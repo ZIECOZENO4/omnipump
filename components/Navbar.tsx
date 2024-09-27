@@ -50,7 +50,7 @@ export default function NavBar() {
               xmlns="http://www.w3.org/2000/svg"
               fill="#04db00"
               whileHover={{ scale: 1.1 }}
-              className="transition-colors duration-300 hover:fill-[#04db00]"
+              className="transition-colors duration-300 hover:fill-gray-200"
             >
               <g id="SVGRepo_iconCarrier">
                 <g id="layer1">
@@ -59,7 +59,7 @@ export default function NavBar() {
               </g>
             </motion.svg>
             <motion.p
-              className="font-extrabold mt-2 text-white tracking-widest hover:text-[#04db00] text-inherit text-md md:text-2xl ml-2 md:ml-4 hover:scale-110 hover:text-xl md:hover:text-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out"
+              className="font-extrabold mt-2 text-white tracking-widest hover:text-gray-500 text-inherit text-md md:text-2xl ml-2 md:ml-4 hover:scale-110 hover:text-xl md:hover:text-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out"
               whileHover={{
                 y: [-2, 2, -2],
                 transition: { repeat: Infinity, duration: 0.5 }
@@ -82,7 +82,7 @@ export default function NavBar() {
                   href={item.path}
                   className={`items-center px-1 flex flex-row align-middle text-center border-b-2 text-md hover:scale-110 hover:text-xl hover:-translate-y-1 transition-all duration-300 ease-in-out font-bold ${
                     currentPath === item.path
-                      ? "border-[#04db00] text-[#04db00]"
+                      ? "border-white text-white"
                       : "border-transparent text-gray-500 hover:text-gray-700"
                   }`}
                 >
@@ -90,7 +90,7 @@ export default function NavBar() {
                 </Link>
                 {hoveredItem === item.name && (
                   <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#04db00]"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-white"
                     initial={{ width: "0%" }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
@@ -110,7 +110,7 @@ export default function NavBar() {
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-opacity-60 text-white hover:bg-[#85ee83] p-2 md:px-3 md:py-2 rounded-md text-sm font-medium cursor-pointer"
+              className="bg-opacity-60 text-white hover:bg-gray-500 p-2 md:px-3 md:py-2 rounded-md text-sm font-medium cursor-pointer"
             >
               <Badge content="New" shape="circle" color="danger">
                 <Button
@@ -120,11 +120,11 @@ export default function NavBar() {
                   variant="light"
                   onClick={toggleNotification}
                 >
-                  <NotificationIcon
-                    size={24}
-                    fill="#ffffff"
-                    background="#04db00"
-                  />
+                 <NotificationIcon
+  size={24}
+  fill='#94a3b8'
+  background="#1e293b"
+/>
                 </Button>
               </Badge>
             </motion.div>
@@ -179,7 +179,7 @@ export default function NavBar() {
                   <div className="md:hidden p-3 gap-4 aligm-middle flex flex-col">
                     <Link href="/">
                       <button className="p-[3px] relative w-full">
-                        <div className="absolute inset-0 bg-gradient-to-r  from-indigo-500 to-purple-500 rounded-lg" />
+                        <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
                         <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                           Home
                         </div>
@@ -187,7 +187,7 @@ export default function NavBar() {
                     </Link>
                     <Link href="/create">
                       <button className="p-[3px] relative w-full">
-                        <div className="absolute inset-0 bg-gradient-to-r  from-indigo-500 to-purple-500 rounded-lg" />
+                        <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
                         <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                           Create
                         </div>
@@ -195,7 +195,7 @@ export default function NavBar() {
                     </Link>
                     <Link href="/lunch">
                       <button className="p-[3px] relative w-full">
-                        <div className="absolute inset-0 bg-gradient-to-r  from-indigo-500 to-purple-500 rounded-lg" />
+                        <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
                         <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                           Lunch
                         </div>
@@ -203,7 +203,7 @@ export default function NavBar() {
                     </Link>
                     <Link href="/newcoin">
                       <button className="p-[3px] relative w-full">
-                        <div className="absolute inset-0 bg-gradient-to-r  from-indigo-500 to-purple-500 rounded-lg" />
+                        <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
                         <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                      New Coin
                         </div>
@@ -211,7 +211,7 @@ export default function NavBar() {
                     </Link>
                     <Link href="/lisiting">
                       <button className="p-[3px] relative w-full">
-                        <div className="absolute inset-0 bg-gradient-to-r  from-indigo-500 to-purple-500 rounded-lg" />
+                        <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
                         <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                           Listing
                         </div>
@@ -219,7 +219,7 @@ export default function NavBar() {
                     </Link>
                     <Link href="/contact">
                       <button className="p-[3px] relative w-full">
-                        <div className="absolute inset-0 bg-gradient-to-r  from-indigo-500 to-purple-500 rounded-lg" />
+                        <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
                         <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                           Contact
                         </div>

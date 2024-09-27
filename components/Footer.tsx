@@ -16,10 +16,10 @@ const Footer = () => {
               <span className="inline md:block">OmniPump</span>
               <br />
               <span
-  className="mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-sky-500 to-blue-400 md:inline-block"
+  className="mt-2 bg-clip-text text-transparent bg-gradient-to-r from-slate-600 via-slate-500 to-slate-400 md:inline-block"
 >
 ultimate{" "}
-  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-300 to-sky-200">
+  <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-400 via-slate-300 to-sky-200">
     Coin Marketplace
   </span>
 </span>
@@ -53,7 +53,7 @@ ultimate{" "}
             &copy; OmniPump All rights reserved 2019.
           </p>
           <p className="text-gray-400 text-sm mt-2">
-            <Link href="#" className="text-blue-600 hover:text-green-500 hover:underline">
+            <Link href="#" className="text-slate-600 hover:text-slate-100 hover:underline">
               Privacy Policy
             </Link>
           </p>

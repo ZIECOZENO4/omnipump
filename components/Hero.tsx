@@ -79,20 +79,20 @@ export function HeroSection() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl  text-white">Created by {profile.name}</h2>
+            <h2 className="text-2xl md:text-3xl text-light  text-white">Created by {profile.name}</h2>
             <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-2 text-white">
               {profile.badges.map((badge, index) => (
-                <Chip key={index} color={`${index % 2 === 0 ? 'primary' : 'warning'}`} variant={`${index % 2 === 0 ? 'shadow' : 'dot'}`} className='font-bold'>
+                <Chip key={index} color={`${index % 2 === 0 ? 'default' : 'warning'}`} variant={`${index % 2 === 0 ? 'shadow' : 'dot'}`} className='font-bold'>
                   {badge}
                 </Chip>
               ))}
             </div>
-            <p className="mt-2 text-gray-300">Market Cap: {profile.marketCap}</p>
-            <p className="text-gray-300">Replies: {profile.replies}</p>
-            <p className="text-green-400 mt-2">
+            <p className="mt-2 text-gray-500 flex">Market Cap: <span className='text-white'>{profile.marketCap}</span> </p>
+            <p className="text-gray-500 flex">Replies:<span className='text-white'> {profile.replies}</span> </p>
+            <p className="text-slate-500 mt-2">
               {profile.tickerName} [ticker: {profile.ticker}]
             </p>
-            <Chip color="success" className='text-sm md:text-md my-1 font-bold'>{profile.address}</Chip>
+            <Chip color="default" className='text-sm md:text-md my-1 font-bold'>{profile.address}</Chip>
           </motion.div>
         </div>
         <div className="gap-4 my-2 flex flex-col w-full md:flex-row ">

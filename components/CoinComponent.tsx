@@ -327,15 +327,27 @@ export default function ComponentCoin() {
           <Tab key="Trending" title="Trending" />
           <Tab key="Featured" title="Featured" />
         </Tabs>
-        <Button color="success">USD</Button>
+        <Button color="default">USD</Button>
       </motion.div>
 
+      <div className="flex-row justify-between md:placeholder:hidden flex align-middle ">
+          <Switch defaultSelected color="default" className="md:text-xl">
+            Launched
+          </Switch>
+          <Button
+            startContent={<FaFilter />}
+            onClick={openModal}
+            className="md:hidden"
+          >
+            Filter
+          </Button>
+        </div>
       <motion.div
         className="flex flex-row gap-8 items-center"
         whileHover={{ scale: 1.02 }}
       >
-        <div className="flex flex-row justify-between align-middle ">
-          <Switch defaultSelected color="success" className="md:text-xl">
+        <div className="md:flex-row justify-between hidden md:flex align-middle ">
+          <Switch defaultSelected color="default" className="md:text-xl">
             Launched
           </Switch>
           <Button
@@ -363,13 +375,13 @@ export default function ComponentCoin() {
                 className="bg-black max-w-2xl"
               >
                 <button className="p-[1px] relative w-full">
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
                   <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                     {chain.name}
                   </div>
                 </button>
               </SelectItem>
-            ))}
+            ))} 
           </Select>
           <Select
             label="Market Cap"
@@ -380,25 +392,25 @@ export default function ComponentCoin() {
           >
             <SelectItem key="hello" className="bg-black max-w-2xl">
               <button className="p-[1px] relative my-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
                 <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                   All Market Cap
                 </div>
               </button>
               <button className="p-[1px] relative my-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
                 <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                   Low Cap (&lt; $1B)
                 </div>
               </button>
               <button className="p-[1px] relative my-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
                 <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                   Mid Cap ($1B - $10B)
                 </div>
               </button>
               <button className="p-[1px] relative my-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
                 <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                   High Cap (&gt; $10B)
                 </div>
@@ -413,7 +425,7 @@ export default function ComponentCoin() {
             onChange={(e) => setSelectedChain(e.target.value)}
           >
 
-              <SelectItem key="button" className="bg-black w-[70rem]">
+              <SelectItem key="button" className="bg-black">
                 <div className="p-[1px] relative my-1 flex flex-col gap-4 space-y-4">
         
                   <div className="p-2  flex flex-row justify-between bg-black gap-4 rounded-[6px]  relative group transition duration-200 focus:focus-within: text-white hover:bg-transparent">
@@ -423,7 +435,7 @@ export default function ComponentCoin() {
                       placeholder="0.00"
                       value={minMarketCap}
                       onChange={(e) => setMinMarketCap(e.target.value)}
-className='border border-green-400 focus:border-slate-300 mx-2'
+className='border border-slate-400 focus:border-slate-300 mx-2'
                     />
                     <Input
                       type="number"
@@ -431,7 +443,7 @@ className='border border-green-400 focus:border-slate-300 mx-2'
                       placeholder="0.00"
                       value={maxMarketCap}
                       onChange={(e) => setMaxMarketCap(e.target.value)}
-                      className='border border-green-400 focus:border-slate-300 mx-2'
+                      className='border border-slate-400 focus:border-slate-300 mx-2'
                     />
                   </div>
                   <div className="p-2 gap-4 flex flex-row justify-between bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
@@ -506,7 +518,7 @@ className='border border-green-400 focus:border-slate-300 mx-2'
                             Trending on Omni
                           </Chip>
                           <Chip
-                            color="success"
+                            color="default"
                             className="text-sm md:text-md flex flex-row justify-between my-3 font-bold"
                           >
                             Address: OXtr....kret

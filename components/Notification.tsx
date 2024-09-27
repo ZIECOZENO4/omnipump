@@ -15,7 +15,7 @@ export default function NotificationAlert() {
               <CardBody className='flex flex-col gap-4 space-y-2 text-center align-middle'>
            No Transaction Yet
            <button className="p-[3px] relative">
-  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-700 rounded-lg" />
   <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
    Create Coin
   </div>
@@ -28,7 +28,7 @@ export default function NotificationAlert() {
               <CardBody className='flex flex-col gap-4 space-y-2 text-center align-middle'>
              No Pending Transaction
              <button className="p-[3px] relative">
-  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-700 rounded-lg" />
   <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
    Create Coin
   </div>
@@ -41,7 +41,7 @@ export default function NotificationAlert() {
               <CardBody className='flex flex-col gap-4 space-y-2 text-center align-middle'>
               No Completed Transaction
               <button className="p-[3px] relative">
-  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-700 rounded-lg" />
   <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
    Create Coin
   </div>
@@ -54,7 +54,7 @@ export default function NotificationAlert() {
               <CardBody className='flex flex-col gap-4 space-y-2 text-center align-middle'>
               No Failed Transaction
               <button className="p-[3px] relative">
-  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-700 rounded-lg" />
   <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
    Create Coin
   </div>
