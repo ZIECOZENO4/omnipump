@@ -102,7 +102,7 @@ export default function NavBar() {
         </NavbarContent>
         <NavbarContent justify="end">
           <NavbarItem>
-            <div className="md:w-auto hidden sm:flex w-12">
+            <div className="md:w-auto hidden bg-white rounded-md sm:flex w-12">
               <ConnectWallet />
             </div>
           </NavbarItem>
