@@ -23,10 +23,10 @@ export function CardContent() {
         Welcome to Omini Pump
       </motion.p>
       
-      <div className="text-slate-500 text-sm mt-2 relative z-20">
+      <div className="text-slate-100 text-xs my-2 relative z-20">
         Omini Pump is the best decentralised platform, where you Create crypto token and Coin also buy and sell of any Crypto Currency
-        <p className="text-slate-100  mt-2">Transparent and Safe</p>
-        <ul className="list-none text-slate-500 text-xs">
+        <p className="text-slate-500  mt-2">Transparent and Safe</p>
+        <ul className="list-none text-slate-100 text-xs">
           <AnimatedStep title="Support Full Wallet Activity" delay={0.1} />
           <AnimatedStep title="Create Tokens and Coins" delay={0.2} />
           <AnimatedStep title="Fully Audited and Unruggable" delay={0.3} />
