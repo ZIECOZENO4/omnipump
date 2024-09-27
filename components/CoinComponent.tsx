@@ -544,7 +544,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
               </Card> */}
                   <div className="justify-center items-center  grid grid-cols-12 gap-4 no-scrollbar ">
       <motion.div
-        className="relative w-screen md:w-1/3 mx-2 md:mx-4 h-64 bg-black border border-gray-800 rounded-lg overflow-hidden"
+        className="relative w-[100vw] md:w-[33.3vw] mx-2 md:mx-4 h-64 bg-black border border-gray-800 rounded-lg overflow-hidden"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
