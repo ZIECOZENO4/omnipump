@@ -236,12 +236,13 @@ const DesktopCoin: React.FC<CoinProps> = ({
             </div>
             <div className="flex flex-col gap-4 align-middle">
               <div className="bg-black flex flex-col bg-opacity-50 shadow-50 border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
+                <p className="text-center text-xl my-2 text-[#FFD700] ">Start Transaction</p>
                 <div className="flex flex-row gap-4 my-4 justify-between align-middle">
-                  <button className="px-8 w-full py-2 rounded-md bg-teal-500 text-white font-bold transition duration-200 hover:bg-green-500 border-2 border-transparent hover:border-teal-500">
+                  <button className="px-8 w-full py-2 rounded-md bg-teal-500 text-white transition duration-200 hover:bg-green-500 border-2 border-transparent hover:border-teal-500">
                     Buy {symbol}
                   </button>
-                  <button className="px-8 py-2 w-full rounded-md bg-red-500 text-white font-bold transition duration-200 hover:bg-red-600 border-2 border-transparent hover:border-slate-500">
-                    {symbol}
+                  <button className="px-8 py-2 w-full rounded-md bg-red-500 text-white transition duration-200 hover:bg-red-600 border-2 border-transparent hover:border-slate-500">
+                   Sell {symbol}
                   </button>
                 </div>
                 <div className="flex flex-row gap-4 align-middle">
@@ -262,8 +263,45 @@ const DesktopCoin: React.FC<CoinProps> = ({
                     </SelectItem>
                   </Select>
                 </div>
-                <ConnectWallet />
-                <div className="flex flex-row gap-4 align-middle"></div>
+                <div className="flex flex-row justify-between my-4 gap-4 align-middle">
+                <Chip color="warning" variant="bordered">1 {symbol}</Chip>
+                <Chip color="warning" variant="bordered">10 {symbol}</Chip>
+                <Chip color="warning" variant="bordered">100 {symbol}</Chip>
+                <Chip color="warning" variant="bordered">1000 {symbol}</Chip>
+</div>
+<div className="flex flex-row my-2 items-center  gap-4 align-middle">
+<ConnectWallet />
+</div>
+                
+                <p className="mt-4 mb-2 text-center align-middle">Transaction Details</p>
+                <div className="flex flex-row text-xs my-1 justify-between gap-4 align-middle">
+<p className="text-indigo-300"> Total Supply</p>
+<p className="text-indigo-600">10 Trillion {symbol} </p>
+                </div>
+                <div className="flex flex-row text-xs my-1 justify-between gap-4 align-middle">
+<p className="text-indigo-300"> Price</p>
+<p className="text-indigo-600">{value.toFixed(2)} {symbol} </p>
+                </div>
+                <div className="flex flex-row text-xs my-1 justify-between gap-4 align-middle">
+<p className="text-indigo-300"> Market Cap</p>
+<p className="text-indigo-600">   {(market_cap / 1000000000).toFixed(2)}B </p>
+                </div>
+                <div className="flex flex-row text-xs my-1 justify-between gap-4 align-middle">
+<p className="text-indigo-300">Max Transaction</p>
+<p className="text-indigo-600">   0.00 {symbol} </p>
+                </div>
+                <div className="flex flex-row text-xs my-1 justify-between gap-4 align-middle">
+<p className="text-indigo-300"> Min Transaction</p>
+<p className="text-indigo-600">   0.00 {symbol}</p>
+                </div>
+                <div className="flex flex-row text-xs my-1 justify-between gap-4 align-middle">
+<p className="text-indigo-300"> Per/USD Value</p>
+<p className="text-indigo-600">  62,00 USD</p>
+                </div>
+                <div className="flex flex-row text-xs my-1 justify-between gap-4 align-middle">
+<p className="text-indigo-300"> Per/ETH Value</p>
+<p className="text-indigo-600">  1 ETH</p>
+                </div>
               </div>
               <div className="bg-black flex flex-col bg-opacity-50 shadow-50 border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
                 <div className="flex justify-center items-center min-h-screen">
@@ -272,7 +310,7 @@ const DesktopCoin: React.FC<CoinProps> = ({
                       <p className="text-[#04db00] mb-4 text-center">
                         Swap Coins ({symbol})
                       </p>
-                      <p className="text-slate-100 mb-4">
+                      <p className="text-slate-100 my-4">
                         Enter the amount you wish to convert and select the
                         desired currency.
                       </p>
@@ -424,9 +462,9 @@ const DesktopCoin: React.FC<CoinProps> = ({
                     </div>
                   </div>
                 </div>
-                <div className="align-middle items-center ">
-                  <ConnectWallet />
-                </div>
+                <div className="flex flex-row my-2 items-center  gap-4 align-middle">
+<ConnectWallet />
+</div>
               </div>
               <div className="bg-black bg-opacity-50 shadow-50 border border-gray-100 shadow-md shadow-black/5 p-6 rounded-md">
                 <div className="flex justify-between mb-4 items-start">
