@@ -61,7 +61,7 @@ export const BackgroundGradient = ({
           backgroundSize: animate ? "400% 400%" : undefined,
         }}
         className={cn(
-          "absolute inset-0 rounded-3xl z-[1] will-change-transform",
+          "absolute inset-0 rounded-3xl z-[1] will-change-transform",  
           "bg-[radial-gradient(circle_farthest-side_at_0_100%,#001f1b,transparent),radial-gradient(circle_farthest-side_at_100%_0,#1a0f3c,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#3d2e00,transparent),radial-gradient(circle_farthest-side_at_0_0,#002a44,#000000)]"
         )}
       />
