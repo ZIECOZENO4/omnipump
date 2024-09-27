@@ -573,7 +573,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                    More
               </motion.h2>
               </div>
-          
+              <div className="flex flex-row justify-between align-middle">
               <motion.p
                 className="text-md text-gray-400 text-left mb-2"
                 initial={{ opacity: 0, y: -10 }}
@@ -582,6 +582,8 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
               >
                Coin Creator
               </motion.p>
+              <p className='hidden'>heloo</p>
+              </div>
               <motion.div
             className="mt-4 mb-2 flex flex-row justify-between"
             initial={{ opacity: 0, x: -20 }}
