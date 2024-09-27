@@ -32,17 +32,17 @@ export default function ConnectWallet() {
     <>
       {/* Button for larger screens (md and up) */}
       <div className="w-full">
-        <ConnectButton
-          client={client}
-          wallets={wallets}
-          theme={customTheme}
-          connectButton={{ label: "Connect Wallet" }}
-          connectModal={{
-            size: "wide",
-            title: "OmniPump Coin Wallet",
-            showThirdwebBranding: false,
-          }}
-        />
+      <ConnectButton
+  client={client}
+  wallets={wallets}
+  theme={customTheme}
+  connectButton={{ label: "Connect Wallet", className: "text-white w-full" }}
+  connectModal={{
+    size: "wide",
+    title: "OmniPump Coin Wallet",
+    showThirdwebBranding: false,
+  }}
+/>
       </div>
     </>
   );

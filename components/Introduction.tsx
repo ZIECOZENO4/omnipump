@@ -21,7 +21,7 @@ export function WalletPopup({ onClose }: WalletPopupProps) {
             <CardItem
               translateZ={20}
               as="button"
-              className="px-2 md:w-32 w-20  py-2 rounded-xl text-xs font-normal text-white bg-[#04db00] "
+              className="px-2 md:w-32 w-20  py-2 rounded-xl text-xs font-normal text-white bg-slate-800 "
               onClick={onClose}
             >
               Start Creating →

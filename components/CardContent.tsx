@@ -16,17 +16,17 @@ export function CardContent() {
       </motion.div>
       
       <motion.p 
-        className="text-xl md:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-sky-500 to-blue-400 text-center font-bold relative z-20 mt-2 "
+        className="text-xl md:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-slate-600 via-slate-500 to-slate-400 text-center font-bold relative z-20 mt-2 "
         animate={{ y: [0, -10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
       >
         Welcome to Omini Pump
       </motion.p>
       
-      <div className="text-neutral-200 text-sm mt-2 relative z-20">
+      <div className="text-slate-500 text-sm mt-2 relative z-20">
         Omini Pump is the best decentralised platform, where you Create crypto token and Coin also buy and sell of any Crypto Currency
-        <p className="text-[#04db00]">Transparent and Safe</p>
-        <ul className="list-none mt-2 text-xs">
+        <p className="text-slate-100  mt-2">Transparent and Safe</p>
+        <ul className="list-none text-slate-500 text-xs">
           <AnimatedStep title="Support Full Wallet Activity" delay={0.1} />
           <AnimatedStep title="Create Tokens and Coins" delay={0.2} />
           <AnimatedStep title="Fully Audited and Unruggable" delay={0.3} />
