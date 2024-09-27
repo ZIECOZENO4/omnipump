@@ -330,7 +330,7 @@ export default function ComponentCoin() {
         <Button color="default">USD</Button>
       </motion.div>
 
-      <div className="flex-row justify-between md:placeholder:hidden flex align-middle ">
+      <div className="flex-row justify-between md:hidden flex align-middle ">
           <Switch defaultSelected color="default" className="md:text-xl">
             Launched
           </Switch>
@@ -496,15 +496,16 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                           <h3 className="my-2 text-foreground/90">
                             {coin.name} ({coin.symbol})
                           </h3>
-                          <p className="text-small my-1 flex flex-row justify-between text-foreground/80">
-                            Value: ${coin.value.toFixed(2)}
+                          <p className="text-small text-slate-700 my-1 flex flex-row justify-between text-foreground/80">
+                            Value: <span className='mr-1 md:ml-2 text-slate-200'>${coin.value.toFixed(2)}</span> 
                           </p>
                           <h1 className="text-large flex flex-row justify-between font-medium my-1">
                             Market Cap: $
-                            {(coin.market_cap / 1000000000).toFixed(2)}B
+                            <span className='mr-1 md:ml-2 text-slate-200'>   {(coin.market_cap / 1000000000).toFixed(2)}B</span>
+                         
                           </h1>
                           <Chip
-                            color="primary"
+                            color="default"
                             variant="shadow"
                             className="font-bold text-white my-1"
                           >

@@ -48,7 +48,7 @@ export default function NavBar() {
               height="40"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              fill="#04db00"
+              fill="#e5e7eb"
               whileHover={{ scale: 1.1 }}
               className="transition-colors duration-300 hover:fill-gray-200"
             >
