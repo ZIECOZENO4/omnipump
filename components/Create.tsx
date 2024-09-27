@@ -125,7 +125,7 @@ export default function CreateComponent() {
           <h1 className="mb-8 text-4xl font-bold">Create</h1>
         </div>
         <div className="space-y-4">
-        <Link href='/coin'>
+        <Link href='/newcoin'>
          <div className="p-4 bg-gray-800 hover:bg-opacity-40 rounded-lg my-4">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center">

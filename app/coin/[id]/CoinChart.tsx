@@ -35,7 +35,7 @@ const CustomizedDot: React.FC<CustomizedDotProps> = ({ cx, cy, value }) => {
 
 const CoinBuySellChart: React.FC = () => {
   return (
-    <div style={{ width: '100%', height: '100%', backgroundColor: '#1a1a1a' }}>
+    <div style={{ width: '100%', height: '100vh', backgroundColor: '#1a1a1a' }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}

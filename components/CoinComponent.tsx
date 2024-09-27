@@ -362,9 +362,9 @@ export default function ComponentCoin() {
                 value={chain.key}
                 className="bg-black max-w-2xl"
               >
-                <button className="p-[3px] relative">
+                <button className="p-[1px] relative w-full">
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                  <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                     {chain.name}
                   </div>
                 </button>
@@ -379,27 +379,27 @@ export default function ComponentCoin() {
             onChange={(e) => setSelectedMarketCap(e.target.value)}
           >
             <SelectItem key="hello" className="bg-black max-w-2xl">
-              <button className="p-[3px] relative">
+              <button className="p-[1px] relative my-1">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                   All Market Cap
                 </div>
               </button>
-              <button className="p-[3px] relative">
+              <button className="p-[1px] relative my-1">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                   Low Cap (&lt; $1B)
                 </div>
               </button>
-              <button className="p-[3px] relative">
+              <button className="p-[1px] relative my-1">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                   Mid Cap ($1B - $10B)
                 </div>
               </button>
-              <button className="p-[3px] relative">
+              <button className="p-[1px] relative my-1">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                   High Cap (&gt; $10B)
                 </div>
               </button>
@@ -412,27 +412,29 @@ export default function ComponentCoin() {
             value={selectedChain}
             onChange={(e) => setSelectedChain(e.target.value)}
           >
-            {chainData.map((chain) => (
-              <SelectItem key="button" className="bg-black max-w-2xl">
-                <div className="p-[3px] relative flex flex-col gap-4 space-y-4">
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                  <div className="px-8 py-2  flex flex-row justify-between bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+
+              <SelectItem key="button" className="bg-black w-[70rem]">
+                <div className="p-[1px] relative my-1 flex flex-col gap-4 space-y-4">
+        
+                  <div className="p-2  flex flex-row justify-between bg-black gap-4 rounded-[6px]  relative group transition duration-200 focus:focus-within: text-white hover:bg-transparent">
                     <Input
                       type="number"
-                      label="Min Market Cap (Billion $)"
+                      label="Min M-Cap"
                       placeholder="0.00"
                       value={minMarketCap}
                       onChange={(e) => setMinMarketCap(e.target.value)}
+className='border border-green-400 focus:border-slate-300 mx-2'
                     />
                     <Input
                       type="number"
-                      label="Max Market Cap (Billion $)"
+                      label="Max  M-Cap"
                       placeholder="0.00"
                       value={maxMarketCap}
                       onChange={(e) => setMaxMarketCap(e.target.value)}
+                      className='border border-green-400 focus:border-slate-300 mx-2'
                     />
                   </div>
-                  <div className="px-8 py-2  flex flex-row justify-between bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                  <div className="p-2 gap-4 flex flex-row justify-between bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                     <Button color="primary" onClick={applyFilters}>
                       Filter
                     </Button>
@@ -442,7 +444,6 @@ export default function ComponentCoin() {
                   </div>
                 </div>
               </SelectItem>
-            ))}
           </Select>
         </div>
       </motion.div>
