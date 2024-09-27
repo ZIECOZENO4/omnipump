@@ -112,7 +112,7 @@ export default function NavBar() {
               whileTap={{ scale: 0.95 }}
               className="bg-opacity-60 text-white hover:bg-gray-500 p-2 md:px-3 md:py-2 rounded-md text-sm font-medium cursor-pointer"
             >
-              <Badge content="New" shape="circle" color="danger">
+              <Badge content="New" shape="circle" color="default">
                 <Button
                   radius="full"
                   isIconOnly

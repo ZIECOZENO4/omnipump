@@ -66,7 +66,9 @@ body {
   font-weight: 400;
   font-style: normal;
   font-variation-settings:
-  "BLED" 16,
-  "SCAN" -33;
+  /* "BLED" 16,
+  "SCAN" -33; */
+  "BLED" 0,
+  "SCAN" -53;
 }
 
