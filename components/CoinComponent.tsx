@@ -542,17 +542,17 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                   </div>
                 </CardBody>
               </Card> */}
-                  <div className="justify-center items-center  grid grid-cols-12 gap-4 no-scrollbar ">
+                  <div className="justify-center items-center align-middle  grid grid-cols-12 gap-4 no-scrollbar ">
       <motion.div
-        className="relative w-[100vw] md:w-[33.3333vw] mx-2 md:mx-4 h-64 bg-black border border-gray-800 rounded-lg overflow-hidden"
+        className="relative w-[90vw] md:w-[30vw] mx-2 md:mx-4 h-64 bg-black border border-gray-800 rounded-lg overflow-hidden"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-slate-500 via-slate-700 to-slate-900 opacity-20 animate-gradient" />
-        <div className="relative p-6 text-white">
-          <div className="flex justify-between items-start mb-4">
-            <img src={coin.image}  alt={coin.name} className="w-30 full  bg-gray-700 rounded" />
+        <div className="relative p-3 text-white">
+          <div className="flex justify-between items-start ">
+            <img src={coin.image}  alt={coin.name} className="w-[40vw] md:w-[10vw] h-full  bg-gray-700 rounded" />
      
             <div className="text-right">
               <div className="flex flex-row justify-between align-middle">
@@ -575,7 +575,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
               </div>
           
               <motion.p
-                className="text-md text-gray-400"
+                className="text-md text-gray-400 text-left mb-2"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
@@ -583,7 +583,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                Coin Creator
               </motion.p>
               <motion.div
-            className="mt-4 flex flex-row justify-between"
+            className="mt-4 mb-2 flex flex-row justify-between"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
@@ -601,7 +601,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             <p className="text-md">Arbitrum</p>
           </motion.div>
           <motion.p
-            className="mt-4 text-md "
+            className="mt-2 text-md "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
