@@ -24,7 +24,6 @@ const customTheme = darkTheme({
     primaryButtonBg: "#333333", // Dark gray for buttons
     primaryText: "#e0e0e0", // Light gray for primary text
     secondaryText: "#a0a0a0", // Medium gray for secondary text
-    backgroundColor: "#121212", // Very dark gray, almost black for main background
   },
 });
 
