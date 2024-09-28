@@ -557,7 +557,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             <div className="text-right p-2">
               <div className="flex flex-row justify-between align-middle">
               <motion.h2
-                className="text-xl font-bold "
+                className="text-xl text-white font-bold "
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
@@ -591,7 +591,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             transition={{ delay: 0.4, duration: 0.5 }}
           >
             <p className="text-sm text-gray-600">Time to Launch:</p>
-            <p className="text-md">00D/4H/24M</p>
+            <p className="text-md text-white">00D/4H/24M</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -600,7 +600,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                  className="flex flex-row justify-between"
           >
             <p className="text-sm text-gray-600">Chain:</p>
-            <p className="text-md">Arbitrum</p>
+            <p className="text-md text-white">Arbitrum</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -609,7 +609,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                  className="flex flex-row justify-between"
           >
             <p className="text-sm text-gray-600">Details:</p>
-            <p className="text-md">This is the official</p>
+            <p className="text-md text-white">This is the official</p>
           </motion.div>
             </div>
           </div>
