@@ -56,7 +56,7 @@ export function HeroSection() {
   const profile = profiles[currentProfile]
   return (
     <div className="flex justify-center items-center h-auto mt-4">
-    <BackgroundGradient className="flex flex-col rounded-[22px] w-full align-middle items-center p-4 sm:p-10 bg-zinc-900">
+    {/* <BackgroundGradient className="flex flex-col rounded-[22px] w-full align-middle items-center p-4 sm:p-10 bg-zinc-900"> */}
   <StartingButton  />
     <div className="flex align-middle my-6 flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <motion.div 
@@ -105,7 +105,7 @@ export function HeroSection() {
             </div>
 
         </div>
-      </BackgroundGradient>
+      {/* </BackgroundGradient> */}
     </div>
   );
 }

@@ -544,7 +544,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
               </Card> */}
                   <div className="justify-center items-center align-middle  grid grid-cols-12 gap-4 no-scrollbar ">
       <motion.div
-        className="relative w-[90vw] md:w-[30vw] mx-2 md:mx-4 h-60 bg-black border border-gray-800 rounded-lg overflow-hidden"
+        className="relative w-[90vw] md:w-[30vw] mx-2 md:mx-4 h-48 bg-black border border-gray-800 rounded-lg overflow-hidden"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -552,7 +552,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
         <div className="absolute inset-0 bg-gradient-to-r from-slate-500 via-slate-700 to-slate-900 opacity-20 animate-gradient" />
         <div className="relative p-3 text-white">
           <div className="flex justify-between items-start ">
-            <img src={coin.image}  alt={coin.name} className="w-[25vw] md:w-[10vw] h-52  bg-gray-700 rounded" />
+            <img src={coin.image}  alt={coin.name} className="w-[25vw] md:w-[10vw] h-40  bg-gray-700 rounded" />
      
             <div className="text-right p-2">
               <div className="flex flex-row justify-between align-middle">
@@ -575,7 +575,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
               </div>
               <div className="flex flex-row justify-between align-middle">
               <motion.p
-                className="text-md text-gray-400 text-left mb-2"
+                className="text-md text-gray-400 text-left "
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
@@ -585,7 +585,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
               <p className='hidden'>heloo</p>
               </div>
               <motion.div
-            className="mt-4 flex flex-row justify-between"
+            className="mt-3 flex flex-row justify-between"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
