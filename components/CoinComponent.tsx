@@ -557,7 +557,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             <div className="text-right p-2">
               <div className="flex flex-row justify-between align-middle">
               <motion.h2
-                className="text-xl font-bold mb-2"
+                className="text-xl font-bold "
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
@@ -565,7 +565,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                       {coin.name} ({coin.symbol})
               </motion.h2>
               <motion.h2
-                className="text-sm text-gray-400 hover:underline mb-2"
+                className="text-sm text-gray-400 hover:underline"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
