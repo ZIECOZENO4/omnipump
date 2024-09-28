@@ -552,7 +552,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
         <div className="absolute inset-0 bg-gradient-to-r from-slate-500 via-slate-700 to-slate-900 opacity-20 animate-gradient" />
         <div className="relative p-3 text-white">
           <div className="flex justify-between items-start ">
-            <img src={coin.image}  alt={coin.name} className="w-[20vw] md:w-[10vw] h-56  bg-gray-700 rounded" />
+            <img src={coin.image}  alt={coin.name} className="w-[25vw] md:w-[10vw] h-52  bg-gray-700 rounded" />
      
             <div className="text-right p-2">
               <div className="flex flex-row justify-between align-middle">
@@ -609,7 +609,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                  className="flex flex-row justify-between"
           >
             <p className="text-sm text-gray-400">Details:</p>
-            <p className="text-md">This is the official coin created on Omni Pump</p>
+            <p className="text-md">This is the official coin ......</p>
           </motion.div>
             </div>
           </div>
