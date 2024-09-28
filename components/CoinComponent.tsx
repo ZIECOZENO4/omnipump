@@ -549,7 +549,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-500 via-slate-700 to-slate-900 opacity-20 animate-gradient" />
+       
         <div className="relative p-3 text-white">
           <div className="flex justify-between items-start ">
             <img src={coin.image}  alt={coin.name} className="w-[25vw] md:w-[10vw] h-40  bg-gray-700 rounded" />
@@ -565,7 +565,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                       {coin.name} ({coin.symbol})
               </motion.h2>
               <motion.h2
-                className="text-sm text-gray-400 hover:underline"
+                className="text-sm text-gray-600 hover:underline"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
@@ -575,7 +575,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
               </div>
               <div className="flex flex-row justify-between align-middle">
               <motion.p
-                className="text-md text-gray-400 text-left "
+                className="text-md text-gray-600 text-left "
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
@@ -590,7 +590,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            <p className="text-sm text-gray-400">Time to Launch:</p>
+            <p className="text-sm text-gray-600">Time to Launch:</p>
             <p className="text-md">00D/4H/24M</p>
           </motion.div>
           <motion.div
@@ -599,7 +599,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             transition={{ delay: 0.5, duration: 0.5 }}
                  className="flex flex-row justify-between"
           >
-            <p className="text-sm text-gray-400">Chain:</p>
+            <p className="text-sm text-gray-600">Chain:</p>
             <p className="text-md">Arbitrum</p>
           </motion.div>
           <motion.div
@@ -608,7 +608,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             transition={{ delay: 0.5, duration: 0.5 }}
                  className="flex flex-row justify-between"
           >
-            <p className="text-sm text-gray-400">Details:</p>
+            <p className="text-sm text-gray-600">Details:</p>
             <p className="text-md">This is the official</p>
           </motion.div>
             </div>
