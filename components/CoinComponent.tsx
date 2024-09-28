@@ -585,7 +585,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
               <p className='hidden'>heloo</p>
               </div>
               <motion.div
-            className="mt-4 mb-2 flex flex-row justify-between"
+            className="mt-4 flex flex-row justify-between"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
