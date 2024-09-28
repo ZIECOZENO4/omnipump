@@ -552,7 +552,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
         <div className="absolute inset-0 bg-gradient-to-r from-slate-500 via-slate-700 to-slate-900 opacity-20 animate-gradient" />
         <div className="relative p-3 text-white">
           <div className="flex justify-between items-start ">
-            <img src={coin.image}  alt={coin.name} className="w-[40vw] md:w-[10vw] h-60  bg-gray-700 rounded" />
+            <img src={coin.image}  alt={coin.name} className="w-[20vw] md:w-[10vw] h-56  bg-gray-700 rounded" />
      
             <div className="text-right p-2">
               <div className="flex flex-row justify-between align-middle">
@@ -590,7 +590,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            <p className="text-sm text-gray-400">time to launch:</p>
+            <p className="text-sm text-gray-400">Time to Launch:</p>
             <p className="text-md">00D/4H/24M</p>
           </motion.div>
           <motion.div
@@ -599,17 +599,18 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             transition={{ delay: 0.5, duration: 0.5 }}
                  className="flex flex-row justify-between"
           >
-            <p className="text-sm text-gray-400">chain:</p>
+            <p className="text-sm text-gray-400">Chain:</p>
             <p className="text-md">Arbitrum</p>
           </motion.div>
-          <motion.p
-            className="mt-2 text-sm text-right"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+                 className="flex flex-row justify-between"
           >
-            aslan is a scammer, always have been
-          </motion.p>
+            <p className="text-sm text-gray-400">Details:</p>
+            <p className="text-md">This is the official coin created on Omni Pump</p>
+          </motion.div>
             </div>
           </div>
        
