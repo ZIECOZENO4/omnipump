@@ -609,7 +609,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                  className="flex flex-row justify-between"
           >
             <p className="text-sm text-gray-400">Details:</p>
-            <p className="text-md">This is the official coin ......</p>
+            <p className="text-md">This is the official</p>
           </motion.div>
             </div>
           </div>
