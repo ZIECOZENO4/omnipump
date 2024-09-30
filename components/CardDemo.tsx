@@ -90,7 +90,7 @@ const CardDemo = () => {
                 </motion.p>
           
                        <motion.div
-                       className='mt-[68px] '
+                       className='mt-[20px]'
                   style={{
                     width: '180px',
                     height: '10px',
