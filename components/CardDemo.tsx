@@ -9,7 +9,7 @@ const CardDemo = () => {
         style={{
           width: '332px',
           height: '130px',
-          position: 'absolute',
+        
           top: '1022px',
           left: '3542px',
           background: '#0A0909',
@@ -31,10 +31,10 @@ const CardDemo = () => {
                   style={{
                     width: '70px',
                     height: '20px',
-                    position: 'absolute',
+                  
                     top: '14px',
                     left: '137px',
-                    fontFamily: 'Workbench, sans-serif',
+                
                     fontSize: '20px',
                     lineHeight: '20px',
                   }}
@@ -49,10 +49,10 @@ const CardDemo = () => {
                   style={{
                     width: '20px',
                     height: '10px',
-                    position: 'absolute',
+                  
                     top: '9px',
                     left: '302px',
-                    fontFamily: 'Workbench, sans-serif',
+                
                     fontSize: '10px',
                     fontWeight: 400,
                     lineHeight: '10px',
@@ -72,10 +72,10 @@ const CardDemo = () => {
                   style={{
                     width: '60px',
                     height: '10px',
-                    position: 'absolute',
+                  
                     top: '41px',
                     left: '137px',
-                    fontFamily: 'Workbench, sans-serif',
+                
                     fontSize: '10px',
                     fontWeight: 400,
                     lineHeight: '10px',
@@ -88,31 +88,12 @@ const CardDemo = () => {
                 >
                   Pear Network
                 </motion.p>
-                <motion.div
+          
+                       <motion.div
                   style={{
                     width: '180px',
                     height: '10px',
-                    position: 'absolute',
-                    top: '68px',
-                    left: '137px',
-                    fontFamily: 'Workbench, sans-serif',
-                    fontSize: '10px',
-                    fontWeight: 400,
-                    lineHeight: '10px',
-                    textAlign: 'left',
-                    color: '#F7F2DA',
-                  }}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4, duration: 0.5 }}
-                >
-                  Time to Launch: 00D/4H/24m
-                </motion.div>
-                <motion.div
-                  style={{
-                    width: '180px',
-                    height: '10px',
-                    position: 'absolute',
+                  
                     top: '85px',
                     left: '137px',
                     display: 'flex',
@@ -125,7 +106,47 @@ const CardDemo = () => {
                 >
                   <p
                     style={{
-                      fontFamily: 'Workbench, sans-serif',
+                  
+                      fontSize: '10px',
+                      fontWeight: 400,
+                      lineHeight: '10px',
+                      textAlign: 'left',
+                      color: '#F7F2DA',
+                    }}
+                  >
+                  Time to Launch:
+                  </p>
+                  <p
+                    style={{
+                  
+                      fontSize: '10px', 
+                      fontWeight: 400,
+                      lineHeight: '10px',
+                      textAlign: 'left',
+                      color: '#F7F2DA',
+                    }}
+                  >
+                  00D/4H/24m
+                  </p>
+                </motion.div>
+                <motion.div
+                  style={{
+                    width: '180px',
+                    height: '10px',
+                  
+                    top: '85px',
+                    left: '137px',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                >
+                  <p
+                    style={{
+                  
                       fontSize: '10px',
                       fontWeight: 400,
                       lineHeight: '10px',
@@ -137,7 +158,7 @@ const CardDemo = () => {
                   </p>
                   <p
                     style={{
-                      fontFamily: 'Workbench, sans-serif',
+                  
                       fontSize: '10px',
                       fontWeight: 400,
                       lineHeight: '10px',
@@ -152,10 +173,10 @@ const CardDemo = () => {
                   style={{
                     width: '180px',
                     height: '10px',
-                    position: 'absolute',
+                  
                     top: '102px',
                     left: '137px',
-                    fontFamily: 'Workbench, sans-serif',
+                
                     fontSize: '10px',
                     fontWeight: 400,
                     lineHeight: '10px',
