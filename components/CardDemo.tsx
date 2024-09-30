@@ -22,7 +22,7 @@ const CardDemo = () => {
       >
         <div className="relative p-3 text-white">
           <div className="flex justify-between items-start">
-            <img src="/path-to-coin-image.png" alt="Coin" className="w-[100px] h-[80px] my-[10px] mx-[10px] bg-[#D9D9D966]" />
+            <img src="/path-to-coin-image.png" alt="Coin" className="w-[100px] h-[90px] my-[10px] mx-[10px] bg-[#D9D9D966]" />
             
             <div className="text-right flex flex-col p-2">
               <div className="flex flex-row justify-between align-middle">
@@ -90,6 +90,7 @@ const CardDemo = () => {
                 </motion.p>
           
                        <motion.div
+                       className='mt-[68px] '
                   style={{
                     width: '180px',
                     height: '10px',
@@ -130,6 +131,7 @@ const CardDemo = () => {
                   </p>
                 </motion.div>
                 <motion.div
+                   className='my-[10px]'
                   style={{
                     width: '180px',
                     height: '10px',
@@ -170,6 +172,7 @@ const CardDemo = () => {
                   </p>
                 </motion.div>
                 <motion.div
+                   className=' my-[10px]'
                   style={{
                     width: '180px',
                     height: '10px',
