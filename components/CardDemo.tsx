@@ -180,7 +180,7 @@ const CardDemo = () => {
                     top: '102px',
                     left: '137px',
                 
-                    fontSize: '12px',
+                    fontSize: '10px',
                     fontWeight: 400,
                     lineHeight: '10px',
                     textAlign: 'left',
