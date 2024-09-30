@@ -68,12 +68,10 @@ const CardDemo = () => {
               </div>
               <div className="flex flex-col  align-middle">
                 <motion.p
-                  className="text-[#F7F2DA] p-[5px]"
+                  className="text-[#F7F2DA] flex flex-row p-[5px]"
                   style={{
                     width: '60px',
                     height: '10px',
-                  
-                    top: '41px',
                     left: '137px',
                 
                     fontSize: '10px',
@@ -90,7 +88,7 @@ const CardDemo = () => {
                 </motion.p>
           
                        <motion.div
-                       className='mt-[20px]'
+                       className='mt-[40px]'
                   style={{
                     width: '180px',
                     height: '10px',
