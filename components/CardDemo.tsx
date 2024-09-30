@@ -131,7 +131,7 @@ const CardDemo = () => {
                   </p>
                 </motion.div>
                 <motion.div
-                   className='my-[8px]'
+                   className='my-[5px]'
                   style={{
                     width: '180px',
                     height: '10px',
@@ -172,7 +172,7 @@ const CardDemo = () => {
                   </p>
                 </motion.div>
                 <motion.div
-                   className=' mb-[8px]'
+                   className=' mb-[5px]'
                   style={{
                     width: '180px',
                     height: '10px',
