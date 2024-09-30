@@ -120,7 +120,7 @@ const CardDemo = () => {
                   <p
                     style={{
                   
-                      fontSize: '10px', 
+                      fontSize: '20px', 
                       fontWeight: 400,
                       lineHeight: '10px',
                       textAlign: 'left',
@@ -131,7 +131,7 @@ const CardDemo = () => {
                   </p>
                 </motion.div>
                 <motion.div
-                   className='my-[10px]'
+                   className='my-[8px]'
                   style={{
                     width: '180px',
                     height: '10px',
@@ -172,7 +172,7 @@ const CardDemo = () => {
                   </p>
                 </motion.div>
                 <motion.div
-                   className=' my-[10px]'
+                   className=' mb-[8px]'
                   style={{
                     width: '180px',
                     height: '10px',
@@ -180,7 +180,7 @@ const CardDemo = () => {
                     top: '102px',
                     left: '137px',
                 
-                    fontSize: '10px',
+                    fontSize: '20px',
                     fontWeight: 400,
                     lineHeight: '10px',
                     textAlign: 'left',
