@@ -73,9 +73,8 @@ const CardDemo = () => {
                     width: '60px',
                     height: '10px',
                     left: '137px',
-                
                     fontSize: '10px',
-                    fontWeight: 400,
+                    fontWeight: 200,
                     lineHeight: '10px',
                     textAlign: 'left',
                     color: '#F7F2DA',
