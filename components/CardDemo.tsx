@@ -8,7 +8,7 @@ const CardDemo = () => {
       <motion.div
         style={{
           width: '332px',
-          height: '130px',
+          height: '150px',
         
           top: '1022px',
           left: '3542px',
@@ -22,7 +22,7 @@ const CardDemo = () => {
       >
         <div className="relative p-3 text-white">
           <div className="flex justify-between items-start">
-            <div  className="w-[100px] h-[90px] my-[10px] mx-[10px] bg-[#D9D9D966]" />
+            <div  className="w-[100px] h-[100px] my-[10px] mx-[10px] bg-[#D9D9D966]" />
             
             <div className="text-right flex flex-col p-2">
               <div className="flex flex-row justify-between align-middle">
