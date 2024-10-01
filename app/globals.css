@@ -56,7 +56,7 @@ body {
 
 @layer base {
   :root {
-    --font-workbench: 'Workbench', sans-serif;
+    --font-workbench: 'Workbench', system-ui;
   }
 }
 
