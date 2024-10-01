@@ -54,8 +54,8 @@ const CardDemo = () => {
                     left: '302px',
                 
                     fontSize: '10px',
-                    fontWeight: 400,
-                    lineHeight: '5px',
+                    fontWeight: 200,
+                    lineHeight: '20px',
                     textAlign: 'left',
                     color: '#F7F2DA',
                   }}
