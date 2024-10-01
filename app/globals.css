@@ -72,3 +72,12 @@ body {
   "SCAN" -53;
 }
 
+.workbench-text {
+  font-family: "Workbench", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" -53;
+}
