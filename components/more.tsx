@@ -1,7 +1,5 @@
-"use client"
-import { motion } from 'framer-motion';
 import Head from 'next/head';
-import React from 'react'
+import { motion } from 'framer-motion';
 
 const WorkbenchText = () => {
   return (
@@ -12,21 +10,17 @@ const WorkbenchText = () => {
         <link href="https://fonts.googleapis.com/css2?family=Workbench:SCAN@-53&display=swap" rel="stylesheet" />
       </Head>
       <motion.h2
-        className="hover:underline text-[#F7F2DA] workbench-text"
+        className="workbench-text hover:underline"
         style={{
           width: '20px',
           height: '10px',
           top: '9px',
           left: '302px',
           fontSize: '10px',
-          fontWeight: 200,
+          fontWeight: 400,
           lineHeight: '20px',
           textAlign: 'left',
           color: '#F7F2DA',
-          fontFamily: '"Workbench", system-ui',
-          fontOpticalSizing: 'auto',
-          fontStyle: 'normal',
-          fontVariationSettings: '"BLED" 0, "SCAN" -53'
         }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
