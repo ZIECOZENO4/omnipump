@@ -206,6 +206,7 @@ import './WorkbenchFontTest.css';
 
 const Card = () => (
   <motion.div
+  className='mx-2'
     style={{
       width: '332px',
       height: '150px',
@@ -384,7 +385,7 @@ const Card = () => (
 
 const CardDemo = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto space-x-2">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {[...Array(50)].map((_, index) => (
           <Card key={index} />
