@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Workbench:SCAN@-53&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Workbench:SCAN@-53&display=swap');
 
 .workbench-test {
   font-family: "Workbench", system-ui;
@@ -37,4 +37,16 @@ h1 {
   border: 1px solid #555555;
   border-radius: 5px;
   color: #ffffff;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Workbench:SCAN@-53&display=swap');
+
+.workbench-test {
+  font-family: "Workbench", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" -53;
 }

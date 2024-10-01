@@ -284,7 +284,7 @@ const FirstAnimation: React.FC = () => {
           initial={{ gap: "0.1px" }}
         >
           {gridCells.map((i: number) => (
-            <div key={i} className="border border-[#181818]"></div>
+            <div key={i} className="border border-[#242323]"></div>
           ))}
         </motion.div>
       </motion.div>

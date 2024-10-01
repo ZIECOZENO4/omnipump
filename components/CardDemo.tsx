@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { motion } from 'framer-motion'
-
+import './WorkbenchFontTest.css'; 
 const CardDemo = () => {
   return (
     <div className="justify-center items-center align-middle grid grid-cols-12 gap-4 no-scrollbar">
@@ -45,7 +45,7 @@ const CardDemo = () => {
                   [SPEAR]
                 </motion.h2>
                 <motion.h2
-  className="hover:underline text-[#F7F2DA] workbench-text"
+  className="hover:underline text-[#F7F2DA] workbench-test"
   style={{
     width: '20px',
     height: '10px',
@@ -56,10 +56,6 @@ const CardDemo = () => {
     lineHeight: '20px',
     textAlign: 'left',
     color: '#F7F2DA',
-    fontFamily: '"Workbench", system-ui',
-    fontOpticalSizing: 'auto',
-    fontStyle: 'normal',
-    fontVariationSettings: '"BLED" 0, "SCAN" -53'
   }}
   initial={{ opacity: 0, y: -20 }}
   animate={{ opacity: 1, y: 0 }}
