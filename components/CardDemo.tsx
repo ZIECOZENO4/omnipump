@@ -66,7 +66,7 @@ const CardDemo = () => {
               </div>
               <div className="flex flex-col  align-middle">
                 <motion.p
-                  className="text-[#F7F2DA] flex flex-row mt-[5px]"
+                  className="text-[#F7F2DA] workbench-test flex flex-row mt-[5px]"
                   style={{
                     width: '60px',
                     height: '10px',
@@ -101,6 +101,7 @@ const CardDemo = () => {
                   transition={{ delay: 0.5, duration: 0.5 }}
                 >
                   <p
+                  className='workbench-test'
                     style={{
                   
                       fontSize: '10px',
@@ -126,7 +127,7 @@ const CardDemo = () => {
                   </p>
                 </motion.div>
                 <motion.div
-                   className='my-[8px]'
+                   className='my-[8px] workbench-test'
                   style={{
                     width: '180px',
                     height: '10px',
