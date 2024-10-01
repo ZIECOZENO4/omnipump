@@ -13,10 +13,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  Card,
-  CardBody,
-  Slider,
-  Image
+
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { FaFilter } from "react-icons/fa";
@@ -24,16 +21,7 @@ import {
   SiEthereum,
   SiBinance,
   SiPolygon,
-  SiRipple,
-  SiCardano,
-  SiSolana,
-  SiDogecoin,
-  SiLitecoin,
-  SiTether
 } from "react-icons/si";
-import { HeartIcon } from "./HeartIcon";
-import { Chip } from "@nextui-org/react";
-import Link from "next/link";
 import CardDemo from "./CardDemo";
 const chainData = [
   { key: "all", name: "All Chains" },
