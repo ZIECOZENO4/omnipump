@@ -450,7 +450,6 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
         </div>
       </motion.div>
 <CardDemo />
-<WorkbenchFontTest />
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
