@@ -23,6 +23,7 @@ import {
   SiPolygon,
 } from "react-icons/si";
 import CardDemo from "./CardDemo";
+import WorkbenchText from "./more";
 const chainData = [
   { key: "all", name: "All Chains" },
   {
@@ -449,6 +450,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
         </div>
       </motion.div>
 <CardDemo />
+<WorkbenchText />
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
