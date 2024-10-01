@@ -23,7 +23,7 @@ import {
   SiPolygon,
 } from "react-icons/si";
 import CardDemo from "./CardDemo";
-import {WorkbenchFontTest} from "./more";
+import WorkbenchFontTest from "./more";
 const chainData = [
   { key: "all", name: "All Chains" },
   {
