@@ -1,14 +1,8 @@
-import Head from 'next/head';
 import { motion } from 'framer-motion';
-
+import React from 'react'
 const WorkbenchText = () => {
   return (
     <>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Workbench:SCAN@-53&display=swap" rel="stylesheet" />
-      </Head>
       <motion.h2
         className="workbench-text hover:underline"
         style={{
@@ -28,7 +22,9 @@ const WorkbenchText = () => {
       >
         More
       </motion.h2>
-      <style jsx global>{`
+      <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Workbench:SCAN@-53&display=swap');
+
         .workbench-text {
           font-family: "Workbench", system-ui;
           font-optical-sizing: auto;
