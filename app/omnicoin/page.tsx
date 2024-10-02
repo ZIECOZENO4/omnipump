@@ -10,9 +10,16 @@ export default function Component() {
 
   return (
     <div className="min-h-screen  text-white p-4 md:px-[5vw] px-4">
+    <style jsx global>{`
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #4ae436 !important;
+    }
+  `}</style>
       <main className="flex space-x-4">
         <div className="w-2/3 space-y-4">
-          <Card className="bg-black p-4">
+          <Card className="border-slate-600  bg-black p-4">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center">
                 <ChevronLeft className="mr-2" />
@@ -48,7 +55,7 @@ export default function Component() {
               </span>
             </div>
           </Card>
-          <div className="flex space-x-8 text-xl mb-4 mt-6">
+          <div className="flex space-x-8 text-xl mb-4 mt-6 md:mt-10">
             <button
               className={`${
                 activeTab === "comments"
@@ -69,10 +76,11 @@ export default function Component() {
             >
               Trades
             </button>
+          <hr />
           </div>
           {activeTab === "comments" ? (
             <>
-              <Card className="bg-black p-4 flex flex-col items-center justify-center h-48">
+              <Card className="bg-black border-slate-600  p-4 flex flex-col items-center justify-center h-48">
                 <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
                   !
                 </div>
@@ -113,10 +121,13 @@ export default function Component() {
               <input
                 type="text"
                 placeholder="Enter amount"
-                className="flex-grow bg-black p-2 rounded-l"
+                className="flex-grow bg-black border border-gray-700 p-2 rounded-xl"
               />
-              <select aria-label="usd" className="bg-black p-2 rounded-r">
+              <select aria-label="USD" className="bg-black border border-gray-700 p-2 rounded-xl">
                 <option>USD</option>
+                <option>ETH</option>
+                <option>BTC</option>
+                <option>SOL</option>
               </select>
             </div>
             <div className="flex space-x-2 mb-4">
@@ -134,7 +145,7 @@ export default function Component() {
               Connect Wallet
             </Button>
           </Card>
-          <Card className="bg-gray-900 text-white p-4">
+          <Card className="bg-gray-900 border-slate-600  text-white p-4">
             <div className="flex items-center space-x-4 mb-4">
               <div className="relative w-12 h-12">
                 <div className="absolute flex flex-row justify-between inset-0 bg-purple-600 rounded-full">

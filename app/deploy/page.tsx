@@ -30,7 +30,7 @@ export default function Component() {
 
       <main className="max-w-3xl mx-auto ">
         <div className="space-y-6">
-          <div className="flex flex-col w-full gap-4 md:flex-row md:gap-6">
+          <div className="flex flex-col w-full gap-4 md:hidden">
             <div>
               <label className="block mb-2">Name</label>
               <input
@@ -48,7 +48,26 @@ export default function Component() {
               />
             </div>
           </div>
-
+          <div className="md:flex hidden space-x-4">
+            <div className="flex-1">
+              <label className="block mb-2">Name</label>
+              <input
+                type="text"
+                placeholder="Token name"
+                className="w-full bg-black rounded p-2 border border-gray-700"
+          
+              />
+            </div>
+            <div className="flex-1">
+              <label className="block mb-2">Ticker</label>
+              <input
+                 type="text"
+                 placeholder="Token ticker"
+                className="w-full bg-black rounded p-2 border border-gray-700"
+          
+              />
+            </div>
+          </div>
           <div>
             <label className="block mb-2">Description</label>
             <textarea
