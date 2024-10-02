@@ -3,9 +3,9 @@
 import { motion } from "framer-motion"
 
 const blockchains = [
-  { name: "Arbitrum", color: "bg-gradient-to-r from-indigo-600 to-blue-500 border border-blue-600", logo: "/arbitrum-logo.svg", recommended: true },
-  { name: "Ethereum", color: "bg-gradient-to-r from-indigo-500 to-neutral-700 border border-blue-800", logo: "/ethereum-logo.svg" },
-  { name: "Optimism", color: "bg-gradient-to-r from-red-500 to-orange-500 border border-red-500", logo: "/optimism-logo.svg" },
+  { name: "Arbitrum", color: "bg-gradient-to-r from-indigo-600 to-blue-500 border border-blue-600", logo: "/images/arbi.png", recommended: true },
+  { name: "Ethereum", color: "bg-gradient-to-r from-indigo-500 to-neutral-700 border border-blue-800", logo: "/images/eth.png" },
+  { name: "Optimism", color: "bg-gradient-to-r from-red-500 to-orange-500 border border-red-500", logo: "/images/opti.png" },
 ]
 
 export default function Component() {

@@ -49,7 +49,7 @@ const MdNavBar = () => {
       setIsNotificationOpen(!isNotificationOpen);
     };
   return (
-    <div className='md:bg-[#17171A] hidden md:text-white md:h-20 md:flex md:gap-[100px] w-full md:p-[20px] md:sticky md:top-0 md:z-50 md:fixed'>
+    <div className='bg-black shadow-2xl flex-row justify-between text-white md:h-20 flex md:gap-[100px] w-full md:p-[20px] sticky top-0 md:z-50 fixed'>
    <Link href="/" className="flex flex-row ">
             <motion.svg
               width="40"
@@ -108,9 +108,11 @@ const MdNavBar = () => {
             ))}
      
         </nav>
-        <div className="flex items-center justify-end ml-4">
+       
+      </div>
+      <div className="flex items-center justify-end ml-4">
         <div className="md:w-auto hidden text-white rounded-md sm:flex w-12">
-              <ConnectWallet />
+              <CubicButton />
             </div>
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -134,7 +136,6 @@ const MdNavBar = () => {
               </Badge>
             </motion.div>
         </div>
-      </div>
       <AnimatePresence>
         {isNotificationOpen && (
           <>
