@@ -49,7 +49,7 @@ const MdNavBar = () => {
       setIsNotificationOpen(!isNotificationOpen);
     };
   return (
-    <div className='bg-black shadow-2xl bg-opacity-70 flex-row justify-between text-white h-20 flex md:gap-[80px] w-full md:p-[20px] md:px-[30px] px-[20px] sticky top-0 z-50 fixed'>
+    <div className='bg-black shadow-2xl bg-opacity-70 flex-row justify-between text-white h-20 flex md:gap-[80px] w-full p-[20px] md:px-[30px] px-[20px] sticky top-0 z-50 fixed'>
    <Link href="/" className="flex flex-row ">
             <motion.svg
               width="40"

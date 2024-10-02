@@ -8,7 +8,7 @@ export default function Component() {
   const [activeTab, setActiveTab] = useState('comments')
 
   return (
-    <div className="min-h-screen  text-white p-4">
+    <div className="min-h-screen  text-white p-4 md:px-10 px-4">
       <main className="flex space-x-4">
         <div className="w-2/3 space-y-4">
           <Card className="bg-black p-4">
@@ -41,7 +41,7 @@ export default function Component() {
               <div className="text-gray-400">Token Price</div>
               <div className="text-xl">0.000010 ETH</div>
             </div>
-            <div className="bg-gray-800 h-64 flex items-center justify-center">
+            <div className="bg-black h-64 flex items-center justify-center">
               <span className="text-gray-400">📈 TradingView Chart Placeholder</span>
             </div>
           </Card>
@@ -61,7 +61,7 @@ export default function Component() {
 </div>
           {activeTab === 'comments' ? (
             <>
-              <Card className="bg-gray-800 p-4 flex flex-col items-center justify-center h-48">
+              <Card className="bg-black p-4 flex flex-col items-center justify-center h-48">
                 <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-4">!</div>
                 <p className="text-gray-400">No comments yet Be the first to comment!</p>
               </Card>
@@ -69,21 +69,22 @@ export default function Component() {
               <Button className="w-full bg-green-500 hover:bg-green-600">+ Add Comment</Button>
             </>
           ) : (
-            <Card className="bg-gray-800 p-4 flex flex-col items-center justify-center h-48">
+            <Card className="bg-black p-4 flex flex-col items-center justify-center h-48">
               <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-4">!</div>
               <p className="text-gray-400">No trades yet</p>
             </Card>
           )}
         </div>
         <div className="w-1/3 space-y-4">
-          <Card className="bg-gray-800 p-4">
-            <div className="flex justify-between mb-4">
+          <Card className="bg-black border border-slate-600 mt-2 p-4">
+            <p className="py-1">1 $1 is 0.000010 ETH ($0.023)</p>
+            <div className="flex justify-between mb-8 p-2">
               <Button className="bg-green-500 hover:bg-green-600 flex-grow mr-2">Buy</Button>
               <Button variant="bordered" className="flex-grow ml-2">Sell</Button>
             </div>
-            <div className="flex justify-between text-sm mb-4">
+            <div className="flex text-xs justify-between  mb-8">
               <span>Total Supply:10001</span>
-              <span className="text-purple-500">Set slippage: 1%</span>
+              <span className="text-purple-700">Set slippage: 1%</span>
             </div>
             <div className="flex mb-4">
               <input type="text" placeholder="Enter amount" className="flex-grow bg-gray-700 p-2 rounded-l" />
@@ -92,14 +93,14 @@ export default function Component() {
               </select>
             </div>
             <div className="flex space-x-2 mb-4">
-              <Chip radius="sm" className="flex-grow">1 ETH</Chip>
-              <Chip radius="sm" className="flex-grow">5 ETH</Chip>
-              <Chip radius="sm" className="flex-grow">10 ETH</Chip>
+              <Chip radius="sm" className="flex-grow p-2">1 ETH</Chip>
+              <Chip radius="sm" className="flex-grow p-2">5 ETH</Chip>
+              <Chip radius="sm" className="flex-grow p-2">10 ETH</Chip>
           
             </div>
             <Button className="w-full bg-green-500 hover:bg-green-600">Connect Wallet</Button>
           </Card>
-          <Card className="bg-gray-800 p-4">
+          <Card className="bg-black p-4">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-purple-600 rounded-full mr-4"></div>
               <div>
