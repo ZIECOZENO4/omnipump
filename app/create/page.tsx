@@ -1,9 +1,9 @@
 import React from 'react'
-import CreateComponent from '../../components/Create'
 
+import Component from './content'
 const CreatePage = () => {
   return (
-    <div><CreateComponent /></div>
+    <div><Component /></div>
   )
 }
 

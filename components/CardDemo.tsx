@@ -7,7 +7,7 @@ import './WorkbenchFontTest.css';
 
 const Card = () => (
   <motion.div
-  className='mx-2'
+  className='mx-8'
     style={{
       width: '332px',
       height: '150px',
