@@ -385,7 +385,7 @@ const Card = () => (
 
 const CardDemo = () => {
   return (
-    <div className="w-full -ml-8rem px-4 md:mx-10 mx-auto">
+    <div className="w-full -ml-[100px] px-4 md:mx-10 mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {[...Array(50)].map((_, index) => (
           <Link href='/omnicoin' key={index}>

@@ -49,7 +49,7 @@ export default function Component() {
               <div className="text-gray-400">Token Price</div>
               <div className="text-xl">0.000010 ETH</div>
             </div>
-            <div className="bg-slate-800 h-64 flex items-center justify-center">
+            <div className="bg-slate-800 h-64 flex items-center justify-center rounded-md">
               <span className="text-gray-400">
                 📈 TradingView Chart Placeholder
               </span>
