@@ -1,4 +1,5 @@
-import { useState } from 'react'
+"use client";
+import React, { useState, useEffect } from "react";
 import { Bell, ChevronDown, Upload } from 'lucide-react'
 
 export default function Component() {
