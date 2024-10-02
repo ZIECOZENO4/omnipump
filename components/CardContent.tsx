@@ -26,11 +26,23 @@ export function CardContent() {
       <div className="text-slate-100 text-xs my-2 relative z-20">
         Omini Pump is the best decentralised platform, where you Create crypto token and Coin also buy and sell of any Crypto Currency
         <p className="text-slate-500 text-md mt-2">Transparent and Safe</p>
-        <ul className="list-none text-slate-100 text-xs">
-        <li>Support Full Wallet Activity</li>
-    <li>Create Tokens and Coins</li>
-    <li>Fully Audited and Unruggable</li>
-    <li>Buy and Sell of Coins and Tokens</li>
+        <ul className="list-none text-slate-100 text-xs space-y-2 mt-2">
+          <li className="flex items-start">
+            <CheckIcon />
+            <span className="ml-2">Support Full Wallet Activity</span>
+          </li>
+          <li className="flex items-start">
+            <CheckIcon />
+            <span className="ml-2">Create Tokens and Coins</span>
+          </li>
+          <li className="flex items-start">
+            <CheckIcon />
+            <span className="ml-2">Fully Audited and Unruggable</span>
+          </li>
+          <li className="flex items-start">
+            <CheckIcon />
+            <span className="ml-2">Buy and Sell of Coins and Tokens</span>
+          </li>
         </ul>
       </div>
       
