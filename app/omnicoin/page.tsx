@@ -9,7 +9,7 @@ export default function Component() {
   const [activeTab, setActiveTab] = useState("comments");
 
   return (
-    <div className="min-h-screen  text-white p-4 md:px-10 px-4">
+    <div className="min-h-screen  text-white p-4 md:px-30 px-4">
       <main className="flex space-x-4">
         <div className="w-2/3 space-y-4">
           <Card className="bg-black p-4">
@@ -73,7 +73,7 @@ export default function Component() {
           {activeTab === "comments" ? (
             <>
               <Card className="bg-black p-4 flex flex-col items-center justify-center h-48">
-                <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
                   !
                 </div>
                 <p className="text-gray-400">
@@ -87,7 +87,7 @@ export default function Component() {
             </>
           ) : (
             <Card className="bg-black p-4 flex flex-col items-center justify-center h-48">
-              <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
                 !
               </div>
               <p className="text-gray-400">No trades yet</p>
@@ -96,7 +96,7 @@ export default function Component() {
         </div>
         <div className="w-1/3 space-y-4">
           <Card className="bg-black border border-slate-600 mt-2 p-4">
-            <p className="py-1">1 $1 is 0.000010 ETH ($0.023)</p>
+            <p className="py-1 text-xs ">1 $1 is 0.000010 ETH ($0.023)</p>
             <div className="flex justify-between mb-8 p-2">
               <Button className="bg-green-500 hover:bg-green-600 flex-grow mr-2">
                 Buy
@@ -113,9 +113,9 @@ export default function Component() {
               <input
                 type="text"
                 placeholder="Enter amount"
-                className="flex-grow bg-gray-700 p-2 rounded-l"
+                className="flex-grow bg-black p-2 rounded-l"
               />
-              <select aria-label="usd" className="bg-gray-700 p-2 rounded-r">
+              <select aria-label="usd" className="bg-black p-2 rounded-r">
                 <option>USD</option>
               </select>
             </div>
@@ -137,7 +137,7 @@ export default function Component() {
           <Card className="bg-gray-900 text-white p-4">
             <div className="flex items-center space-x-4 mb-4">
               <div className="relative w-12 h-12">
-                <div className="absolute inset-0 bg-purple-600 rounded-full"></div>
+                <div className="absolute flex flex-row justify-between inset-0 bg-purple-600 rounded-full">
                 <Image
                   src="/placeholder.svg?height=48&width=48"
                   alt="Token logo"
@@ -145,12 +145,14 @@ export default function Component() {
                   height={48}
                   className="relative z-10 rounded-full"
                 />
-              </div>
-              <div className="mt-4 text-right text-xs text-gray-400">
+                </div>
+                <div className="mt-4 text-right text-xs text-gray-400">
                 <Chip radius="md" className="p-2">
                   MCAP: $24.28000
                 </Chip>
               </div>
+              </div>
+           
             </div>
             <div className="my-4">
               <h2 className="text-2xl font-bold">hellohell</h2>
@@ -187,7 +189,7 @@ export default function Component() {
             </div>
           </Card>
           <Card className="bg-black border border-slate-400 text-center p-4">
-            <h2 className="text-xl text-white text-center mb-4">
+            <h2 className="text-xl md:text-3xl text-white text-center mb-4">
               Holders Distribution
             </h2>
             <p className="text-xs my-8">No Current Distribution</p>

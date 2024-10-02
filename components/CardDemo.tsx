@@ -384,13 +384,12 @@ const Card = () => (
 
 const CardDemo = () => {
   return (
-    <div className="container mx-auto my-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0 max-w-screen-xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {[...Array(50)].map((_, index) => (
-          <Link href='/omnicoin' >
-          <Card key={index} />
+          <Link href='/omnicoin' key={index}>
+            <Card />
           </Link>
-          
         ))}
       </div>
     </div>

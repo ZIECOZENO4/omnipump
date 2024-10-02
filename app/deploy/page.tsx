@@ -14,12 +14,12 @@ export default function Component() {
   useEffect(() => {
     if (liquidity > 0) {
       const price = ethAmount / (liquidity / 1000);
-      setInitialPrice(Number(price.toFixed(8)));
+      setInitialPrice(Number(price.toFixed(0)));
     }
   }, [ethAmount, liquidity]);
 
   return (
-    <div className="min-h-screen mt-8 bg-black text-gray-300 p-4">
+    <div className="min-h-screen mt-8  text-gray-300 p-4">
       <style jsx global>{`
         input:focus,
         textarea:focus {
@@ -36,7 +36,7 @@ export default function Component() {
               <input
                 type="text"
                 placeholder="Token name"
-                className="w-full bg-black rounded p-2 border border-gray-700"
+                className="w-full md:w-1/2 bg-black rounded p-2 border border-gray-700"
               />
             </div>
             <div>
@@ -44,7 +44,7 @@ export default function Component() {
               <input
                 type="text"
                 placeholder="Token ticker"
-                className="w-full bg-black rounded p-2 border border-gray-700"
+                className="w-full md:w-1/2 bg-black rounded p-2 border border-gray-700"
               />
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function Component() {
             <label className="block mb-2">Description</label>
             <textarea
               placeholder="Token description"
-              className="w-full bg-black rounded p-2 border border-gray-700 h-24"
+              className="w-full bg-black rounded p-2 border border-gray-700 h-24 md:h-32"
             ></textarea>
           </div>
           <div>
@@ -93,7 +93,7 @@ export default function Component() {
               }
             />
           </div>
-          <div className="bg-black rounded p-4 flex flex-col md:flex-row md:justify-between gap-4">
+          <div className="bg-black border border-gray-700 rounded p-4 flex flex-col md:flex-row md:justify-between gap-4">
             <div className="md:w-1/2 w-full flex flex-col">
               <h3 className="font-bold mb-2">Liquidity Information</h3>
               <div className="mb-2">
@@ -117,7 +117,7 @@ export default function Component() {
             </div>
           </div>
           <button
-            className="w-full bg-black text-white p-2 rounded flex items-center justify-center hover:bg-purple-700 transition-colors duration-300"
+            className="w-full bg-black border border-gray-700 text-white p-2 rounded flex items-center justify-center hover:bg-purple-700 transition-colors duration-300"
             onClick={() => setShowMore(!showMore)}
           >
             {showMore ? (

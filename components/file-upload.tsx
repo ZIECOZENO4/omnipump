@@ -56,7 +56,7 @@ export const FileUpload = ({
       <motion.div
         onClick={handleClick}
         whileHover="animate"
-        className="p-10 group/file block rounded-lg cursor-pointer w-full relative overflow-hidden"
+        className="p-2 group/file block rounded-lg cursor-pointer w-full relative overflow-hidden"
       >
         <input
           ref={fileInputRef}
@@ -67,7 +67,7 @@ export const FileUpload = ({
           aria-label='number'
         />
         <div className="flex flex-col items-center justify-center w-full">
-          <div className="relative w-full mt-10 mx-auto">
+          <div className="relative w-full  mx-auto">
             {files.length > 0 &&
               files.map((file, idx) => (
                 <motion.div
