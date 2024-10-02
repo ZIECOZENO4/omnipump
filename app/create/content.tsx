@@ -12,7 +12,7 @@ export default function Component() {
   return (
     <div className="min-h-screen bg-black text-white p-4 sm:p-8">
       <h1 className="text-2xl md:text-3xl sm:text-4xl text-center mb-8 sm:mb-12">Select a Blockchain</h1>
-      <div className="flex flex-col sm:flex-row justify-center items-center sm:items-stretch space-y-6 sm:space-y-0 sm:space-x-4 md:space-x-6 lg:space-x-8 max-w-7xl mx-auto">
+      <div className="flex flex-col sm:flex-row justify-center items-center sm:items-stretch space-y-6 sm:space-y-0 sm:space-x-4 md:space-x-6 lg:space-x-8 max-w-7xl h-[60vh] mx-auto">
         {blockchains.map((blockchain) => (
           <Link href='/deploy' key={blockchain.name} className="w-full sm:w-1/3 max-w-sm">
             <motion.div

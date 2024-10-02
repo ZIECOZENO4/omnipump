@@ -9,7 +9,7 @@ export default function Component() {
   const [activeTab, setActiveTab] = useState("comments");
 
   return (
-    <div className="min-h-screen  text-white p-4 md:px-30 px-4">
+    <div className="min-h-screen  text-white p-4 md:px-[5vw] px-4">
       <main className="flex space-x-4">
         <div className="w-2/3 space-y-4">
           <Card className="bg-black p-4">

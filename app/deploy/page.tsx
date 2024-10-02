@@ -30,7 +30,7 @@ export default function Component() {
 
       <main className="max-w-3xl mx-auto ">
         <div className="space-y-6">
-          <div className="flex flex-col md:flex-row md:gap-6">
+          <div className="flex flex-col w-full gap-4 md:flex-row md:gap-6">
             <div>
               <label className="block mb-2">Name</label>
               <input
