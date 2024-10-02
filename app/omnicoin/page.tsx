@@ -19,7 +19,7 @@ export default function Component() {
   `}</style>
       <main className="flex space-x-4">
         <div className="w-2/3 space-y-4">
-          <Card className="border-slate-600  bg-black p-4">
+          <Card className=" border border-slate-600  bg-black p-4">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center">
                 <ChevronLeft className="mr-2" />
@@ -88,13 +88,13 @@ export default function Component() {
                   No comments yet Be the first to comment!
                 </p>
               </Card>
-              <div className="text-center text-green-500 mb-4">Load more</div>
+              <div className="text-center text-green-500 mb-4  border border-slate-600">Load more</div>
               <Button className="w-full bg-green-500 hover:bg-green-600">
                 + Add Comment
               </Button>
             </>
           ) : (
-            <Card className="bg-black p-4 flex flex-col items-center justify-center h-48">
+            <Card className="bg-black p-4 flex   border border-slate-600 flex-col items-center justify-center h-48">
               <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
                 !
               </div>
@@ -117,7 +117,7 @@ export default function Component() {
               <span>Total Supply:10001</span>
               <span className="text-purple-700">Set slippage: 1%</span>
             </div>
-            <div className="flex mb-4">
+            <div className="flex gap-4 mb-4">
               <input
                 type="text"
                 placeholder="Enter amount"
@@ -145,10 +145,11 @@ export default function Component() {
               Connect Wallet
             </Button>
           </Card>
-          <Card className="bg-gray-900 border-slate-600  text-white p-4">
+
+          <Card className="bg-black border border-slate-600  text-white p-4">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="relative w-12 h-12">
-                <div className="absolute flex flex-row justify-between inset-0 bg-purple-600 rounded-full">
+              <div className="relative flex flex-row justify-between w-12 h-12">
+                <div className="absolute  inset-0 bg-purple-600 rounded-full">
                 <Image
                   src="/placeholder.svg?height=48&width=48"
                   alt="Token logo"
@@ -166,7 +167,7 @@ export default function Component() {
            
             </div>
             <div className="my-4">
-              <h2 className="text-2xl font-bold">hellohell</h2>
+              <h2 className="text-2xl ">hellohell</h2>
               <p className="text-slate-500 text-sm">
                 HelloHell Is Here...{" "}
                 <span className="text-green-400"> More ▼</span>
@@ -199,6 +200,8 @@ export default function Component() {
               </div>
             </div>
           </Card>
+   
+       
           <Card className="bg-black border border-slate-400 text-center p-4">
             <h2 className="text-xl md:text-3xl text-white text-center mb-4">
               Holders Distribution
