@@ -209,6 +209,7 @@ const Card = () => (
     className='w-full' // Changed from mx-8 to w-full
     style={{
       height: '150px',
+      width: '380px',
       background: '#0A0909',
       borderRadius: '8px',
       overflow: 'hidden',
@@ -384,7 +385,7 @@ const Card = () => (
 
 const CardDemo = () => {
   return (
-    <div className="w-full px-4 md:px-24 mx-auto">
+    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0 max-w-screen-xl mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         {[...Array(50)].map((_, index) => (
           <Link href='/omnicoin' key={index}>
