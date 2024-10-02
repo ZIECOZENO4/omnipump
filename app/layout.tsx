@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { Workbench } from 'next/font/google';
 import "./globals.css";
-import NavBar from "../components/Navbar";
+import  MdNavBar from "../components/MdNavBar";
 import { Providers } from "./providers";
 import { Suspense } from 'react';
 import Loading from './loading';
@@ -32,7 +32,7 @@ export default function RootLayout({
         <div className="relative min-h-screen">
           <FirstAnimation />
           <div className="relative z-10">
-          <NavBar />
+          <MdNavBar  />
             <Suspense fallback={<Loading />}>
               {children}
             </Suspense>

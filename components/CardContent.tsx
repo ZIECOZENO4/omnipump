@@ -5,7 +5,7 @@ import { Avatar } from "@nextui-org/react";
 
 export function CardContent() {
   return (
-    <CardSpotlight className="h-auto md:w-96 w-[90vw] flex flex-col items-center justify-center">
+    <CardSpotlight className="h-auto w-full flex flex-col items-center justify-center">
       <motion.div 
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -27,10 +27,10 @@ export function CardContent() {
         Omini Pump is the best decentralised platform, where you Create crypto token and Coin also buy and sell of any Crypto Currency
         <p className="text-slate-500 text-md mt-2">Transparent and Safe</p>
         <ul className="list-none text-slate-100 text-xs">
-          <AnimatedStep title="Support Full Wallet Activity" delay={0.1} />
-          <AnimatedStep title="Create Tokens and Coins" delay={0.2} />
-          <AnimatedStep title="Fully Audited and Unruggable" delay={0.3} />
-          <AnimatedStep title="Buy and Sell of Coins and Tokens" delay={0.4} />
+        <li>Support Full Wallet Activity</li>
+    <li>Create Tokens and Coins</li>
+    <li>Fully Audited and Unruggable</li>
+    <li>Buy and Sell of Coins and Tokens</li>
         </ul>
       </div>
       
@@ -40,20 +40,6 @@ export function CardContent() {
     </CardSpotlight>
   );
 }
-
-const AnimatedStep = ({ title, delay }: { title: string; delay: number }) => {
-  return (
-    <motion.li 
-      className="flex gap-2 items-start"
-      initial={{ x: -20, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ delay, duration: 0.5 }}
-    >
-      <CheckIcon />
-      <p className="text-white">{title}</p>
-    </motion.li>
-  );
-};
 
 const CheckIcon = () => {
   return (

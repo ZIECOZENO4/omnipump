@@ -304,14 +304,10 @@ export default function ComponentCoin() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
       className="flex flex-col my-8 gap-4 px-4 md:px-8"
     >
       <motion.div
         className="flex flex-row justify-between align-middle gap-4"
-        whileHover={{ scale: 1.02 }}
       >
         <Tabs key="trending" variant="bordered" aria-label="Tabs variants">
           <Tab key="Trending" title="Trending" />
@@ -334,7 +330,7 @@ export default function ComponentCoin() {
         </div>
       <motion.div
         className="flex flex-row gap-8 items-center"
-        whileHover={{ scale: 1.02 }}
+      
       >
         <div className="md:flex-row justify-between hidden md:flex align-middle ">
           <Switch defaultSelected color="default" className="md:text-xl">
