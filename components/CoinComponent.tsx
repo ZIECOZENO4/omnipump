@@ -445,7 +445,10 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
           </Select>
         </div>
       </motion.div>
-<CardDemo />
+      <div className='w-full'>
+      <CardDemo />
+      </div>
+
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}

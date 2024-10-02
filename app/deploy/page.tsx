@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Upload, ChevronUp, ChevronDown } from 'lucide-react'
 import { Progress } from "@nextui-org/react";
-import { FileUpload } from './FileUpload'; // Make sure this import is correct
+import { FileUpload } from './file-upload'; // Make sure this import is correct
 
 export default function Component() {
   const [showMore, setShowMore] = useState(false);
