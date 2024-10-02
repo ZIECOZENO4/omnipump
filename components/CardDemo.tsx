@@ -206,7 +206,7 @@ import Link from 'next/link';
 
 const Card = () => (
   <motion.div
-    className='w-full' // Changed from mx-8 to w-full
+    className='w-full -ml-[100px] justify-start items-start' // Changed from mx-8 to w-full
     style={{
       height: '150px',
       width: '350px',
