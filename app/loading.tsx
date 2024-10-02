@@ -5,7 +5,6 @@ import { CirclesWithBar } from 'react-loader-spinner'
 export default function Loading() {
     return (
       <div className="flex justify-center items-center h-screen">
-        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900">
         <CirclesWithBar
   height="100"
   width="100"
@@ -19,6 +18,5 @@ export default function Loading() {
   visible={true}
   />
         </div>
-      </div>
     );
 }

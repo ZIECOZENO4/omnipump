@@ -49,7 +49,7 @@ export default function Component() {
               <div className="text-gray-400">Token Price</div>
               <div className="text-xl">0.000010 ETH</div>
             </div>
-            <div className="bg-black h-64 flex items-center justify-center">
+            <div className="bg-slate-800 h-64 flex items-center justify-center">
               <span className="text-gray-400">
                 📈 TradingView Chart Placeholder
               </span>
@@ -88,7 +88,7 @@ export default function Component() {
                   No comments yet Be the first to comment!
                 </p>
               </Card>
-              <div className="text-center text-green-500 mb-4  border border-slate-600">Load more</div>
+              <div className="text-center text-green-500 mb-4 py-2  border border-slate-600">Load more</div>
               <Button className="w-full bg-green-500 hover:bg-green-600">
                 + Add Comment
               </Button>
@@ -148,7 +148,7 @@ export default function Component() {
 
           <Card className="bg-black border border-slate-600  text-white p-4">
             <div className="flex items-center space-x-4 mb-4">
-              <div className=" flex flex-row justify-between w-12 h-12">
+              <div className=" flex flex-row justify-between w-full h-auto">
                 <div className="  inset-0 bg-purple-600 rounded-full">
                 <Image
                   src="/placeholder.svg?height=48&width=48"
