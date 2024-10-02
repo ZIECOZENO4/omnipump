@@ -25,7 +25,7 @@ const styles = {
   badge: `rounded-full bg-blue-600 h-1 w-1 absolute bottom-5 right-0 top-1 ring-4`,
   navItem: `relative mr-1 cursor-pointer hover:opacity-60`,
   nav: `flex justify-center items-center gap-[20px]`,
-  headerWrapper: `flex justify-between h-full max-w-screen-xl mx-auto px-4`,
+  headerWrapper: `md:flex md:justify-between h-full max-w-screen-xl mx-auto px-4 hidden`,
   inputContainer: `flex items-center justify-center p-2 rounded `,
   input: `bg-transparent outline-none text-white w-70 ml-3`,
   cursorPointer: `mr-5 cursor-pointer`,
@@ -49,7 +49,7 @@ const MdNavBar = () => {
       setIsNotificationOpen(!isNotificationOpen);
     };
   return (
-    <div className='bg-black shadow-2xl flex-row justify-between text-white md:h-20 flex md:gap-[100px] w-full md:p-[20px] sticky top-0 md:z-50 fixed'>
+    <div className='bg-black shadow-2xl bg-opacity-70 flex-row justify-between text-white h-20 flex md:gap-[80px] w-full md:p-[20px] md:px-[30px] px-[20px] sticky top-0 z-50 fixed'>
    <Link href="/" className="flex flex-row ">
             <motion.svg
               width="40"

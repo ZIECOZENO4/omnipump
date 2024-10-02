@@ -202,6 +202,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import './WorkbenchFontTest.css'; 
+import Link from 'next/link';
 
 const Card = () => (
   <motion.div
@@ -386,7 +387,10 @@ const CardDemo = () => {
     <div className="container mx-auto my-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {[...Array(50)].map((_, index) => (
+          <Link href='/omnicoin' >
           <Card key={index} />
+          </Link>
+          
         ))}
       </div>
     </div>
