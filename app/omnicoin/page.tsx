@@ -80,7 +80,7 @@ export default function Component() {
           </div>
           {activeTab === "comments" ? (
             <>
-              <Card className="bg-black border-slate-600  p-4 flex flex-col items-center justify-center h-48">
+              <Card className="bg-black border border-slate-600  p-4 flex flex-col items-center justify-center h-48">
                 <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
                   !
                 </div>
@@ -148,8 +148,8 @@ export default function Component() {
 
           <Card className="bg-black border border-slate-600  text-white p-4">
             <div className="flex items-center space-x-4 mb-4">
-              <div className="relative flex flex-row justify-between w-12 h-12">
-                <div className="absolute  inset-0 bg-purple-600 rounded-full">
+              <div className=" flex flex-row justify-between w-12 h-12">
+                <div className="  inset-0 bg-purple-600 rounded-full">
                 <Image
                   src="/placeholder.svg?height=48&width=48"
                   alt="Token logo"

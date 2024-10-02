@@ -448,7 +448,6 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
       <div className='w-full'>
       <CardDemo />
       </div>
-hello you
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
