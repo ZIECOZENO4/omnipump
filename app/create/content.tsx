@@ -91,7 +91,7 @@ function TiltCard({ blockchain }: { blockchain: typeof blockchains[0] }) {
 
   return (
     <motion.div
-      className={`${blockchain.color} rounded-3xl p-4 sm:p-6 md:h-full h-[70vh] flex flex-col items-center justify-center relative overflow-hidden`}
+      className={`${blockchain.color} rounded-3xl p-4 mt-4 sm:p-6 md:h-[50vh] h-[60vh] flex flex-col items-center justify-center relative overflow-hidden`}
       style={{
         rotateX,
         rotateY,

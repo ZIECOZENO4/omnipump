@@ -448,7 +448,6 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
       </motion.div>
       <div className='w-full'>
       <CardDemo />
-  <CubicButton />
       </div>
       <Modal
         isOpen={isModalOpen}

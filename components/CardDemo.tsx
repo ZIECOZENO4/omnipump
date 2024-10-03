@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const Card = () => (
   <motion.div
-  className='mx-8 -ml-[100px]'
+  className='mx-8 md:-ml-[110px] -ml-80 md:mr-20'
     style={{
       width: '350px',
       height: '150px',
