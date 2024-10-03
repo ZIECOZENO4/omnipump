@@ -453,6 +453,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
       <div className='md:hidden'>
       <CardGrid />
       </div>
+      <Card />
       <div className="container sm:flex hidden mx-auto px-2 my-4">
       <div className=" hidden md:flex-wrap md:grid md:grid-cols-4 -mx-2 ">
         {[...Array(50)].map((_, index) => (
