@@ -24,6 +24,7 @@ import {
 } from "react-icons/si";
 import CardDemo from "./CardDemo";
 import WorkbenchFontTest from "./more";
+import CubicButton from "./CubicButton";
 const chainData = [
   { key: "all", name: "All Chains" },
   {
@@ -447,7 +448,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
       </motion.div>
       <div className='w-full'>
       <CardDemo />
-  
+  <CubicButton />
       </div>
       <Modal
         isOpen={isModalOpen}

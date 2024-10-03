@@ -19,8 +19,8 @@ export default function Component() {
   `}</style>
       <main className="flex space-x-4">
         <div className="w-2/3 space-y-4">
-          <Card className=" border border-slate-600  bg-black p-4">
-            <div className="flex items-center justify-between mb-4">
+        <Card className=" border border-slate-600  bg-black p-4">
+        <div className="flex items-center justify-between mb-4">
               <div className="flex items-center">
                 <ChevronLeft className="mr-2" />
                 <div className="w-8 h-8 bg-purple-600 rounded-full mr-2"></div>
@@ -31,6 +31,9 @@ export default function Component() {
                 <span className="text-red-500">🔥</span>
               </div>
             </div>
+            </Card>
+          <Card className=" border border-slate-600  bg-black p-4">
+           
             <div className="grid grid-cols-3 gap-4 mb-4">
               <div>
                 <div className="text-gray-400">Market cap</div>
@@ -44,11 +47,12 @@ export default function Component() {
                 <div className="text-gray-400">Token Reserve</div>
                 <div className="text-xl">1000.000000</div>
               </div>
+              <div>
+                <div className="text-gray-400">Token Price</div>
+                <div className="text-xl">0.000010 ETH</div>
+              </div>
             </div>
-            <div className="text-right mb-4">
-              <div className="text-gray-400">Token Price</div>
-              <div className="text-xl">0.000010 ETH</div>
-            </div>
+          
             <div className="bg-slate-800 h-64 flex items-center justify-center rounded-md">
               <span className="text-gray-400">
                 📈 TradingView Chart Placeholder
