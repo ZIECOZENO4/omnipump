@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const Card = () => (
   <motion.div
-  className='mx-8'
+  className='mx-8 -ml-[100px]'
     style={{
       width: '350px',
       height: '150px',
@@ -20,7 +20,7 @@ const Card = () => (
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
   >
-    <div className="relative p-3 text-white">
+    <div className=" p-3 text-white">
       <div className="flex justify-between items-start">
         <div className="w-[100px] h-[100px] my-[10px] mx-[10px] bg-[#D9D9D966]" />
         

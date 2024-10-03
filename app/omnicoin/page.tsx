@@ -34,7 +34,7 @@ export default function Component() {
             </Card>
           <Card className=" border border-slate-600  bg-black p-4">
            
-            <div className="grid grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-4 gap-4 mb-4">
               <div>
                 <div className="text-gray-400">Market cap</div>
                 <div className="text-xl">$24.53</div>
