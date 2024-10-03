@@ -196,13 +196,13 @@ export default function DesktopCoin() {
             <div className="flex items-center space-x-4 mb-4">
               <div className=" flex flex-row justify-between w-full h-auto">
                 <div className=" h-14 w-14 inset-0 bg-purple-600 rounded-full">
-                <Image
+                {/* <Image
                   src="/placeholder.svg?height=48&width=48"
                   alt="Token logo"
                   width={48}
                   height={48}
                   className="relative z-10 rounded-full"
-                />
+                /> */}
                 </div>
                 <div className="mt-4 text-right text-xs text-gray-400">
                 <Chip radius="md" className="p-2">

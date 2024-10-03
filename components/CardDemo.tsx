@@ -189,7 +189,7 @@ const Card = () => (
 const CardDemo = () => {
   return (
     <div className="container mx-auto px-2 my-4">
-      <div className="flex flex-wrap md:grid md:grid-cols-4 -mx-2 md:pr-[80px]">
+      <div className="flex flex-wrap md:grid md:grid-cols-4 -mx-2 md:mr-[80px]">
         {[...Array(50)].map((_, index) => (
           <Link href='/omnicoin' key={index}>
             <Card />
