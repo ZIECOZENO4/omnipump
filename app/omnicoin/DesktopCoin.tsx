@@ -58,12 +58,13 @@ export default function DesktopCoin() {
         </motion.svg>
       </motion.a>
     </Link>
-                <div className="w-8 h-8 bg-purple-600 rounded-full mr-2"></div>
+                <div className="w-12 h-12 bg-purple-600 rounded-full ml-6 mr-2"></div>
                 <span>hellohell</span>
               </div>
               <div className="flex items-center">
-                <span className="mr-2">Creator: afbbff</span>
-                <span className="text-red-500">🔥</span>
+                <Chip className='p-2 flex flex-row gap-3 mx-2'>   <span className="mr-2">Creator: afbbff</span>
+                <span className="text-red-500">🔥</span></Chip>
+             
               </div>
             </div>
             </Card>
