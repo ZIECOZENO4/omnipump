@@ -4,14 +4,14 @@ import MobileCoin from './MobileCoin'
 
 const OmniCoinPage = () => {
   return (
-    <div>
-      <div className="hidden sm:flex">
-      <DesktopCoin />
+    <div className="w-full h-full">
+      <div className="hidden sm:block w-full h-full">
+        <DesktopCoin />
       </div>
-  <div className="md:hidden">
-  <MobileCoin />
-  </div>
-          </div>
+      <div className="sm:hidden w-full h-full">
+        <MobileCoin />
+      </div>
+    </div>
   )
 }
 
