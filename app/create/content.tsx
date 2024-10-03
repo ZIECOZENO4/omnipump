@@ -1,45 +1,3 @@
-// "use client"
-// import { motion } from "framer-motion"
-// import Link from 'next/link'
-
-// const blockchains = [
-//   { name: "Arbitrum", color: "bg-gradient-to-r from-indigo-600 to-blue-500 border border-blue-600", logo: "/images/arbi.png", recommended: true },
-//   { name: "Ethereum", color: "bg-gradient-to-r from-indigo-500 to-neutral-700 border border-green-600", logo: "/images/eth.png" },
-//   { name: "Optimism", color: "bg-gradient-to-r from-red-500 to-orange-500 border border-red-500", logo: "/images/opti.png" },
-// ]
-
-// export default function Component() {
-//   return (
-//     <div className="min-h-screen bg-black text-white p-4 sm:p-8">
-//       <h1 className="text-2xl md:text-3xl sm:text-4xl text-center mb-8 sm:mb-12">Select a Blockchain</h1>
-//       <div className="flex flex-col sm:flex-row justify-center items-center sm:items-stretch space-y-6 sm:space-y-0 sm:space-x-4 md:space-x-6 lg:space-x-8 max-w-7xl h-[70vh] mx-auto">
-//         {blockchains.map((blockchain) => (
-//           <Link href='/deploy' key={blockchain.name} className="w-full sm:w-1/3 px-10 max-w-sm">
-//             <motion.div
-//               className={`${blockchain.color} rounded-3xl p-4 sm:p-6 h-full flex flex-col items-center justify-center relative overflow-hidden`}
-//               whileHover={{ scale: 1.05 }}
-//               transition={{ type: "spring", stiffness: 300, damping: 10 }}
-//             >
-//               {blockchain.recommended && (
-//                 <div className="absolute top-2 right-2 bg-red-500 text-white text-xs sm:text-sm rounded-full px-2 py-1">
-//                   Recommended
-//                 </div>
-//               )}
-//               <motion.div
-//                 className="mb-4 md:mb-12 w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center"
-//                 whileHover={{ scale: 1.1 }}
-//               >
-//                 <img src={blockchain.logo} alt={`${blockchain.name} logo`} className="max-w-full max-h-full object-contain" />
-//               </motion.div>
-//               <h2 className="text-xl sm:text-2xl text-center">{blockchain.name}</h2>
-//             </motion.div>
-//           </Link>
-//         ))}
-//       </div>
-//     </div>
-//   )
-// }
-
 "use client"
 import { motion, useMotionValue, useTransform } from "framer-motion"
 import Link from 'next/link'
@@ -48,7 +6,7 @@ import { useState } from 'react'
 const blockchains = [
   { name: "Arbitrum", color: "bg-gradient-to-r from-indigo-600 to-blue-500 border border-blue-600", logo: "/images/arbi.png", recommended: true },
   { name: "Ethereum", color: "bg-gradient-to-r from-indigo-500 to-neutral-700 border border-green-600", logo: "/images/eth.png" },
-  { name: "Optimism", color: "bg-gradient-to-r from-red-500 to-orange-500 border border-red-500", logo: "/images/opti.png" },
+  { name: "Optimism", color: "bg-gradient-to-r from-amber-500 to-pink-500 border border-red-800", logo: "/images/opti.png" },
 ]
 
 export default function Component() {

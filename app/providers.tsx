@@ -10,7 +10,7 @@ const queryClient = new QueryClient()
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <QueryClientProvider client={queryClient} >
-      <NextUIProvider>
+      <NextUIProvider disableAnimation>
         <ThirdwebProvider>
         <NextThemesProvider attribute="class" defaultTheme="dark">
         {children}
