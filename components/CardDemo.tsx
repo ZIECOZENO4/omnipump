@@ -206,7 +206,7 @@ import Link from 'next/link';
 
 const Card = () => (
   <motion.div
-    className='w-full -ml-[70px] justify-start items-start' // Changed from mx-8 to w-full
+    className='w-full justify-start items-start' // Changed from mx-8 to w-full
     style={{
       height: '150px',
       width: '350px',
@@ -220,7 +220,7 @@ const Card = () => (
   >
     <div className=" p-3 text-white">
       <div className="flex justify-between items-start">
-        <div className="w-[100px] h-[100px] my-[10px] mx-[10px] bg-[#D9D9D966]" />
+        <div className="w-[100px] h-[100px] py-[10px] px-[10px] bg-[#D9D9D966]" />
         
         <div className="text-right flex flex-col p-2">
           <div className="flex flex-row justify-between align-middle">
