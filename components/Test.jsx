@@ -9,7 +9,7 @@ const Card = ({ number }) => (
 
 const CardGrid = () => {
   return (
-    <div className="hidden md:block container mx-auto px-4 my-8">
+    <div className="hidden md:block w-screen container mx-auto px-4 my-8">
       <div className="grid grid-cols-4 gap-4">
         {[...Array(10)].map((_, index) => (
           <Card key={index} number={index + 1} />
