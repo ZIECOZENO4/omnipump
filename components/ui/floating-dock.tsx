@@ -26,7 +26,7 @@ export const FloatingDock = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto flex h-16 gap-4 items-end rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
+        "mx-auto flex h-16 gap-4 items-end rounded-2xl w-full bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
         className
       )}
     >

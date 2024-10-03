@@ -144,7 +144,7 @@ const MdNavBar = () => {
               animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black z-40"
+              className="fixed inset-0 bg-black z-40 top-20"
               onClick={toggleNotification}
             />
             <motion.div
