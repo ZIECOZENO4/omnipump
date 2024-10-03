@@ -206,7 +206,7 @@ import Link from 'next/link';
 
 const Card = () => (
   <motion.div
-    className='w-full -ml-[100px] justify-start items-start' // Changed from mx-8 to w-full
+    className='w-full -ml-[70px] justify-start items-start' // Changed from mx-8 to w-full
     style={{
       height: '150px',
       width: '350px',
@@ -385,8 +385,8 @@ const Card = () => (
 
 const CardDemo = () => {
   return (
-    <div className="w-full -ml-[100px] px-4 md:mx-10 mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+    <div className="w-full px-4 md:mx-10 mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-10">
         {[...Array(50)].map((_, index) => (
           <Link href='/omnicoin' key={index}>
             <Card />
