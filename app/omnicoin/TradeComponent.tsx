@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from "react";
 import { Bell, ChevronDown, ChevronLeft } from "lucide-react";
 import { Button } from "@nextui-org/react";
 import { Card, Chip } from "@nextui-org/react";
@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const TradeComponent = () => {
+  const [activeTab, setActiveTab] = useState("comments");
   return (
     <div className='w-full p-2 flex flex-col '>
             <h1 className='text-xl md:text-3xl text-center py-2 md:py-4'>Trade Transaction </h1>
