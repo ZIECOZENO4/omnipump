@@ -453,7 +453,7 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
       <div className='md:hidden'>
       <CardGrid />
       </div>
-      <div className='flex justify-between align-middle flex-row my-4'>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
       <Card />
 
 <Card />
@@ -465,9 +465,9 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
       <div className="container sm:flex hidden mx-auto px-2 my-4">
       <div className=" hidden md:flex-wrap md:grid md:grid-cols-4 -mx-2 ">
         {[...Array(50)].map((_, index) => (
-          <Link href='/omnicoin' key={index}>
+      
             <Card />
-          </Link>
+         
         ))}
       </div>
     </div>
