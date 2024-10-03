@@ -449,6 +449,10 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
       <CardDemo />
       </div>
       <CardGrid />
+      </div>  <div className="bg-gray-200 p-4 rounded-lg shadow-md">
+    <h2 className="text-xl font-bold">Card </h2>
+    <p>This is card number </p>
+  </div>
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}

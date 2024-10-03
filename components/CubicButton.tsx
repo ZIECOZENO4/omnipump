@@ -10,7 +10,7 @@ const CubicButton = () => {
             CONNECT
           </span>
         </div>
-        <div className="top-[69.7px] left-[1305px] w-[113.08px] h-[3.15px] bg-[#787878] border-b-[0.63px] border-solid border-black"></div>
+        <div className="top-[69.7px] left-[1305px] w-[110.08px] h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
       </div>
     </div>
   );
