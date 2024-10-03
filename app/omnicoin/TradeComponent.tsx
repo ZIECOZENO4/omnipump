@@ -53,11 +53,34 @@ const TradeComponent = () => {
       Connect Wallet
     </Button>
   </Card>
-  <div>
+  <div className=' flex flex-col '>
+  <div className="flex space-x-8 text-xl mb-4 mt-6 md:mt-10">
+            <button
+              className={`${
+                activeTab === "comments"
+                  ? "text-green-500 border-b-2 border-green-500"
+                  : "text-gray-400"
+              }`}
+              onClick={() => setActiveTab("comments")}
+            >
+              Comments 0
+            </button>
+            <button
+              className={`${
+                activeTab === "trades"
+                  ? "text-green-500 border-b-2 border-green-500"
+                  : "text-gray-400"
+              }`}
+              onClick={() => setActiveTab("trades")}
+            >
+              Trades
+            </button>
+          <hr />
+          </div>
   {activeTab === "comments" ? (
             <>
-              <Card className="bg-black border border-slate-600  p-4 flex flex-col items-center justify-center h-48">
-                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
+              <Card className="bg-black border border-slate-600 mb-3 p-4 flex flex-col items-center justify-center h-48">
+                <div className="w-12 h-12 my-1iuoh;iok bg-black rounded-full flex items-center justify-center mb-4">
                   !
                 </div>
                 <p className="text-gray-400">

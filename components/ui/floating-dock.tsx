@@ -1,4 +1,3 @@
-
 "use client"
 import { cn } from "@/lib/utils";
 import {
@@ -26,7 +25,7 @@ export const FloatingDock = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto flex h-16 gap-4 items-end rounded-2xl px-4 items-center align-middle justify-center w-full bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
+        "mx-auto flex h-16 items-end rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3 w-full justify-between",
         className
       )}
     >
@@ -101,7 +100,7 @@ function IconContainer({
       onClick={onClick}
       className={`aspect-square rounded-full ${
         isActive ? "bg-[#04db00]" : "bg-gray-200 dark:bg-neutral-800"
-      } flex items-center justify-between gap-4 relative cursor-pointer`}
+      } flex items-center justify-center relative cursor-pointer`}
     >
       <AnimatePresence>
         {hovered && (
