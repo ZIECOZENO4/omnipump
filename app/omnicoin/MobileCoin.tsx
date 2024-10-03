@@ -65,7 +65,7 @@ const MobileCoin = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-full">
+    <div className="flex flex-col min-h-screen w-full">
       {renderComponent()}
       <FloatingDock
         className="fixed bottom-2 left-1/2 transform z-50 -translate-x-1/2"

@@ -9,9 +9,9 @@ import Link from "next/link";
 const TradeComponent = () => {
   const [activeTab, setActiveTab] = useState("comments");
   return (
-    <div className='w-full p-2 flex flex-col '>
+    <div className='w-full p-2 flex flex-col gap-4 '>
             <h1 className='text-xl md:text-3xl text-center py-2 md:py-4'>Trade Transaction </h1>
-       <Card className="bg-black border border-slate-600 mt-2 p-4">
+       <Card className="bg-black border border-slate-600 my-2 p-4">
     <p className="py-1 text-xs ">1 $1 is 0.000010 ETH ($0.023)</p>
     <div className="flex justify-between mb-8 p-2">
       <Button className="bg-green-500 hover:bg-green-600 flex-grow mr-2">

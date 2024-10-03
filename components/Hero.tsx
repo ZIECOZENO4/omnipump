@@ -87,8 +87,8 @@ export function HeroSection() {
                 </Chip>
               ))}
             </div>
-            <p className="mt-2 text-gray-500 flex">Market Cap: <span className='ml-2 text-white'>{profile.marketCap}</span> </p>
-            <p className="text-gray-500 flex">Replies:<span className='ml-2 text-white'> {profile.replies}</span> </p>
+            <p className="mt-2 justify-center sm:justify-start  text-gray-500 flex">Market Cap: <span className='ml-2 text-white'>{profile.marketCap}</span> </p>
+            <p className=" justify-center sm:justify-start text-gray-500 flex">Replies:<span className='ml-2 text-white'> {profile.replies}</span> </p>
             <p className="text-slate-500 mt-2">
               {profile.tickerName} [ticker: {profile.ticker}]
             </p>

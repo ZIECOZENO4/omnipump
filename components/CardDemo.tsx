@@ -213,7 +213,7 @@ import Link from 'next/link'
 
 const Card = () => (
   <motion.div
-    className='w-full md:w-[100vw] md:w-[350px] px-2 mb-4'
+    className='w-full  md:w-[350px] px-2 mb-4'
     initial={{ opacity: 0, scale: 0.9 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
@@ -393,7 +393,7 @@ const Card = () => (
 const CardDemo = () => {
   return (
     <div className="container mx-auto px-2 my-4">
-      <div className="flex flex-wrap -mx-2">
+      <div className="flex flex-wrap md:grid md:grid-rows-4 -mx-2">
         {[...Array(50)].map((_, index) => (
           <Link href='/omnicoin' key={index}>
             <Card />
