@@ -56,7 +56,7 @@ export default function BottomMore() {
           whileTap={{ scale: 0.95 }}
         >
           <span className="flex items-center">
-            <MoreHorizontal className="w-5 h-5 mr-2" />
+          View
             More
           </span>
           {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}

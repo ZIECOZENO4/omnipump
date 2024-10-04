@@ -390,22 +390,21 @@ export default function ComponentCoin() {
           <Select
             label="Price"
             variant="bordered"
-            className="max-w-3xl"
+            className="max-w-xs"
             value={selectedChain}
             onChange={(e) => setSelectedChain(e.target.value)}
           >
 
               <SelectItem key="button" className="bg-black">
-                <div className="p-[1px] relative my-1 flex flex-col gap-4 space-y-4">
         
-                  <div className="p-2  flex flex-row justify-between bg-black gap-4 rounded-[6px]  relative group transition duration-200 focus:focus-within: text-white hover:bg-transparent">
+                  <div className=" flex flex-col gap-4 ">
                     <Input
                       type="number"
                       label="Min M-Cap"
                       placeholder="0.00"
                       value={minMarketCap}
                       onChange={(e) => setMinMarketCap(e.target.value)}
-className='border border-slate-400 focus:border-slate-300 mx-2'
+className='border border-slate-400 focus:border-green-500 mx-2'
                     />
                     <Input
                       type="number"
@@ -413,10 +412,10 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                       placeholder="0.00"
                       value={maxMarketCap}
                       onChange={(e) => setMaxMarketCap(e.target.value)}
-                      className='border border-slate-400 focus:border-slate-300 mx-2'
+                      className='border border-slate-400 focus:border-green-500 mx-2'
                     />
                   </div>
-                  <div className="p-2 gap-4 flex flex-row justify-between bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                  <div className=" gap-4 flex flex-row justify-between ">
                     <Button color="primary" onClick={applyFilters}>
                       Filter
                     </Button>
@@ -424,7 +423,6 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
                       Reset
                     </Button>
                   </div>
-                </div>
               </SelectItem>
           </Select>
         </div>
