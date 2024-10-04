@@ -29,6 +29,9 @@ importers:
       '@thirdweb-dev/react':
         specifier: ^4.9.4
         version: 4.9.4(@ethersproject/abstract-provider@5.7.0)(@ethersproject/abstract-signer@5.7.0)(@ethersproject/bignumber@5.7.0)(@ethersproject/properties@5.7.0)(@thirdweb-dev/sdk@4.0.99(@types/react-dom@18.3.0)(@types/react@18.3.9)(bufferutil@4.0.8)(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2)(utf-8-validate@5.0.10))(@types/react-dom@18.3.0)(@types/react@18.3.9)(bs58@5.0.0)(bufferutil@4.0.8)(ethers@5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(fastify@4.28.1)(localforage@1.10.0)(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tweetnacl@1.0.3)(typescript@5.6.2)(utf-8-validate@5.0.10)
+      '@types/react-responsive':
+        specifier: ^8.0.8
+        version: 8.0.8
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -62,6 +65,9 @@ importers:
       react-loader-spinner:
         specifier: ^6.1.6
         version: 6.1.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-responsive:
+        specifier: ^10.0.0
+        version: 10.0.0(react@18.3.1)
       recharts:
         specifier: ^2.12.7
         version: 2.12.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2912,6 +2918,9 @@ packages:
   '@types/react-reconciler@0.28.8':
     resolution: {integrity: sha512-SN9c4kxXZonFhbX4hJrZy37yw9e7EIxcpHCxQv5JUS18wDE5ovkQKlqQEkufdJCCMfuI9BnjUJvhYeJ9x5Ra7g==}
 
+  '@types/react-responsive@8.0.8':
+    resolution: {integrity: sha512-HDUZtoeFRHrShCGaND23HmXAB9evOOTjkghd2wAasLkuorYYitm5A1XLeKkhXKZppcMBxqB/8V4Snl6hRUTA8g==}
+
   '@types/react@18.3.9':
     resolution: {integrity: sha512-+BpAVyTpJkNWWSSnaLBk6ePpHLOGJKnEQNbINNovPWzvEUyAe3e+/d494QdEh71RekM/qV7lw6jzf1HGrJyAtQ==}
 
@@ -3665,6 +3674,9 @@ packages:
   css-color-keywords@1.0.0:
     resolution: {integrity: sha512-FyyrDHZKEjXDpNJYvVsV960FiqQyXc/LlYmsxl2BcdMb2WPx0OGRVgTg55rPSyLSNMqP52R9r8geSp7apN3Ofg==}
     engines: {node: '>=4'}
+
+  css-mediaquery@0.1.2:
+    resolution: {integrity: sha512-COtn4EROW5dBGlE/4PiKnh6rZpAPxDeFLaEEwt4i10jpDMFt2EhQGS79QmmrO+iKCHv0PU/HrOWEhijFd1x99Q==}
 
   css-to-react-native@3.2.0:
     resolution: {integrity: sha512-e8RKaLXMOFii+02mOlqwjbD00KSEKqblnpO9e++1aXS1fPQOpS1YoqdVHBqPjHNoxeF2mimzVqawm2KCbEdtHQ==}
@@ -4572,6 +4584,9 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
+  hyphenate-style-name@1.1.0:
+    resolution: {integrity: sha512-WDC/ui2VVRrz3jOVi+XtjqkDjiVjTtFaAGiW37k6b+ohyQ5wYDOGkvCZa8+H0nx3gyvv0+BST9xuOgIyGQ00gw==}
+
   idb-keyval@6.2.1:
     resolution: {integrity: sha512-8Sb3veuYCyrZL+VBt9LJfZjLUPWVvqn8tG28VqYNFCo43KHcKuq+b4EiXGeuaLAQWL2YmyDgMp2aSpH9JHsEQg==}
 
@@ -5030,6 +5045,9 @@ packages:
 
   magic-sdk@13.6.2:
     resolution: {integrity: sha512-ZjIZM2gqaxxOR+ZAyKVw50akjfdyo0q5hZzrCMiqyCqh4BXulU7yqHgUa/5/nJ+0/4xBgUejoOcDEm+UdmzLjA==}
+
+  matchmediaquery@0.4.2:
+    resolution: {integrity: sha512-wrZpoT50ehYOudhDjt/YvUJc6eUzcdFPdmbizfgvswCKNHD1/OBOHYJpHie+HXpu6bSkEGieFMYk6VuutaiRfA==}
 
   md5.js@1.3.5:
     resolution: {integrity: sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==}
@@ -5680,6 +5698,12 @@ packages:
       '@types/react':
         optional: true
 
+  react-responsive@10.0.0:
+    resolution: {integrity: sha512-N6/UiRLGQyGUqrarhBZmrSmHi2FXSD++N5VbSKsBBvWfG0ZV7asvUBluSv5lSzdMyEVjzZ6Y8DL4OHABiztDOg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8.0'
+
   react-smooth@4.0.1:
     resolution: {integrity: sha512-OE4hm7XqR0jNOq3Qmk9mFLyd6p2+j6bvbPJ7qlB7+oo0eNcL2l7WQzG6MBnT3EXY6xzkLMUBec3AfewJdA0J8w==}
     peerDependencies:
@@ -5893,6 +5917,9 @@ packages:
   sha.js@2.4.11:
     resolution: {integrity: sha512-QMEp5B7cftE7APOjk5Y6xgrbWu+WkLVQwk8JNjZ8nKRciZaByEW6MubieAiToS7+dwvrjGhH8jRXz3MVd0AYqQ==}
     hasBin: true
+
+  shallow-equal@3.1.0:
+    resolution: {integrity: sha512-pfVOw8QZIXpMbhBWvzBISicvToTiM5WBF1EeAUZDDSb5Dt29yl4AYbyywbJFSEsRUMr7gJaxqCdr4L3tQf9wVg==}
 
   shallowequal@1.1.0:
     resolution: {integrity: sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==}
@@ -11319,6 +11346,10 @@ snapshots:
     dependencies:
       '@types/react': 18.3.9
 
+  '@types/react-responsive@8.0.8':
+    dependencies:
+      '@types/react': 18.3.9
+
   '@types/react@18.3.9':
     dependencies:
       '@types/prop-types': 15.7.13
@@ -12653,6 +12684,8 @@ snapshots:
 
   css-color-keywords@1.0.0: {}
 
+  css-mediaquery@0.1.2: {}
+
   css-to-react-native@3.2.0:
     dependencies:
       camelize: 1.0.1
@@ -13905,6 +13938,8 @@ snapshots:
 
   human-signals@5.0.0: {}
 
+  hyphenate-style-name@1.1.0: {}
+
   idb-keyval@6.2.1: {}
 
   ieee754@1.2.1: {}
@@ -14363,6 +14398,10 @@ snapshots:
       localforage: 1.10.0
     transitivePeerDependencies:
       - supports-color
+
+  matchmediaquery@0.4.2:
+    dependencies:
+      css-mediaquery: 0.1.2
 
   md5.js@1.3.5:
     dependencies:
@@ -15061,6 +15100,14 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.9
 
+  react-responsive@10.0.0(react@18.3.1):
+    dependencies:
+      hyphenate-style-name: 1.1.0
+      matchmediaquery: 0.4.2
+      prop-types: 15.8.1
+      react: 18.3.1
+      shallow-equal: 3.1.0
+
   react-smooth@4.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       fast-equals: 5.0.1
@@ -15307,6 +15354,8 @@ snapshots:
     dependencies:
       inherits: 2.0.4
       safe-buffer: 5.2.1
+
+  shallow-equal@3.1.0: {}
 
   shallowequal@1.1.0: {}
 
