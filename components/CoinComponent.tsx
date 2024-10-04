@@ -469,6 +469,282 @@ className='border border-slate-400 focus:border-slate-300 mx-2'
             <Card />
           </Link>
       </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+
+<div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+<Link href='/omnicoin' >
+      <Card />
+    </Link>
+
+    <Link href='/omnicoin' >
+      <Card />
+    </Link>
+
+    <Link href='/omnicoin' >
+      <Card />
+    </Link>
+    <Link href='/omnicoin' >
+      <Card />
+    </Link>
+</div>
+
+<div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+
+<div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+<Link href='/omnicoin' >
+      <Card />
+    </Link>
+
+    <Link href='/omnicoin' >
+      <Card />
+    </Link>
+
+    <Link href='/omnicoin' >
+      <Card />
+    </Link>
+    <Link href='/omnicoin' >
+      <Card />
+    </Link>
+</div>
+
+<div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
+      <div className='hidden md:flex md:justify-between align-middle flex-row my-4'>
+      <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+          <Link href='/omnicoin' >
+            <Card />
+          </Link>
+      </div>
 
       <Modal
         isOpen={isModalOpen}
