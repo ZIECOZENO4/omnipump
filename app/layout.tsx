@@ -7,6 +7,7 @@ import { Providers } from "./providers";
 import { Suspense } from 'react';
 import Loading from './loading';
 import FirstAnimation from "../components/FirstAnimation";
+import BottomMore from "@/components/BottomMore";
 
 const workbench = Workbench({
   weight: '400', 
@@ -36,6 +37,7 @@ export default function RootLayout({
             <Suspense fallback={<Loading />}>
               {children}
             </Suspense>
+            <BottomMore />
           </div>
         </div>
         </Providers>

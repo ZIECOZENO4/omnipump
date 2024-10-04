@@ -360,55 +360,37 @@ export default function ComponentCoin() {
               <SelectItem
                 key={chain.key}
                 value={chain.key}
-                className="bg-black max-w-2xl"
-              >
-                <button className="p-[1px] relative w-full">
-                  <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
-                  <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                    {chain.name}
-                  </div>
-                </button>
+                className="bg-black max-w-2xl text-start"
+              >  
+              {chain.name}
+              
               </SelectItem>
             ))} 
           </Select>
           <Select
-            label="Market Cap"
-            value={selectedMarketCap}
-            variant="bordered"
-            className="w-[40rem]"
-            onChange={(e) => setSelectedMarketCap(e.target.value)}
-          >
-            <SelectItem key="hello" className="bg-black max-w-2xl">
-              <button className="p-[1px] relative my-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
-                <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                  All Market Cap
-                </div>
-              </button>
-              <button className="p-[1px] relative my-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
-                <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                  Low Cap (&lt; $1B)
-                </div>
-              </button>
-              <button className="p-[1px] relative my-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
-                <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                  Mid Cap ($1B - $10B)
-                </div>
-              </button>
-              <button className="p-[1px] relative my-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-500 rounded-lg" />
-                <div className="p-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                  High Cap (&gt; $10B)
-                </div>
-              </button>
-            </SelectItem>
-          </Select>
+  label="Market Cap"
+  value={selectedMarketCap}
+  variant="bordered"
+  className="w-[40rem]"
+  onChange={(e) => setSelectedMarketCap(e.target.value)}
+>
+  <SelectItem key="all" value="all" className="bg-black max-w-2xl">
+    All Market Cap
+  </SelectItem>
+  <SelectItem key="low" value="low" className="bg-black max-w-2xl">
+    Low Cap (&lt; $1B)
+  </SelectItem>
+  <SelectItem key="mid" value="mid" className="bg-black max-w-2xl">
+    Mid Cap ($1B - $10B)
+  </SelectItem>
+  <SelectItem key="high" value="high" className="bg-black max-w-2xl">
+    High Cap (&gt; $10B)
+  </SelectItem>
+</Select>
           <Select
             label="Price"
             variant="bordered"
-            className="max-w-xs"
+            className="max-w-3xl"
             value={selectedChain}
             onChange={(e) => setSelectedChain(e.target.value)}
           >

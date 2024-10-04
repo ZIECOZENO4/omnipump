@@ -29,6 +29,7 @@ export default function Component() {
       `}</style>
 
       <main className="max-w-3xl mx-auto ">
+      <h1 className="text-xl md:text-2xl sm:text-3xl text-center mb-8 sm:mb-12">Fill the details to kick off your new coin</h1>
         <div className="space-y-6">
           <div className="flex flex-col w-full gap-4 md:hidden">
             <div>
@@ -127,8 +128,8 @@ export default function Component() {
               </div>
             </div>
             <div className="md:w-1/2 w-full flex flex-col">
-              <p className="mt-4">
-                <span className="font-bold">Initial Price</span>
+              <p className="mt-2">
+                <span className="font-bold mb-2">Initial Price</span>
                 <br />
                 The initial price will be approximately:{" "}
                 {initialPrice.toFixed(8)} ETH per token

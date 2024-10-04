@@ -6,12 +6,18 @@ import { Card, Chip } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion} from "framer-motion";
+import FullConnectButton from "../../components/fullConnectButton";
 
 export default function DesktopCoin() {
   const [activeTab, setActiveTab] = useState("comments");
+  const [selectedCurrency, setSelectedCurrency] = useState('USD');
+  
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCurrency(event.target.value);
+  };
 
   return (
-    <div className="min-h-screen  text-white p-4 md:px-[5vw] px-4">
+    <div className="min-h-screen  text-[#F7F2DA] p-4 md:px-[5vw] px-4">
     <style jsx global>{`
     input:focus,
     textarea:focus {
@@ -58,8 +64,8 @@ export default function DesktopCoin() {
         </motion.svg>
       </motion.a>
     </Link>
-                <div className="w-12 h-12 bg-purple-600 rounded-full ml-6 mr-2"></div>
-                <span>hellohell</span>
+                <div className="w-12 h-12 bg-purple-600 rounded-full ml-6 mr-4"></div>
+                <span className='uppercase'>hellohell</span>
               </div>
               <div className="flex items-center">
                 <Chip className='p-2 flex flex-row gap-3 mx-2'>   <span className="mr-2">Creator: afbbff</span>
@@ -90,9 +96,9 @@ export default function DesktopCoin() {
             </div>
           
             <div className="bg-slate-800 h-64 flex items-center justify-center rounded-md">
-              <span className="text-gray-400">
-                📈 TradingView Chart Placeholder
-              </span>
+              <div className="text-gray-400 text-2xl flex flex-row gap-4">
+              <svg width="30px" height="30px" className='text-gray-400 ' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 21V17M9 21V13M15 21V15M21 21V11M8.43934 5.56066C8.71079 5.83211 9.08579 6 9.5 6C9.91421 6 10.2892 5.83211 10.5607 5.56066M8.43934 5.56066C8.16789 5.28921 8 4.91421 8 4.5C8 3.67157 8.67157 3 9.5 3C10.3284 3 11 3.67157 11 4.5C11 4.91421 10.8321 5.28921 10.5607 5.56066M8.43934 5.56066L5.56066 8.43934M5.56066 8.43934C5.28921 8.16789 4.91421 8 4.5 8C3.67157 8 3 8.67157 3 9.5C3 10.3284 3.67157 11 4.5 11C5.32843 11 6 10.3284 6 9.5C6 9.08579 5.83211 8.71079 5.56066 8.43934ZM10.5607 5.56066L13.4393 8.43934M13.4393 8.43934C13.1679 8.71079 13 9.08579 13 9.5C13 10.3284 13.6716 11 14.5 11C15.3284 11 16 10.3284 16 9.5C16 9.08579 15.8321 8.71079 15.5607 8.43934M13.4393 8.43934C13.7108 8.16789 14.0858 8 14.5 8C14.9142 8 15.2892 8.16789 15.5607 8.43934M15.5607 8.43934L18.4393 5.56066M18.4393 5.56066C18.7108 5.83211 19.0858 6 19.5 6C20.3284 6 21 5.32843 21 4.5C21 3.67157 20.3284 3 19.5 3C18.6716 3 18 3.67157 18 4.5C18 4.91421 18.1679 5.28921 18.4393 5.56066Z" stroke="#f1e9e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> <p>TradingView Chart Placeholder</p>
+              </div>
             </div>
           </Card>
           <div className="flex space-x-8 text-xl mb-4 mt-6 md:mt-10">
@@ -121,10 +127,8 @@ export default function DesktopCoin() {
           {activeTab === "comments" ? (
             <>
               <Card className="bg-black border border-slate-600  p-4 flex flex-col items-center justify-center h-48">
-                <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
-                  !
-                </div>
-                <p className="text-gray-400">
+              <svg width="30px" height="20px" className='text-gray-400 py-2' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0619 4.4295C12.6213 3.54786 11.3636 3.54786 10.9229 4.4295L3.89008 18.5006C3.49256 19.2959 4.07069 20.2317 4.95957 20.2317H19.0253C19.9142 20.2317 20.4923 19.2959 20.0948 18.5006L13.0619 4.4295ZM9.34196 3.6387C10.434 1.45376 13.5508 1.45377 14.6429 3.63871L21.6758 17.7098C22.6609 19.6809 21.2282 22 19.0253 22H4.95957C2.75669 22 1.32395 19.6809 2.3091 17.7098L9.34196 3.6387Z" fill="#ffffff"></path> <path d="M12 8V13" stroke="#f20202" stroke-width="1.7" stroke-linecap="round"></path> <path d="M12 16L12 16.5" stroke="#f20202" stroke-width="1.7" stroke-linecap="round"></path> </g></svg>
+                <p className="text-gray-400 text-2xl">
                   No comments yet Be the first to comment!
                 </p>
               </Card>
@@ -135,16 +139,18 @@ export default function DesktopCoin() {
             </>
           ) : (
             <Card className="bg-black p-4 flex   border border-slate-600 flex-col items-center justify-center h-48">
-              <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
-                !
-              </div>
-              <p className="text-gray-400">No trades yet</p>
+              <svg width="30px" height="20px" className='text-gray-400 py-2' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0619 4.4295C12.6213 3.54786 11.3636 3.54786 10.9229 4.4295L3.89008 18.5006C3.49256 19.2959 4.07069 20.2317 4.95957 20.2317H19.0253C19.9142 20.2317 20.4923 19.2959 20.0948 18.5006L13.0619 4.4295ZM9.34196 3.6387C10.434 1.45376 13.5508 1.45377 14.6429 3.63871L21.6758 17.7098C22.6609 19.6809 21.2282 22 19.0253 22H4.95957C2.75669 22 1.32395 19.6809 2.3091 17.7098L9.34196 3.6387Z" fill="#ffffff"></path> <path d="M12 8V13" stroke="#f20202" stroke-width="1.7" stroke-linecap="round"></path> <path d="M12 16L12 16.5" stroke="#f20202" stroke-width="1.7" stroke-linecap="round"></path> </g></svg>
+              <p className="text-gray-400 text-2xl">No trades yet</p>
             </Card>
           )}
         </div>
         <div className="w-1/3 space-y-4">
           <Card className="bg-black border border-slate-600 mt-2 p-4">
-            <p className="py-1 text-xs ">1 $1 is 0.000010 ETH ($0.023)</p>
+  
+            <div className="flex text-xs justify-between py-2">
+              <span>Total Supply:10001</span>
+              <span className=" text-xs text-gray-400">1 $1 is 0.000010 ETH ($0.023)</span>
+            </div>
             <div className="flex justify-between mb-8 p-2">
               <Button className="bg-green-500 hover:bg-green-600 flex-grow mr-2">
                 Buy
@@ -155,7 +161,7 @@ export default function DesktopCoin() {
             </div>
             <div className="flex text-xs justify-between  mb-8">
               <span>Total Supply:10001</span>
-              <span className="text-purple-700">Set slippage: 1%</span>
+              <span className="text-slate-400">Set slippage: 1%</span>
             </div>
             <div className="flex gap-4 mb-4">
               <input
@@ -163,12 +169,17 @@ export default function DesktopCoin() {
                 placeholder="Enter amount"
                 className="flex-grow bg-black border border-gray-700 p-2 rounded-xl"
               />
-              <select aria-label="USD" className="bg-black border border-gray-700 p-2 rounded-xl">
-                <option>USD</option>
-                <option>ETH</option>
-                <option>BTC</option>
-                <option>SOL</option>
-              </select>
+               <select
+      value={selectedCurrency}
+      onChange={handleChange}
+      aria-label="Select Currency"
+      className="bg-black text-white border border-gray-700 p-2 rounded-xl"
+    >
+      <option value="USD">USD</option>
+      <option value="ETH">ETH</option>
+      <option value="BTC">BTC</option>
+      <option value="SOL">SOL</option>
+    </select>
             </div>
             <div className="flex space-x-2 mb-4">
               <Chip radius="sm" className="flex-grow p-2">
@@ -187,9 +198,10 @@ export default function DesktopCoin() {
                 50 ETH
               </Chip>
             </div>
-            <Button className="w-full bg-green-500 hover:bg-green-600">
+            {/* <Button className="w-full bg-green-500 hover:bg-green-600">
               Connect Wallet
-            </Button>
+            </Button> */}
+            <FullConnectButton />
           </Card>
 
           <Card className="bg-black border border-slate-600  text-white p-4">
