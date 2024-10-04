@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown, ChevronUp, Plus, Minus, MessageSquare, MessageCircle, MoreHorizontal, X } from "lucide-react"
+import Link from 'next/link';
 
 export default function BottomMore() {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,13 +38,13 @@ export default function BottomMore() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.2 }}
-              className="bg-zinc-900 rounded-lg overflow-hidden mb-2"
+              className="bg-zinc-900 rounded-lg overflow-hidden mb-2 p-2"
             >
-              <div className="p-2 space-y-1">
-                <MenuItem icon={<Plus className="w-4 h-4" />} text="Add Liquidity" />
-                <MenuItem icon={<Minus className="w-4 h-4" />} text="Remove Liquidity" />
-                <MenuItem icon={<MessageSquare className="w-4 h-4" />} text="Comments" />
-                <MenuItem icon={<MessageCircle className="w-4 h-4" />} text="Comment on Website" />
+              <div className="space-y-1">
+                <MenuItem icon={<Plus className="w-4 h-4" />} text="Add Liquidity" href="/liquidity" />
+                <MenuItem icon={<Minus className="w-4 h-4" />} text="Remove Liquidity" href="/liquidity" />
+                <MenuItem icon={<MessageSquare className="w-4 h-4" />} text="Comments" href="/comments" />
+                <MenuItem icon={<MessageCircle className="w-4 h-4" />} text="Comment on Website" href="/website-comment" />
               </div>
             </motion.div>
           )}
@@ -55,9 +56,8 @@ export default function BottomMore() {
           className="bg-transparent border border-green-500 text-white rounded-lg p-2 flex items-center justify-between w-full"
           whileTap={{ scale: 0.95 }}
         >
-          <span className="flex items-center">
-          View
-            More
+          <span className="flex items-center  mx-2">
+            View More
           </span>
           {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </motion.button>
@@ -82,11 +82,13 @@ export default function BottomMore() {
   )
 }
 
-function MenuItem({ icon, text }: { icon: React.ReactNode; text: string }) {
+function MenuItem({ icon, text, href }: { icon: React.ReactNode; text: string; href: string }) {
   return (
-    <button className="hidden md:flex items-center space-x-2 w-full px-2 py-1.5 text-sm text-white hover:bg-zinc-800 rounded">
-      {icon}
-      <span>{text}</span>
-    </button>
+    <Link href={href} className="block">
+      <div className="flex items-center space-x-2 w-full px-3 py-2 text-sm text-white hover:bg-green-500 hover:bg-opacity-70 rounded transition-colors duration-200">
+        {icon}
+        <span>{text}</span>
+      </div>
+    </Link>
   )
 }

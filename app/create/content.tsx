@@ -63,9 +63,10 @@ function TiltCard({ blockchain }: { blockchain: typeof blockchains[0] }) {
       transition={{ type: "spring", stiffness: 300, damping: 10 }}
     >
       {blockchain.recommended && (
-        <div className="absolute top-2 right-2 bg-red-500 text-white text-xs sm:text-sm rounded-full px-2 py-1">
-          Recommended
-        </div>
+      <div className="absolute top-2 right-2 bg-red-500 text-white text-xs sm:text-sm rounded-full px-2 py-1 flex items-center">
+      Recommended
+      <span className="bg-green-500 rounded-full w-2 h-2 animate-pulse ml-2"></span>
+    </div>
       )}
       <motion.div
         className="mb-4 md:mb-12 w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center"
