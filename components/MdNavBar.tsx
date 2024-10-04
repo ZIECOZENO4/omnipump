@@ -39,9 +39,9 @@ const MdNavBar = () => {
     const navItems: NavItem[] = [
       { name: "Home", path: "/" },
       { name: "Create", path: "/create" },
-      { name: "Lunch", path: "/lunch" },
-      { name: "New Coin", path: "/newcoin" },
+      { name: "Liquidity", path: "/liquidity" },
       { name: "Listing", path: "/listing" },
+      { name: "Comment", path: "/website-comment" },
       { name: "Contact", path: "/contact" }
     ];
   
@@ -49,7 +49,7 @@ const MdNavBar = () => {
       setIsNotificationOpen(!isNotificationOpen);
     };
   return (
-    <div className='bg-black shadow-2xl bg-opacity-70 flex-row justify-between text-white h-20 flex md:gap-[80px] w-full p-[20px] md:px-[30px] px-[20px] sticky top-0 z-50 fixed'>
+    <div className='bg-black shadow-2xl bg-opacity-60 flex-row justify-between text-white h-20 flex md:gap-[80px] w-full p-[20px] md:px-[30px] px-[20px] sticky top-0 z-50 fixed'>
    <Link href="/" className="flex flex-row ">
             <motion.svg
               width="40"
@@ -197,27 +197,28 @@ const MdNavBar = () => {
                         </div>
                       </button>
                     </Link>
-                    <Link href="/lunch">
+                    <Link href="/liquidity">
                       <button className="p-[3px] relative w-full">
                         <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
                         <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                          Lunch
+                          Liquidity
                         </div>
                       </button>
                     </Link>
-                    <Link href="/newcoin">
-                      <button className="p-[3px] relative w-full">
-                        <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
-                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                     New Coin
-                        </div>
-                      </button>
-                    </Link>
+             
                     <Link href="/lisiting">
                       <button className="p-[3px] relative w-full">
                         <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
                         <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
                           Listing
+                        </div>
+                      </button>
+                    </Link>    
+                       <Link href="/website-comment">
+                      <button className="p-[3px] relative w-full">
+                        <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
+                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                     Comment
                         </div>
                       </button>
                     </Link>

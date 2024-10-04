@@ -1,94 +1,101 @@
 "use client"
-import React, { useState } from 'react'
-import { Modal, ModalHeader, ModalBody, Button, Input, Textarea } from "@nextui-org/react"
-import { useMediaQuery } from 'react-responsive'
+import { useState } from 'react'
+import { Avatar, Button, ScrollShadow } from "@nextui-org/react"
+import { ChevronLeft } from "lucide-react"
 
-interface Comment {
-  id: number;
-  user: string;
-  address: string;
-  message: string;
+type ChatMessage = {
+  id: string
+  user: string
+  avatar: string
+  time: string
+  message: string
+  address: string
 }
 
-const CommentComponent: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [nickname, setNickname] = useState<string>('')
-  const [message, setMessage] = useState<string>('')
-  
-  const isMdOrLarger = useMediaQuery({ minWidth: 768 })
+const chatData: ChatMessage[] = [
+  { id: '1', user: 'ziecozeno4', address: '0xre...wer', avatar: '/placeholder-avatar.jpg', time: 'Yesterday at 2:41 PM', message: "didnt get any voice from the video but i got the notes" },
+  { id: '2', user: 'oz', address: '0xre...wer', avatar: '/placeholder-avatar-2.jpg', time: 'Yesterday at 4:42 PM', message: "can hear the voice here" },
+  { id: '3', user: 'ziecozeno4', address: '0xre...wer', avatar: '/placeholder-avatar.jpg', time: 'Yesterday at 6:36 PM', message: "omohh\nthis slack is not just myside aswrr\njust headache" },
+  { id: '4', user: 'oz', address: '0xre...wer', avatar: '/placeholder-avatar-2.jpg', time: 'Today at 11:33 AM', message: "lmao" },
+]
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle comment submission logic here
-    console.log('Submitted:', { nickname, message })
-    setNickname('')
-    setMessage('')
-    setIsOpen(false)
-  }
+export default function Component() {
+  const [selectedChat, setSelectedChat] = useState<ChatMessage | null>(null)
 
-  const CommentForm: React.FC = () => (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <Input
-        label="Your nickname"
-        value={nickname}
-        onChange={(e) => setNickname(e.target.value)}
-        className="max-w-xs"
-        variant="bordered"
-        classNames={{
-          input: "text-[#F7F2DA]",
-          label: "text-[#F7F2DA]"
-        }}
-      />
-      <Textarea
-        label="Type your comment here..."
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        className="max-w-xs"
-        variant="bordered"
-        classNames={{
-          input: "text-[#F7F2DA]",
-          label: "text-[#F7F2DA]"
-        }}
-      />
-      <Button color="success" type="submit" className="w-full">
-        Submit Comment
-      </Button>
-    </form>
+  const renderChatList = () => (
+    <ScrollShadow className="h-screen text-[#F7F2DA]">
+      <div className="space-y-4 p-4">
+        <h2 className="text-2xl font-bold mb-4">All Comments</h2>
+        <hr />
+        {chatData.map((chat) => (
+          <Button
+            key={chat.id}
+            variant="bordered"
+            className="w-full justify-start text-left p-1"
+            onClick={() => setSelectedChat(chat)}
+          >
+            <Avatar src={chat.avatar} alt={chat.user} className="w-12 h-12 mr-3 m-2" />
+            <div className="flex flex-col gap-2 p-2 overflow-hidden">
+              <div className="font-semibold">{chat.user}</div>
+              <div className="text-xs text-gray-400">{chat.address}</div>
+              <div className="text-sm text-gray-400 truncate">{chat.message}</div>
+            </div>
+            <div className="text-xs text-gray-100 ml-2">{chat.time}</div>
+          </Button>
+        ))}
+      </div>
+    </ScrollShadow>
+  )
+
+  const renderChatDetail = () => (
+    <div className="flex flex-col h-screen">
+      <header className=" border border-white p-4 flex items-center">
+        <Button variant="ghost" size="sm" onClick={() => setSelectedChat(null)} className="mr-4">
+          <ChevronLeft className="h-6 w-6" />
+          <span className="sr-only">Back to list</span>
+        </Button>
+        <Avatar src={selectedChat?.avatar} alt={selectedChat?.user} className="w-12 h-12 mr-4 m-2" />
+        <div>
+          <div className="text-xl md:text-2xl">{selectedChat?.user}</div>
+          <div className="text-xs text-gray-400">{selectedChat?.address}</div>
+          <div className="text-sm text-gray-400">{selectedChat?.time}</div>
+        </div>
+      </header>
+      <ScrollShadow className="flex-1 p-4">
+        <div className="space-y-4">
+          <div className="flex items-start space-x-4">
+            <Avatar src={selectedChat?.avatar} alt={selectedChat?.user} />
+            <div className="flex-1">
+              <div className="flex items-center space-x-2">
+                <span className="font-bold">{selectedChat?.user}</span>
+                <span className="text-gray-400 text-sm">{selectedChat?.time}</span>
+              </div>
+              <div className="text-xs text-gray-400 mb-1">{selectedChat?.address}</div>
+              <p className="text-gray-300 whitespace-pre-line">{selectedChat?.message}</p>
+            </div>
+          </div>
+        </div>
+      </ScrollShadow>
+    </div>
   )
 
   return (
-    <div className="p-4 bg-black border border-white text-[#F7F2DA] min-h-screen">
-             <style jsx global>{`
-        input:focus,
-        textarea:focus {
-          outline: none;
-          border-color: #4ae436 !important;
-        }
-      `}</style>
-      {isMdOrLarger ? (
-        <div className="max-w-md mx-auto">
-          <h2 className="text-2xl font-bold mb-4">Comment on Website</h2>
-          <CommentForm />
+    <div className=" border border-white text-[#F7F2DA]">
+      <div className="md:hidden">
+        {selectedChat ? renderChatDetail() : renderChatList()}
+      </div>
+      <div className="hidden md:flex">
+        <div className="w-64 border-r  border border-white">
+          {renderChatList()}
         </div>
-      ) : (
-        <>
-          <Button onPress={() => setIsOpen(true)} color="success">
-            Comment on Website
-          </Button>
-          <Modal 
-            isOpen={isOpen} 
-            onClose={() => setIsOpen(false)}
-            className="bg-gray-800"
-          >
-            <ModalHeader className="text-[#F7F2DA]">Comment on Website</ModalHeader>
-            <ModalBody>
-              <CommentForm />
-            </ModalBody>
-          </Modal>
-        </>
-      )}
+        <div className="flex-1">
+          {selectedChat ? renderChatDetail() : (
+            <div className="h-screen text-2xl flex items-center justify-center text-gray-400">
+              Select a chat to view details
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
-
-export default CommentComponent

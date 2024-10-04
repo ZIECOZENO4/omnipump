@@ -38,7 +38,7 @@ export default function BottomMore() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.2 }}
-              className="bg-zinc-900 rounded-lg overflow-hidden mb-2 p-2"
+              className="bg-zinc-900 bg-opacity-30 rounded-lg overflow-hidden mb-2 p-2"
             >
               <div className="space-y-1">
                 <MenuItem icon={<Plus className="w-4 h-4" />} text="Add Liquidity" href="/liquidity" />
@@ -53,10 +53,10 @@ export default function BottomMore() {
         {/* Toggle button */}
         <motion.button
           onClick={toggleMenu}
-          className="bg-transparent border border-green-500 text-white rounded-lg p-2 flex items-center justify-between w-full"
+          className="bg-transparent hover:bg-green-600 hover:bg-opacity-25 border border-green-500 text-white rounded-lg p-2 flex items-center text-center justify-between w-full"
           whileTap={{ scale: 0.95 }}
         >
-          <span className="flex items-center  mx-2">
+          <span className="flex text-center  mx-2">
             View More
           </span>
           {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
@@ -85,7 +85,7 @@ export default function BottomMore() {
 function MenuItem({ icon, text, href }: { icon: React.ReactNode; text: string; href: string }) {
   return (
     <Link href={href} className="block">
-      <div className="flex items-center space-x-2 w-full px-3 py-2 text-sm text-white hover:bg-green-500 hover:bg-opacity-70 rounded transition-colors duration-200">
+      <div className="flex items-center space-x-2 w-full px-3 py-2 text-sm text-white hover:bg-green-500 hover:bg-opacity-20 rounded transition-colors duration-200">
         {icon}
         <span>{text}</span>
       </div>
