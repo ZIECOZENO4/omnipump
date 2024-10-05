@@ -31,20 +31,17 @@ export default function Component() {
           <Button
             key={chat.id}
             variant="bordered"
-            className="w-full justify-start  text-left p-2 h-auto"
+            className="w-full justify-start  text-left p-2 h-auto hover:bg-gray-700 hover:bg-opacity-60"
             onClick={() => setSelectedChat(chat)}
           >
             <div className="flex flex-row justify-between">
-        
             <Avatar src={chat.avatar} alt={chat.user} className="w-12 h-12 mr-3 m-2" />
             <div className="flex flex-col gap-2 p-2 overflow-hidden">
               <div className="font-semibold">{chat.user}</div>
               <div className="text-xs text-gray-400">{chat.address}</div>
             <div className="text-xs text-gray-100 ml-2">{chat.time}</div>
-
             </div>
             </div>
-     
           </Button>
         ))}
       </div>

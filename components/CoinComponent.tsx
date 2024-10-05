@@ -404,7 +404,7 @@ export default function ComponentCoin() {
                       placeholder="0.00"
                       value={minMarketCap}
                       onChange={(e) => setMinMarketCap(e.target.value)}
-className='border border-slate-400 focus:border-green-500 mx-2'
+className=' mx-2'
                     />
                     <Input
                       type="number"
@@ -412,10 +412,9 @@ className='border border-slate-400 focus:border-green-500 mx-2'
                       placeholder="0.00"
                       value={maxMarketCap}
                       onChange={(e) => setMaxMarketCap(e.target.value)}
-                      className='border border-slate-400 focus:border-green-500 mx-2'
+                      className=' mx-2'
                     />
-                  </div>
-                  <div className=" gap-4 flex flex-row justify-between ">
+                    <div className=" gap-4 flex flex-col w-full justify-center mx-2">
                     <Button color="primary" onClick={applyFilters}>
                       Filter
                     </Button>
@@ -423,6 +422,8 @@ className='border border-slate-400 focus:border-green-500 mx-2'
                       Reset
                     </Button>
                   </div>
+                  </div>
+                  
               </SelectItem>
           </Select>
         </div>

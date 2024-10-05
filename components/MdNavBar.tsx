@@ -10,6 +10,8 @@ import { NotificationIcon } from "./NotificationIcon";
 import NotificationAlert from "./Notification";
 import FullConnectButton from './fullConnectButton';
 
+type ActiveItem = string | null;
+
 interface NavItem {
   name: string;
   path: string;
@@ -26,7 +28,7 @@ const styles = {
 };
 
 const MdNavBar = () => {
-    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [activeItem, setActiveItem] = useState<ActiveItem>(null);
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
     const currentPath = usePathname();
   
@@ -43,7 +45,7 @@ const MdNavBar = () => {
       setIsNotificationOpen(!isNotificationOpen);
     };
   return (
-    <div className='bg-black shadow-2xl bg-opacity-80 flex-row justify-between text-[#F7F2DA] h-20 flex md:gap-[80px] w-full p-[20px] md:px-[30px] px-[20px] sticky top-0 z-50 fixed'>
+    <div className='flex-row justify-between text-[#F7F2DA] h-20 flex md:gap-[80px] w-full p-[20px] md:px-[30px] px-[20px] sticky top-0 z-50 fixed'>
    <Link href="/" className="flex flex-row ">
             <motion.svg
               width="40"
@@ -61,47 +63,51 @@ const MdNavBar = () => {
               </g>
             </motion.svg>
             <motion.p
-              className="font-extrabold mt-2 text-[#F7F2DA] tracking-widest hover:text-gray-500 text-inherit text-md md:text-2xl ml-2 md:ml-4 hover:scale-110 hover:text-xl md:hover:text-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out"
+              className="mt-2 text-[#F7F2DA] tracking-widest hover:text-gray-500 text-inherit text-md md:text-2xl ml-2 md:ml-4 hover:scale-110 hover:text-xl md:hover:text-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out  text-xl font-normal leading-5 text-center "
               whileHover={{
                 y: [-2, 2, -2],
                 transition: { repeat: Infinity, duration: 0.5 }
               }}
             >
-              OmniPump
+              OMNI PUMP
             </motion.p>
           </Link>
 
       <div className={styles.headerWrapper}>
-        <nav className={styles.nav}>
-        {navItems.map((item) => (
-              <motion.div
-                key={item.name}
-                className="relative"
-                onHoverStart={() => setHoveredItem(item.name)}
-                onHoverEnd={() => setHoveredItem(null)}
+
+        <nav className="flex items-center">
+          {navItems.map((item) => (
+            <motion.div
+              key={item.name}
+              className="relative mx-4"
+              onHoverStart={() => setActiveItem(item.name)}
+              onHoverEnd={() => setActiveItem(null)}
+              onClick={() => setActiveItem(item.name)}
+            >
+              <Link
+                href={item.path}
+                className={`text-md hover:scale-110 transition-all duration-300 ease-in-out font-bold ${
+                  currentPath === item.path ? "text-[#F7F2DA]" : "text-gray-500 hover:text-[#F7F2DA]"
+                }`}
               >
-                <Link
-                  href={item.path}
-                  className={`items-center px-1 flex flex-row align-middle text-center border-b-2 text-md hover:scale-110 hover:text-xl hover:-translate-y-1 transition-all duration-300 ease-in-out font-bold ${
-                    currentPath === item.path
-                      ? "border-white text-[#F7F2DA]"
-                      : "border-transparent text-gray-500 hover:text-gray-700"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-                {hoveredItem === item.name && (
+                {item.name}
+              </Link>
+              <AnimatePresence>
+                {activeItem === item.name && (
                   <motion.div
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-white"
                     initial={{ width: "0%" }}
                     animate={{ width: "100%" }}
+                    exit={{ width: "0%" }}
                     transition={{ duration: 0.3 }}
                   />
                 )}
-              </motion.div>
-            ))}
-     
+              </AnimatePresence>
+            </motion.div>
+          ))}
         </nav>
+  
+
        
       </div>
       <div className="flex items-center justify-end ml-4">

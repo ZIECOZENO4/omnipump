@@ -87,10 +87,10 @@ export default function Component() {
     <ScrollShadow className="h-screen text-[#F7F2DA]">
       <div className="space-y-4 p-4">
         <h2 className="text-2xl font-bold mb-4">Recent Comments</h2>
-        <hr className="border-gray-600" />
+        <hr className="border-gray-600 mb-4" />
         {chatData.map((chat) => (
           <Link href="/comments" key={chat.id}>
-            <Card className="w-full bg-black border-gray-700 hover:bg-gray-700 transition-colors duration-200 mb-4">
+            <Card className="w-full bg-black border-gray-700 hover:bg-gray-700 hover:bg-opacity-60 transition-colors duration-200 mb-4">
               <CardBody>
                 <div className="flex items-center space-x-4">
                   <Avatar src={chat.avatar} alt={chat.user} className="w-12 h-12" />
@@ -116,8 +116,8 @@ export default function Component() {
         </div>
         <div className="md:w-2/3 lg:w-3/4 mt-8 md:mt-10">
           <Card className="bg-black border border-slate-600 p-6 rounded-lg shadow-lg">
-            <h1 className="text-2xl font-bold text-center mb-6">What Do You Think?</h1>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <h1 className="text-2xl font-bold text-center mb-6 md:mb-10">What Do You Think?</h1>
+            <form onSubmit={handleSubmit} className="space-y-6 md:space-y-10">
               <Input
                 label="Your nickname"
                 value={nickname}
@@ -139,14 +139,21 @@ export default function Component() {
                 className="bg-black text-[#F7F2DA] rounded border-white hover:border hover:border-green-500"
                 variant="bordered"
               />
-              <Button 
-                color="success" 
-                type="submit" 
-                className="w-full"
-                disabled={!isFormComplete}
-              >
-                Submit Comment
-              </Button>
+       
+              <button
+            type="submit"
+            disabled={!isFormComplete}
+          className='flex flex-row w-full mt-2 md:mt-4'>
+      <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      <div className='flex flex-col flex-grow'>
+        <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
+          <span className="text-[#F7F2DA] text-xl font-normal leading-5 text-center">
+      SUBMIT COMMENT
+          </span>
+        </div>
+        <div className="top-[69.7px] left-[1305px] w-full h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      </div>
+    </button>
             </form>
           </Card>
         </div>

@@ -115,8 +115,8 @@ export default function DesktopCoin() {
             <button
               className={`${
                 activeTab === "trades"
-                  ? "text-green-500 border-b-2 border-green-500"
-                  : "text-gray-400"
+                  ? "text-[#F7F2DA] border-b-2 border-[#F7F2DA]"
+                  : "text-gray-600"
               }`}
               onClick={() => setActiveTab("trades")}
             >
@@ -132,10 +132,22 @@ export default function DesktopCoin() {
                   No comments yet Be the first to comment!
                 </p>
               </Card>
-              <div className="text-center text-green-500 mb-4 py-2  border border-slate-600">Load more</div>
-              <Button className="w-full bg-green-500 hover:bg-green-600">
-                + Add Comment
-              </Button>
+              <div className="text-center text-[#F7F2DA] text-xl mb-4 py-2  border border-slate-600">Load more</div>
+      
+              <button
+            type="submit"
+       
+          className='flex flex-row w-full'>
+      <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      <div className='flex flex-col flex-grow'>
+        <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
+          <span className="text-[#F7F2DA] text-xl font-normal leading-5 text-center">
+          + Add Comment
+          </span>
+        </div>
+        <div className="top-[69.7px] left-[1305px] w-full h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      </div>
+    </button>
             </>
           ) : (
             <Card className="bg-black p-4 flex   border border-slate-600 flex-col items-center justify-center h-56">
@@ -152,12 +164,36 @@ export default function DesktopCoin() {
               <span className=" text-xs text-gray-400">1 $1 is 0.000010 ETH ($0.023)</span>
             </div>
             <div className="flex justify-between mb-8 p-2">
-              <Button className="bg-green-500 hover:bg-green-600 flex-grow mr-2">
-                Buy
-              </Button>
-              <Button variant="bordered" className="flex-grow ml-2">
-                Sell
-              </Button>
+         
+              <button
+            type="submit"
+
+          className='flex flex-row w-full'>
+      <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      <div className='flex flex-col flex-grow'>
+        <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
+          <span className="text-[#F7F2DA] text-xl font-normal leading-5 text-center">
+          SELL COIN
+          </span>
+        </div>
+        <div className="top-[69.7px] left-[1305px] w-full h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      </div>
+    </button>
+        
+              <button
+            type="submit"
+      
+          className='flex flex-row w-full'>
+      <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      <div className='flex flex-col flex-grow'>
+        <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
+          <span className="text-[#33322c] text-xl font-normal leading-5 text-center">
+          SELL COIN
+          </span>
+        </div>
+        <div className="top-[69.7px] left-[1305px] w-full h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      </div>
+    </button>
             </div>
             <div className="flex text-xs justify-between  mb-8">
               <span>Total Supply:10001</span>
@@ -267,7 +303,7 @@ export default function DesktopCoin() {
             <h2 className="text-xl md:text-3xl text-[#F7F2DA] text-center mb-4">
               Holders Distribution
             </h2>
-            <p className="text-xs my-8">No Current Distribution</p>
+            <p className="text-xs text-slate-600 my-8">No Current Distribution</p>
           </Card>
         </div>
       </main>

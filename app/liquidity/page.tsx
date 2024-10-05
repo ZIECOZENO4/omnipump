@@ -57,12 +57,20 @@ export default function Component() {
               className="bg-black w-full text-[#F7F2DA] mb-4 rounded border-white hover:border hover:border-green-500"
               variant="bordered"
             />
-            <Button 
-              className="w-full bg-green-600 hover:bg-green-700 text-[#F7F2DA]"
-              onClick={handleDepositClick}
-            >
-              Deposit
-            </Button>
+            <button
+            type="submit"
+            onClick={handleDepositClick}
+          className='flex flex-row w-full'>
+      <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      <div className='flex flex-col flex-grow'>
+        <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
+          <span className="text-[#F7F2DA] text-xl font-normal leading-5 text-center">
+          DEOSIT COIN
+          </span>
+        </div>
+        <div className="top-[69.7px] left-[1305px] w-full h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      </div>
+    </button>
           </div>
         </Card>
         
@@ -81,12 +89,21 @@ export default function Component() {
               className="bg-black w-full text-[#F7F2DA] mb-4 rounded border-white hover:border hover:border-green-500"
               variant="bordered"
             />
-            <Button 
-              className="w-full bg-green-600 hover:bg-green-700 text-[#F7F2DA]"
-              onClick={handleWithdrawClick}
-            >
-              Withdraw
-            </Button>
+ 
+            <button
+            type="submit"
+            onClick={handleWithdrawClick}
+          className='flex flex-row w-full'>
+      <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      <div className='flex flex-col flex-grow'>
+        <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
+          <span className="text-[#F7F2DA] text-xl font-normal leading-5 text-center">
+         WITHDRAW COIN
+          </span>
+        </div>
+        <div className="top-[69.7px] left-[1305px] w-full h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      </div>
+    </button>
           </div>
         </Card>
       </div>
