@@ -53,7 +53,7 @@ export default function Component() {
 
   const renderChatDetail = () => (
     <div className="flex flex-col h-screen">
-      <header className=" border border-white p-4 flex items-center">
+      <header className=" border border-slate-600 p-4 flex items-center">
         <Button variant="ghost" size="sm" onClick={() => setSelectedChat(null)} className="mr-4">
           <ChevronLeft className="h-6 w-6" />
           <span className="sr-only">Back to list</span>
@@ -84,12 +84,12 @@ export default function Component() {
   )
 
   return (
-    <div className=" border border-white text-[#F7F2DA]">
+    <div className=" border border-slate-600 text-[#F7F2DA]">
       <div className="md:hidden">
         {selectedChat ? renderChatDetail() : renderChatList()}
       </div>
       <div className="hidden md:flex">
-        <div className="w-64 border-r  border border-white">
+        <div className="w-64 border-r  border border-slate-600">
           {renderChatList()}
         </div>
         <div className="flex-1">

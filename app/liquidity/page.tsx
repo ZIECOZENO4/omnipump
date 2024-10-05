@@ -1,9 +1,24 @@
 "use client"
-import { Button, Card, CardHeader, Input } from "@nextui-org/react"
+import { useState } from "react";
+import { Button, Card, CardHeader, Input, Modal, ModalBody, ModalFooter, ModalHeader, useDisclosure } from "@nextui-org/react"
 
 export default function Component() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isDepositClicked, setIsDepositClicked] = useState(false);
+  const [isWithdrawClicked, setIsWithdrawClicked] = useState(false);
+
+  const handleDepositClick = () => {
+    setIsDepositClicked(true);
+    onOpen();
+  };
+
+  const handleWithdrawClick = () => {
+    setIsWithdrawClicked(true);
+    onOpen();
+  };
+
   return (
-    <div className="py-8 px-4 md:px-[10vw] bg-gray-900 text-white min-h-screen">
+    <div className="py-8 px-4 md:px-[10vw] text-[#F7F2DA] min-h-screen mt-2 md:mt-4">
       <style jsx global>{`
         input:focus, textarea:focus {
           outline: none;
@@ -11,9 +26,9 @@ export default function Component() {
         }
       `}</style>
       
-      <Card className="bg-gray-800 border-gray-700 p-6 mb-8">
-        <h1 className="text-2xl font-bold mb-4">Liquidity Pool</h1>
-        <p className="text-xl mb-6">Deposit and withdraw your liquidity</p>
+      <Card className="bg-black border border-gray-600 p-6 mb-8">
+        <h1 className="text-gray-400 mb-4">Liquidity Pool</h1>
+        <p className="text-2xl mb-6">Deposit and withdraw your liquidity</p>
         <div className="grid grid-cols-2 gap-4">
           <div>
             <h2 className="text-gray-400 mb-2">Your Balance</h2>
@@ -27,9 +42,9 @@ export default function Component() {
       </Card>
       
       <div className="grid md:grid-cols-2 gap-8 mb-8">
-        <Card className="bg-gray-800 border-gray-700 p-6">
+        <Card className="bg-black border border-gray-600 p-6">
           <CardHeader>
-            <h2 className="text-xl font-semibold">Deposit</h2>
+            <h2 className="text-2xl">Deposit</h2>
           </CardHeader>
           <div className="mt-4">
             <label htmlFor="deposit-amount" className="block text-sm font-medium text-gray-400 mb-2">
@@ -39,15 +54,21 @@ export default function Component() {
               id="deposit-amount"
               type="number"
               placeholder="0.0"
-              className="w-full bg-gray-700 text-white mb-4"
+              className="bg-black w-full text-[#F7F2DA] mb-4 border-white hover:border hover:border-green-500"
+              variant="bordered"
             />
-            <Button className="w-full bg-green-600 hover:bg-green-700 text-white">Deposit</Button>
+            <Button 
+              className="w-full bg-green-600 hover:bg-green-700 text-[#F7F2DA]"
+              onClick={handleDepositClick}
+            >
+              Deposit
+            </Button>
           </div>
         </Card>
         
-        <Card className="bg-gray-800 border-gray-700 p-6">
+        <Card className="bg-black border border-gray-600 p-6">
           <CardHeader>
-            <h2 className="text-xl font-semibold">Withdraw</h2>
+            <h2 className="text-2xl">Withdraw</h2>
           </CardHeader>
           <div className="mt-4">
             <label htmlFor="withdraw-amount" className="block text-sm font-medium text-gray-400 mb-2">
@@ -57,19 +78,47 @@ export default function Component() {
               id="withdraw-amount"
               type="number"
               placeholder="0.0"
-              className="w-full bg-gray-700 text-white mb-4"
+              className="bg-black w-full text-[#F7F2DA] mb-4 border-white hover:border hover:border-green-500"
+              variant="bordered"
             />
-            <Button className="w-full bg-green-600 hover:bg-green-700 text-white">Withdraw</Button>
+            <Button 
+              className="w-full bg-green-600 hover:bg-green-700 text-[#F7F2DA]"
+              onClick={handleWithdrawClick}
+            >
+              Withdraw
+            </Button>
           </div>
         </Card>
       </div>
       
       <Button
         variant="bordered"
-        className="w-full bg-gradient-to-r from-slate-600 to-slate-800 hover:from-slate-700 hover:to-slate-900 text-white border-blue-300"
+        className="w-full bg-gradient-to-r mt-2 md:mt-6 from-slate-600 to-slate-800 hover:from-slate-700 hover:to-slate-900 text-[#F7F2DA] border-blue-300"
       >
         Learn More
       </Button>
+
+      <Modal 
+        isOpen={isOpen} 
+        onClose={() => {
+          onClose();
+          setIsDepositClicked(false);
+          setIsWithdrawClicked(false);
+        }}
+        className="bg-gray-800 border border-gray-600"
+      >
+        <ModalHeader className="text-[#F7F2DA]">Success</ModalHeader>
+        <ModalBody>
+          <p className="text-[#F7F2DA]">
+            {isDepositClicked ? "Deposit" : "Withdrawal"} successful!
+          </p>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="success" onPress={onClose}>
+            Close
+          </Button>
+        </ModalFooter>
+      </Modal>
     </div>
   )
 }

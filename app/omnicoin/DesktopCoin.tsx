@@ -32,7 +32,7 @@ export default function DesktopCoin() {
               <div className="flex items-center">
               <Link href='/' passHref>
       <motion.a
-        className="inline-block p-2 rounded-full bg-slate-800 p-2 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+        className="inline-block p-2 rounded-full bg-slate-800  hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
         whileHover={{ x: -5 }}
         whileTap={{ x: -10 }}
         transition={{ type: 'spring', stiffness: 400, damping: 10 }}

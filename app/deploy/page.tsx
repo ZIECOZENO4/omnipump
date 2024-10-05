@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Upload, ChevronUp, ChevronDown } from "lucide-react";
-import { Progress } from "@nextui-org/react";
+import { Progress, Modal, ModalBody, ModalFooter, ModalHeader, Button, useDisclosure } from "@nextui-org/react";
 import { FileUpload } from "@/components/file-upload";
 
 export default function Component() {
@@ -10,6 +10,11 @@ export default function Component() {
   const [liquidity, setLiquidity] = useState(0);
   const [lockPercentage, setLockPercentage] = useState(0);
   const [initialPrice, setInitialPrice] = useState<number>(0);
+  const [name, setName] = useState("");
+  const [ticker, setTicker] = useState("");
+  const [description, setDescription] = useState("");
+  const [image, setImage] = useState("");
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   useEffect(() => {
     if (liquidity > 0) {
@@ -18,8 +23,19 @@ export default function Component() {
     }
   }, [ethAmount, liquidity]);
 
+  const isFormValid = () => {
+    return name && ticker && description  && ethAmount > 0 && liquidity > 0 && lockPercentage > 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (isFormValid()) {
+      onOpen();
+    }
+  };
+
   return (
-    <div className="min-h-screen mt-8  text-gray-300 p-4">
+    <div className="min-h-screen mt-8 text-gray-300 p-4">
       <style jsx global>{`
         input:focus,
         textarea:focus {
@@ -29,8 +45,8 @@ export default function Component() {
       `}</style>
 
       <main className="max-w-3xl mx-auto ">
-      <h1 className="text-xl md:text-2xl sm:text-3xl text-center mb-8 sm:mb-12">Fill the details to kick off your new coin</h1>
-        <div className="space-y-6">
+        <h1 className="text-xl md:text-2xl sm:text-3xl text-center mb-8 sm:mb-12">Fill the details to kick off your new coin</h1>
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div className="flex flex-col w-full gap-4 md:hidden">
             <div>
               <label className="block mb-2">Name</label>
@@ -38,6 +54,9 @@ export default function Component() {
                 type="text"
                 placeholder="Token name"
                 className="w-full md:w-1/2 bg-black rounded p-2 border border-gray-700"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
               />
             </div>
             <div>
@@ -46,6 +65,9 @@ export default function Component() {
                 type="text"
                 placeholder="Token ticker"
                 className="w-full md:w-1/2 bg-black rounded p-2 border border-gray-700"
+                value={ticker}
+                onChange={(e) => setTicker(e.target.value)}
+                required
               />
             </div>
           </div>
@@ -56,16 +78,20 @@ export default function Component() {
                 type="text"
                 placeholder="Token name"
                 className="w-full bg-black rounded p-2 border border-gray-700"
-          
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
               />
             </div>
             <div className="flex-1">
               <label className="block mb-2">Ticker</label>
               <input
-                 type="text"
-                 placeholder="Token ticker"
+                type="text"
+                placeholder="Token ticker"
                 className="w-full bg-black rounded p-2 border border-gray-700"
-          
+                value={ticker}
+                onChange={(e) => setTicker(e.target.value)}
+                required
               />
             </div>
           </div>
@@ -74,6 +100,9 @@ export default function Component() {
             <textarea
               placeholder="Token description"
               className="w-full bg-black rounded p-2 border border-gray-700 h-24 md:h-32"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              required
             ></textarea>
           </div>
           <div>
@@ -88,6 +117,7 @@ export default function Component() {
                 placeholder="1"
                 className="w-full bg-black rounded p-2 border border-gray-700"
                 onChange={(e) => setEthAmount(parseFloat(e.target.value) || 0)}
+                required
               />
             </div>
             <div className="flex-1">
@@ -97,6 +127,7 @@ export default function Component() {
                 placeholder="10000"
                 className="w-full bg-black rounded p-2 border border-gray-700"
                 onChange={(e) => setLiquidity(parseFloat(e.target.value) || 0)}
+                required
               />
             </div>
           </div>
@@ -111,6 +142,7 @@ export default function Component() {
               onChange={(e) =>
                 setLockPercentage(parseFloat(e.target.value) || 0)
               }
+              required
             />
           </div>
           <div className="bg-black border border-gray-700 rounded p-4 flex flex-col md:flex-row md:justify-between gap-4">
@@ -137,7 +169,8 @@ export default function Component() {
             </div>
           </div>
           <button
-            className="w-full bg-black border border-gray-700 text-[#F7F2DA] p-2 rounded flex items-center justify-center hover:bg-gradient-to-r  from-slate-500 to-slate-700 transition-colors duration-300"
+            type="button"
+            className="w-full bg-black border border-gray-700 text-[#F7F2DA] p-2 rounded flex items-center justify-center hover:bg-gradient-to-r from-slate-500 to-slate-700 transition-colors duration-300"
             onClick={() => setShowMore(!showMore)}
           >
             {showMore ? (
@@ -180,11 +213,33 @@ export default function Component() {
               </div>
             </>
           )}
-          <button className="w-full bg-green-500 text-[#F7F2DA] p-3 rounded font-bold">
+          <button
+            type="submit"
+            className="w-full bg-green-500 text-[#F7F2DA] p-3 rounded font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={!isFormValid()}
+          >
             Submit
           </button>
-        </div>
+        </form>
       </main>
+
+      <Modal 
+        isOpen={isOpen} 
+        onClose={onClose}
+        className="bg-gray-800 border border-gray-600"
+      >
+        <ModalHeader className="text-[#F7F2DA]">Success</ModalHeader>
+        <ModalBody>
+          <p className="text-[#F7F2DA]">
+            Your coin has been successfully created!
+          </p>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="success" onPress={onClose}>
+            Close
+          </Button>
+        </ModalFooter>
+      </Modal>
     </div>
   );
 }
