@@ -5,29 +5,23 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import ConnectWallet from "./ConnectButton";
 import { Badge, Button } from "@nextui-org/react";
 import { NotificationIcon } from "./NotificationIcon";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem
-} from "@nextui-org/react";
 import NotificationAlert from "./Notification";
+import FullConnectButton from './fullConnectButton';
 
 interface NavItem {
   name: string;
   path: string;
 }
 const styles = {
-  navLink: `text-white flex mx-[10px]`,
+  navLink: `text-[#F7F2DA] flex mx-[10px]`,
   badge: `rounded-full bg-blue-600 h-1 w-1 absolute bottom-5 right-0 top-1 ring-4`,
   navItem: `relative mr-1 cursor-pointer hover:opacity-60`,
   nav: `flex justify-center items-center gap-[20px]`,
   headerWrapper: `md:flex md:justify-between h-full max-w-screen-xl mx-auto px-4 hidden`,
   inputContainer: `flex items-center justify-center p-2 rounded `,
-  input: `bg-transparent outline-none text-white w-70 ml-3`,
+  input: `bg-transparent outline-none text-[#F7F2DA] w-70 ml-3`,
   cursorPointer: `mr-5 cursor-pointer`,
 };
 
@@ -49,7 +43,7 @@ const MdNavBar = () => {
       setIsNotificationOpen(!isNotificationOpen);
     };
   return (
-    <div className='bg-black shadow-2xl bg-opacity-60 flex-row justify-between text-white h-20 flex md:gap-[80px] w-full p-[20px] md:px-[30px] px-[20px] sticky top-0 z-50 fixed'>
+    <div className='bg-black shadow-2xl bg-opacity-60 flex-row justify-between text-[#F7F2DA] h-20 flex md:gap-[80px] w-full p-[20px] md:px-[30px] px-[20px] sticky top-0 z-50 fixed'>
    <Link href="/" className="flex flex-row ">
             <motion.svg
               width="40"
@@ -67,7 +61,7 @@ const MdNavBar = () => {
               </g>
             </motion.svg>
             <motion.p
-              className="font-extrabold mt-2 text-white tracking-widest hover:text-gray-500 text-inherit text-md md:text-2xl ml-2 md:ml-4 hover:scale-110 hover:text-xl md:hover:text-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out"
+              className="font-extrabold mt-2 text-[#F7F2DA] tracking-widest hover:text-gray-500 text-inherit text-md md:text-2xl ml-2 md:ml-4 hover:scale-110 hover:text-xl md:hover:text-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out"
               whileHover={{
                 y: [-2, 2, -2],
                 transition: { repeat: Infinity, duration: 0.5 }
@@ -90,7 +84,7 @@ const MdNavBar = () => {
                   href={item.path}
                   className={`items-center px-1 flex flex-row align-middle text-center border-b-2 text-md hover:scale-110 hover:text-xl hover:-translate-y-1 transition-all duration-300 ease-in-out font-bold ${
                     currentPath === item.path
-                      ? "border-white text-white"
+                      ? "border-white text-[#F7F2DA]"
                       : "border-transparent text-gray-500 hover:text-gray-700"
                   }`}
                 >
@@ -111,13 +105,13 @@ const MdNavBar = () => {
        
       </div>
       <div className="flex items-center justify-end ml-4">
-        <div className="md:w-auto hidden text-white rounded-md sm:flex w-12">
+        <div className="md:w-auto hidden text-[#F7F2DA] rounded-md sm:flex w-12">
               <CubicButton />
             </div>
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-opacity-60 text-white hover:bg-gray-500 p-2 md:px-3 md:py-2 rounded-md text-sm font-medium cursor-pointer"
+              className="bg-opacity-60 text-[#F7F2DA] hover:bg-gray-500 p-2 md:px-3 md:py-2 rounded-md text-sm font-medium cursor-pointer"
             >
               <Badge content="New" shape="circle" color="default">
                 <Button
@@ -152,7 +146,7 @@ const MdNavBar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed top-0 right-0 h-full bg-black text-white z-50 overflow-y-auto"
+              className="fixed top-0 right-0 h-full bg-black text-[#F7F2DA] z-50 overflow-y-auto"
               style={{
                 width:
                   typeof window !== "undefined" && window.innerWidth >= 768
@@ -184,7 +178,7 @@ const MdNavBar = () => {
                     <Link href="/">
                       <button className="p-[3px] relative w-full">
                         <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
-                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
                           Home
                         </div>
                       </button>
@@ -192,7 +186,7 @@ const MdNavBar = () => {
                     <Link href="/create">
                       <button className="p-[3px] relative w-full">
                         <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
-                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
                           Create
                         </div>
                       </button>
@@ -200,7 +194,7 @@ const MdNavBar = () => {
                     <Link href="/liquidity">
                       <button className="p-[3px] relative w-full">
                         <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
-                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
                           Liquidity
                         </div>
                       </button>
@@ -209,7 +203,7 @@ const MdNavBar = () => {
                     <Link href="/lisiting">
                       <button className="p-[3px] relative w-full">
                         <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
-                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
                           Listing
                         </div>
                       </button>
@@ -217,7 +211,7 @@ const MdNavBar = () => {
                        <Link href="/website-comment">
                       <button className="p-[3px] relative w-full">
                         <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
-                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
                      Comment
                         </div>
                       </button>
@@ -225,12 +219,14 @@ const MdNavBar = () => {
                     <Link href="/contact">
                       <button className="p-[3px] relative w-full">
                         <div className="absolute inset-0 bg-gradient-to-r  from-slate-500 to-slate-700 rounded-lg" />
-                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
                           Contact
                         </div>
                       </button>
                     </Link>
-                    <CubicButton />
+                    <div className="w-full">
+            <FullConnectButton />
+            </div>
                   </div>
                   <div className="space-y-4">
                     <h2 className="text-xl text-center font-bold mt-6 md:hidden px-4 md:px-8">

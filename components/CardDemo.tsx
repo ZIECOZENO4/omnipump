@@ -20,7 +20,7 @@ const Card = () => (
         height: '150px',
       }}
     >
-      <div className="p-3 text-white">
+      <div className="p-3 text-[#F7F2DA]">
         <div className="flex justify-between items-start">
           <div className="w-[100px] h-[100px] my-[10px] mx-[10px] bg-[#D9D9D966]" />
           

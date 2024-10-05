@@ -38,7 +38,7 @@ export default function BottomMore() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.2 }}
-              className="bg-zinc-900 bg-opacity-30 rounded-lg overflow-hidden mb-2 p-2"
+              className="bg-zinc-900 bg-opacity-60 rounded-lg overflow-hidden mb-2 p-2"
             >
               <div className="space-y-1">
                 <MenuItem icon={<Plus className="w-4 h-4" />} text="Add Liquidity" href="/liquidity" />
@@ -53,7 +53,7 @@ export default function BottomMore() {
         {/* Toggle button */}
         <motion.button
           onClick={toggleMenu}
-          className="bg-transparent hover:bg-green-600 hover:bg-opacity-25 border border-green-500 text-white rounded-lg p-2 flex items-center text-center justify-between w-full"
+          className="bg-transparent hover:bg-green-600 hover:bg-opacity-20 border border-green-500 text-[#F7F2DA] rounded-lg p-2 flex items-center text-center justify-between w-full"
           whileTap={{ scale: 0.95 }}
         >
           <span className="flex text-center  mx-2">
@@ -71,7 +71,7 @@ export default function BottomMore() {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.2 }}
               onClick={toggleMenu}
-              className="absolute top-2 right-2 bg-zinc-800 text-white rounded-full p-1"
+              className="absolute top-2 right-2 bg-zinc-800 text-[#F7F2DA] rounded-full p-1"
             >
               <X className="w-4 h-4" />
             </motion.button>
@@ -85,7 +85,7 @@ export default function BottomMore() {
 function MenuItem({ icon, text, href }: { icon: React.ReactNode; text: string; href: string }) {
   return (
     <Link href={href} className="block">
-      <div className="flex items-center space-x-2 w-full px-3 py-2 text-sm text-white hover:bg-green-500 hover:bg-opacity-20 rounded transition-colors duration-200">
+      <div className="flex items-center space-x-2 w-full px-3 py-2 text-sm text-[#F7F2DA] hover:bg-green-500 hover:bg-opacity-20 rounded transition-colors duration-200">
         {icon}
         <span>{text}</span>
       </div>

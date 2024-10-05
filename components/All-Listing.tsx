@@ -10,7 +10,7 @@ export function AllListing() {
       title: "Product",
       value: "product",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-black shadow-xl">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-[#F7F2DA] bg-black shadow-xl">
           <p>Product Tab</p>
           <TabsContent />
         </div>
@@ -20,7 +20,7 @@ export function AllListing() {
       title: "Services",
       value: "services",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-black shadow-xl">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-[#F7F2DA] bg-black shadow-xl">
           <p>Services tab</p>
           <TabsContent />
         </div>
@@ -30,7 +30,7 @@ export function AllListing() {
       title: "Playground",
       value: "playground",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-black shadow-xl">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-[#F7F2DA] bg-black shadow-xl">
           <p>Playground tab</p>
           <TabsContent />
         </div>
@@ -40,7 +40,7 @@ export function AllListing() {
       title: "Content",
       value: "content",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-black shadow-xl">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-[#F7F2DA] bg-black shadow-xl">
           <p>Content tab</p>
           <TabsContent />
         </div>
@@ -50,7 +50,7 @@ export function AllListing() {
       title: "Random",
       value: "random",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-black shadow-xl">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-[#F7F2DA] bg-black shadow-xl">
           <p>Random tab</p>
           <TabsContent />
         </div>

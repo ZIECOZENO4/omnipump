@@ -9,7 +9,7 @@ const InfoComponent = () => {
   return (
     <div className='w-full p-2 flex flex-col gap-4'>
             <h1 className='text-xl md:text-3xl text-center py-2 md:py-4'>Coin Details</h1>
-          <Card className="bg-black border border-slate-600 mb-4 text-white p-4">
+          <Card className="bg-black border border-slate-600 mb-4 text-[#F7F2DA] p-4">
             <div className="flex items-center space-x-4 mb-4">
               <div className=" flex flex-row justify-between w-full h-auto">
                 <div className="  inset-0 bg-purple-600 rounded-full">
@@ -66,7 +66,7 @@ const InfoComponent = () => {
    
        
           <Card className="bg-black border border-slate-400 text-center p-4">
-            <h2 className="text-xl md:text-3xl text-white text-center mb-4">
+            <h2 className="text-xl md:text-3xl text-[#F7F2DA] text-center mb-4">
               Holders Distribution
             </h2>
             <p className="text-xs my-8">No Current Distribution</p>

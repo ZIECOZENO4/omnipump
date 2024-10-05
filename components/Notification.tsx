@@ -5,7 +5,7 @@ export default function NotificationAlert() {
   const [isVertical, setIsVertical] = React.useState(false);
   return (
     <div className="flex flex-col px-4 md:px-8">
-      <Switch className="mb-4 text-white" isSelected={isVertical} onValueChange={setIsVertical}>
+      <Switch className="mb-4 text-[#F7F2DA]" isSelected={isVertical} onValueChange={setIsVertical}>
         Vision
       </Switch>
       <div className="flex w-full flex-col">
@@ -16,7 +16,7 @@ export default function NotificationAlert() {
            No Transaction Yet
            <button className="p-[3px] relative">
   <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-700 rounded-lg" />
-  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
    Create Coin
   </div>
 </button>
@@ -29,7 +29,7 @@ export default function NotificationAlert() {
              No Pending Transaction
              <button className="p-[3px] relative">
   <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-700 rounded-lg" />
-  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
    Create Coin
   </div>
 </button>
@@ -42,7 +42,7 @@ export default function NotificationAlert() {
               No Completed Transaction
               <button className="p-[3px] relative">
   <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-700 rounded-lg" />
-  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
    Create Coin
   </div>
 </button>
@@ -55,7 +55,7 @@ export default function NotificationAlert() {
               No Failed Transaction
               <button className="p-[3px] relative">
   <div className="absolute inset-0 bg-gradient-to-r from-slate-500 to-slate-700 rounded-lg" />
-  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+  <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-[#F7F2DA] hover:bg-transparent">
    Create Coin
   </div>
 </button>

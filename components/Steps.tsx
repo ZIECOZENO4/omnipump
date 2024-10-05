@@ -50,7 +50,7 @@ export function IntoList() {
 
       {loading && (
         <button
-          className="fixed h-[60vh] top-4 right-4 text-white z-[120]"
+          className="fixed h-[60vh] top-4 right-4 text-[#F7F2DA] z-[120]"
           onClick={() => setLoading(false)}
           aria-label='text'
         >

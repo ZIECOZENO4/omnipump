@@ -31,16 +31,20 @@ export default function Component() {
           <Button
             key={chat.id}
             variant="bordered"
-            className="w-full justify-start text-left p-1"
+            className="w-full justify-start  text-left p-2 h-auto"
             onClick={() => setSelectedChat(chat)}
           >
+            <div className="flex flex-row justify-between">
+        
             <Avatar src={chat.avatar} alt={chat.user} className="w-12 h-12 mr-3 m-2" />
             <div className="flex flex-col gap-2 p-2 overflow-hidden">
               <div className="font-semibold">{chat.user}</div>
               <div className="text-xs text-gray-400">{chat.address}</div>
-              <div className="text-sm text-gray-400 truncate">{chat.message}</div>
-            </div>
             <div className="text-xs text-gray-100 ml-2">{chat.time}</div>
+
+            </div>
+            </div>
+     
           </Button>
         ))}
       </div>
@@ -71,7 +75,7 @@ export default function Component() {
                 <span className="text-gray-400 text-sm">{selectedChat?.time}</span>
               </div>
               <div className="text-xs text-gray-400 mb-1">{selectedChat?.address}</div>
-              <p className="text-gray-300 whitespace-pre-line">{selectedChat?.message}</p>
+              <p className="text-gray-300 whitespace-pre-line text-xl md:text-2xl mt-3">{selectedChat?.message}</p>
             </div>
           </div>
         </div>

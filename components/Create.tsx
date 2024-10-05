@@ -70,7 +70,7 @@ export default function CreateComponent() {
   }, [])
 
   return (
-    <div className="flex h-screen text-white">
+    <div className="flex h-screen text-[#F7F2DA]">
       <motion.div
         className={`absolute inset-0`}
         animate={{ opacity: 1 }}

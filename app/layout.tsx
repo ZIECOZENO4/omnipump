@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <body className={`${workbench.variable} dark text-white antialiased relative font-workbench`}>
+       <body className={`${workbench.variable} dark text-[#F7F2DA] antialiased relative font-workbench`}>
        <Providers>
         <div className="relative min-h-screen">
           <FirstAnimation />

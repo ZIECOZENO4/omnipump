@@ -79,16 +79,16 @@ export function HeroSection() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl md:text-3xl text-light  text-white">Created by {profile.name}</h2>
-            <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-2 text-white">
+            <h2 className="text-2xl md:text-3xl text-light  text-[#F7F2DA]">Created by {profile.name}</h2>
+            <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-2 text-[#F7F2DA]">
               {profile.badges.map((badge, index) => (
                 <Chip key={index} color={`${index % 2 === 0 ? 'default' : 'warning'}`} variant={`${index % 2 === 0 ? 'shadow' : 'dot'}`} className='font-bold'>
                   {badge}
                 </Chip>
               ))}
             </div>
-            <p className="mt-2 justify-center sm:justify-start  text-gray-500 flex">Market Cap: <span className='ml-2 text-white'>{profile.marketCap}</span> </p>
-            <p className=" justify-center sm:justify-start text-gray-500 flex">Replies:<span className='ml-2 text-white'> {profile.replies}</span> </p>
+            <p className="mt-2 justify-center sm:justify-start  text-gray-500 flex">Market Cap: <span className='ml-2 text-[#F7F2DA]'>{profile.marketCap}</span> </p>
+            <p className=" justify-center sm:justify-start text-gray-500 flex">Replies:<span className='ml-2 text-[#F7F2DA]'> {profile.replies}</span> </p>
             <p className="text-slate-500 mt-2">
               {profile.tickerName} [ticker: {profile.ticker}]
             </p>

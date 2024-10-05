@@ -21,7 +21,7 @@ export function WalletPopup({ onClose }: WalletPopupProps) {
             <CardItem
               translateZ={20}
               as="button"
-              className="px-2 md:w-32 w-20  py-2 rounded-xl text-xs font-normal text-white bg-slate-800 "
+              className="px-2 md:w-32 w-20  py-2 rounded-xl text-xs font-normal text-[#F7F2DA] bg-slate-800 "
               onClick={onClose}
             >
               Start Creating →
@@ -29,7 +29,7 @@ export function WalletPopup({ onClose }: WalletPopupProps) {
             <CardItem
               translateZ={20}
               as="button"
-              className="px-4 py-2 rounded-xl bg-black hover:border-indigo-700 border-2  border-white  text-white text-xs font-bold"
+              className="px-4 py-2 rounded-xl bg-black hover:border-indigo-700 border-2  border-white  text-[#F7F2DA] text-xs font-bold"
               onClick={onClose}
             >
               Explore

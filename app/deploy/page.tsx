@@ -137,7 +137,7 @@ export default function Component() {
             </div>
           </div>
           <button
-            className="w-full bg-black border border-gray-700 text-white p-2 rounded flex items-center justify-center hover:bg-gradient-to-r  from-slate-500 to-slate-700 transition-colors duration-300"
+            className="w-full bg-black border border-gray-700 text-[#F7F2DA] p-2 rounded flex items-center justify-center hover:bg-gradient-to-r  from-slate-500 to-slate-700 transition-colors duration-300"
             onClick={() => setShowMore(!showMore)}
           >
             {showMore ? (
@@ -180,7 +180,7 @@ export default function Component() {
               </div>
             </>
           )}
-          <button className="w-full bg-green-500 text-white p-3 rounded font-bold">
+          <button className="w-full bg-green-500 text-[#F7F2DA] p-3 rounded font-bold">
             Submit
           </button>
         </div>

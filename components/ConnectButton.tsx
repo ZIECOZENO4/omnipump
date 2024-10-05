@@ -36,7 +36,7 @@ export default function ConnectWallet() {
   client={client}
   wallets={wallets}
   theme={customTheme}
-  connectButton={{ label: "Connect Wallet", className: "text-white w-full" }}
+  connectButton={{ label: "Connect Wallet", className: "text-[#F7F2DA] w-full" }}
   connectModal={{
     size: "wide",
     title: "OmniPump Coin Wallet",

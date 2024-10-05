@@ -11,7 +11,7 @@ const Footer = () => {
             className=" px-4 pt-24 py-8 mx-auto text-left  md:text-center"
           >
             <h1
-              className="text-3xl  leading-10 tracking-tight text-left text-white text-center sm:leading-none md:text-6xl text-4xl lg:text-7xl"
+              className="text-3xl  leading-10 tracking-tight text-left text-[#F7F2DA] text-center sm:leading-none md:text-6xl text-4xl lg:text-7xl"
             >
               <span className="inline md:block">OmniPump</span>
               <br />
@@ -28,14 +28,14 @@ ultimate{" "}
             <div
               className="mx-auto rounded-lg font-black mt-5 text-zinc-400 md:mt-12 md:max-w-lg text-center lg:text-lg"
             >
-              <Link href="/lunch" className="bg-tkb border text-sm text-white py-3 px-7 rounded-full" >
+              <Link href="/lunch" className="bg-tkb border text-sm text-[#F7F2DA] py-3 px-7 rounded-full" >
          Start Lunch
               </Link>
             </div>
           </div>
   </section>
   
-<hr className="text-white mx-5" />
+<hr className="text-[#F7F2DA] mx-5" />
   <footer className=" pb-5">
   <div className=" px-4 pt-8 mx-auto sm:px-6 lg:px-8">
     <div className="sm:flex sm:items-center sm:justify-between">

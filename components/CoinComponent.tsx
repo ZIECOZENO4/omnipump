@@ -730,7 +730,7 @@ className='border border-slate-400 focus:border-green-500 mx-2'
         isOpen={isModalOpen}
         onClose={closeModal}
         placement="bottom"
-        className="bg-gray-900 text-white"
+        className="bg-gray-900 text-[#F7F2DA]"
       >
         <ModalContent>
           {(onClose) => (
@@ -820,7 +820,7 @@ const Card = () => (
         height: '150px',
       }}
     >
-      <div className="p-3 text-white">
+      <div className="p-3 text-[#F7F2DA]">
         <div className="flex justify-between items-start">
           <div className="w-[100px] h-[100px] my-[10px] mx-[10px] bg-[#D9D9D966]" />
           
