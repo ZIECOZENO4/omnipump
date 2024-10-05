@@ -18,7 +18,7 @@ export default function BottomMore() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="md:fixed hidden md:inset-0 bg-black/20 backdrop-blur-sm md:z-50"
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50"
             onClick={toggleMenu}
           />
         )}
@@ -28,7 +28,7 @@ export default function BottomMore() {
       <motion.div
         initial={false}
         animate={isOpen ? "open" : "closed"}
-        className="md:fixed hidden md:bottom-4 md:left-4 md:z-50"
+        className="fixed hidden bottom-4 left-4 z-50"
       >
         {/* Menu items */}
         <AnimatePresence>
