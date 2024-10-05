@@ -88,7 +88,7 @@ export default function Component() {
           <Link href="/comments">
             <div
               key={chat.id}
-              className="w-full justify-start border border-green-500 hover:bg-green-600 hover:bg-opacity-30 text-left p-2 h-auto"
+              className="w-full justify-start border gap-3 rounded-md border-slate-500 hover:bg-slate-600 hover:bg-opacity-30 text-left p-1 h-auto"
             >
               <div className="flex flex-row justify-between">
                 <Avatar
@@ -96,10 +96,9 @@ export default function Component() {
                   alt={chat.user}
                   className="w-12 h-12 mr-3 m-2"
                 />
-                <div className="flex flex-col gap-2 p-2 overflow-hidden">
+                <div className="flex flex-col gap-2 p-1 overflow-hidden">
                   <div className="font-semibold">{chat.user}</div>
-                  <div className="text-xs text-gray-400">{chat.address}</div>
-                  <div className="text-xs text-gray-100 ml-2">{chat.time}</div>
+                  <div className="text-xs text-gray-100 ">{chat.time}</div>
                 </div>
               </div>
             </div>
@@ -116,12 +115,13 @@ export default function Component() {
           {renderChatList()}
         </div>
         <div className="flex-1">
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <h1 className='my-4 text-center text-xl md:text-2xl'>What Do You Think</h1>
+          <form onSubmit={handleSubmit} className="space-y-4 max-w-2xl align-middle">
             <Input
               label="Your nickname"
               value={nickname}
               onChange={(e) => setNickname(e.target.value)}
-              className="w-full"
+              className="w-full border-2 focus:border-green-500"
               variant="bordered"
               classNames={{
                 input: "text-slate-600",
@@ -132,7 +132,7 @@ export default function Component() {
               label="Your address"
               value="0x1234...5678" // Replace with actual user address
               readOnly
-              className="w-full"
+              className="w-full border-2 focus:border-green-500"
               variant="bordered"
               classNames={{
                 input: "text-slate-600",
@@ -143,14 +143,14 @@ export default function Component() {
               label="Type your comment here..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full"
+              className="w-full border-2 focus:border-green-500"
               variant="bordered"
               classNames={{
                 input: "text-slate-600",
                 label: "text-[#F7F2DA]"
               }}
             />
-            <Button color="success" type="submit" className="w-full">
+            <Button color="success" type="submit" className="w-full text-[#F7F2DA]">
               Submit Comment
             </Button>
           </form>
