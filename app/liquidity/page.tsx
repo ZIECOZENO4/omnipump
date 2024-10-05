@@ -54,7 +54,7 @@ export default function Component() {
               id="deposit-amount"
               type="number"
               placeholder="0.0"
-              className="bg-black w-full text-[#F7F2DA] mb-4 border-white hover:border hover:border-green-500"
+              className="bg-black w-full text-[#F7F2DA] mb-4 rounded border-white hover:border hover:border-green-500"
               variant="bordered"
             />
             <Button 
@@ -78,7 +78,7 @@ export default function Component() {
               id="withdraw-amount"
               type="number"
               placeholder="0.0"
-              className="bg-black w-full text-[#F7F2DA] mb-4 border-white hover:border hover:border-green-500"
+              className="bg-black w-full text-[#F7F2DA] mb-4 rounded border-white hover:border hover:border-green-500"
               variant="bordered"
             />
             <Button 
