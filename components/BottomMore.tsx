@@ -18,7 +18,7 @@ export default function BottomMore() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 hidden md:block lg:hidden"
             onClick={toggleMenu}
           />
         )}
@@ -28,7 +28,7 @@ export default function BottomMore() {
       <motion.div
         initial={false}
         animate={isOpen ? "open" : "closed"}
-        className="fixed hidden bottom-4 left-4 z-50"
+        className="fixed hidden md:block lg:hidden bottom-4 left-4 z-50"
       >
         {/* Menu items */}
         <AnimatePresence>
@@ -56,7 +56,7 @@ export default function BottomMore() {
           className="bg-transparent hover:bg-green-600 hover:bg-opacity-20 border border-green-500 text-[#F7F2DA] rounded-lg p-2 flex items-center text-center justify-between w-full"
           whileTap={{ scale: 0.95 }}
         >
-          <span className="flex text-center  mx-2">
+          <span className="flex text-center mx-2">
             View More
           </span>
           {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
