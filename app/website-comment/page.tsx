@@ -80,28 +80,24 @@ export default function Component() {
     setMessage("");
   };
   const renderChatList = () => (
-    <ScrollShadow className="h-screen text-[#F7F2DA]">
+    <ScrollShadow className="h-screen text-white">
       <div className="space-y-4 p-4">
         <h2 className="text-2xl font-bold mb-4">Recent Comments</h2>
-        <hr />
+        <hr className="border-gray-600" />
         {chatData.map((chat) => (
-          <Link href="/comments">
-            <div
-              key={chat.id}
-              className="w-full justify-start border gap-3 rounded-md border-slate-500 hover:bg-slate-600 hover:bg-opacity-30 text-left p-1 h-auto"
-            >
-              <div className="flex flex-row justify-between">
-                <Avatar
-                  src={chat.avatar}
-                  alt={chat.user}
-                  className="w-12 h-12 mr-3 m-2"
-                />
-                <div className="flex flex-col gap-2 p-1 overflow-hidden">
-                  <div className="font-semibold">{chat.user}</div>
-                  <div className="text-xs text-gray-100 ">{chat.time}</div>
+          <Link href="/comments" key={chat.id}>
+            <Card className="w-full bg-gray-800 border-gray-700 hover:bg-gray-700 transition-colors duration-200 mb-4">
+              <CardBody>
+                <div className="flex items-center space-x-4">
+                  <Avatar src={chat.avatar} alt={chat.user} className="w-12 h-12" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-white truncate">{chat.user}</p>
+                    <p className="text-xs text-gray-400">{chat.time}</p>
+                    <p className="mt-1 text-sm text-gray-300 truncate">{chat.message}</p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardBody>
+            </Card>
           </Link>
         ))}
       </div>
@@ -109,65 +105,57 @@ export default function Component() {
   );
 
   return (
-    <div className=" border border-white text-[#F7F2DA]">
-      <div className="hidden md:flex">
-        <div className="w-64 border-r  border border-white">
+    <div className="bg-gray-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-8 md:flex md:space-x-8">
+        <div className="hidden md:block md:w-1/3 lg:w-1/4">
           {renderChatList()}
         </div>
-        <div className="flex-1">
-          <h1 className='my-4 text-center text-xl md:text-2xl'>What Do You Think</h1>
-          <form onSubmit={handleSubmit} className="space-y-4 max-w-2xl align-middle">
-            <Input
-              label="Your nickname"
-              value={nickname}
-              onChange={(e) => setNickname(e.target.value)}
-              className="w-full border-2 focus:border-green-500"
-              variant="bordered"
-              classNames={{
-                input: "text-slate-600",
-                label: "text-[#F7F2DA]"
-              }}
-            />
-            <Input
-              label="Your address"
-              value="0x1234...5678" // Replace with actual user address
-              readOnly
-              className="w-full border-2 focus:border-green-500"
-              variant="bordered"
-              classNames={{
-                input: "text-slate-600",
-                label: "text-[#F7F2DA]"
-              }}
-            />
-            <Textarea
-              label="Type your comment here..."
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="w-full border-2 focus:border-green-500"
-              variant="bordered"
-              classNames={{
-                input: "text-slate-600",
-                label: "text-[#F7F2DA]"
-              }}
-            />
-            <Button color="success" type="submit" className="w-full text-[#F7F2DA]">
-              Submit Comment
-            </Button>
-          </form>
-          <Modal
-            isOpen={!!selectedComment}
-            onClose={() => setSelectedComment(null)}
-            className="bg-gray-800 border border-gray-600"
-          >
-            <ModalHeader className="text-slate-600">
-              {selectedComment?.user}'s Comment
-            </ModalHeader>
-            <ModalBody>
-              <p className="text-[#F7F2DA]">{selectedComment?.message}</p>
-            </ModalBody>
-          </Modal>
+        <div className="md:w-2/3 lg:w-3/4">
+          <Card className="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h1 className="text-2xl font-bold text-center mb-6">What Do You Think?</h1>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <Input
+                label="Your nickname"
+                value={nickname}
+                onChange={(e) => setNickname(e.target.value)}
+                className="bg-gray-700 text-white"
+                variant="bordered"
+              />
+              <Input
+                label="Your address"
+                value="0x1234...5678"
+                readOnly
+                className="bg-gray-700 text-white"
+                variant="bordered"
+              />
+              <Textarea
+                label="Type your comment here..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="bg-gray-700 text-white"
+                variant="bordered"
+              />
+              <Button color="success" type="submit" className="w-full">
+                Submit Comment
+              </Button>
+            </form>
+          </Card>
         </div>
       </div>
+      <Modal
+        isOpen={!!selectedComment}
+        onClose={() => setSelectedComment(null)}
+        className="bg-gray-800 border border-gray-600"
+      >
+        <ModalHeader className="text-white">
+          {selectedComment?.user}'s Comment
+        </ModalHeader>
+        <ModalBody>
+          <p className="text-white">{selectedComment?.message}</p>
+        </ModalBody>
+      </Modal>
     </div>
   );
 }
+
+// 080332261
