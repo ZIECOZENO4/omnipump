@@ -73,7 +73,7 @@ function TiltCard({ blockchain }: { blockchain: typeof blockchains[0] }) {
         style={{ scale: isHovered ? 1.1 : 1 }}
         transition={{ type: "spring", stiffness: 300, damping: 10 }}
       >
-        <img src={blockchain.logo} alt={`${blockchain.name} logo`} className="max-w-full max-h-full object-contain" />
+        <img src={blockchain.logo} alt={`${blockchain.name} logo`} className="max-w-full max-h-full rounded-full object-contain" />
       </motion.div>
       <h2 className="text-xl sm:text-2xl text-center">{blockchain.name}</h2>
     </motion.div>

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Bell, ChevronDown, ChevronLeft } from "lucide-react";
 import { Button } from "@nextui-org/react";
-import { Card, Chip } from "@nextui-org/react";
+import { Card, Chip, Tabs, Tab } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion} from "framer-motion";
@@ -105,8 +105,8 @@ export default function DesktopCoin() {
             <button
               className={`${
                 activeTab === "comments"
-                  ? "text-green-500 border-b-2 border-green-500"
-                  : "text-gray-400"
+                  ? "text-[#F7F2DA] border-b-2 border-[#F7F2DA]"
+                  : "text-gray-600"
               }`}
               onClick={() => setActiveTab("comments")}
             >
@@ -163,37 +163,19 @@ export default function DesktopCoin() {
               <span>Total Supply:10001</span>
               <span className=" text-xs text-gray-400">1 $1 is 0.000010 ETH ($0.023)</span>
             </div>
-            <div className="flex justify-between mb-8 p-2">
-         
-              <button
-            type="submit"
-
-          className='flex flex-row w-full'>
-      <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
-      <div className='flex flex-col flex-grow'>
-        <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
-          <span className="text-[#F7F2DA] text-xl font-normal leading-5 text-center">
-          SELL COIN
-          </span>
-        </div>
-        <div className="top-[69.7px] left-[1305px] w-full h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
-      </div>
-    </button>
-        
-              <button
-            type="submit"
-      
-          className='flex flex-row w-full'>
-      <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
-      <div className='flex flex-col flex-grow'>
-        <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
-          <span className="text-[#33322c] text-xl font-normal leading-5 text-center">
-          SELL COIN
-          </span>
-        </div>
-        <div className="top-[69.7px] left-[1305px] w-full h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
-      </div>
-    </button>
+            <div className="flex justify-center align-middle w-full mb-8 p-2">
+            <Tabs 
+                   className='w-full'
+                   classNames={{
+                     tabList: "w-full",
+                     tab: "flex-1",
+                     cursor: "w-full",
+                   }}
+            key="transaction" variant="bordered" aria-label="Tabs variants">
+          <Tab key="BUY" title="BUY" />
+          <Tab key="SELL" title="SELL" />
+        </Tabs>
+ 
             </div>
             <div className="flex text-xs justify-between  mb-8">
               <span>Total Supply:10001</span>
@@ -267,7 +249,7 @@ export default function DesktopCoin() {
               <h2 className="text-xl ">hellohell</h2>
               <p className="text-slate-500 text-sm">
                 HelloHell Is Here...{" "}
-                <span className="text-green-400"> More ▼</span>
+                <span className=""> More ▼</span>
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4 text-sm">
