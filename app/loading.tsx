@@ -1,22 +1,21 @@
 'use client';
+import './loder.css'
 
-import { CirclesWithBar } from 'react-loader-spinner'
 
 export default function Loading() {
     return (
       <div className="flex justify-center items-center h-screen">
-        <CirclesWithBar
-  height="100"
-  width="100"
-  color="#4fa94d"
-  outerCircleColor="#4fa94d"
-  innerCircleColor="#4fa94d"
-  barColor="#4fa94d"
-  ariaLabel="circles-with-bar-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
-  />
+<div className="terminal-loader">
+  <div className="terminal-header">
+    <div className="terminal-title">Status</div>
+    <div className="terminal-controls">
+      <div className="control close"></div>
+      <div className="control minimize"></div>
+      <div className="control maximize"></div>
+    </div>
+  </div>
+  <div className="text">please wait...</div>
+</div>
         </div>
     );
 }

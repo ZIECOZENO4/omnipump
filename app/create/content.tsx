@@ -11,7 +11,7 @@ const blockchains = [
 
 export default function Component() {
   return (
-    <div className="min-h-screen bg-black text-[#F7F2DA] p-4 sm:p-8">
+    <div className="min-h-screen  text-[#F7F2DA] p-4 sm:p-8">
       <h1 className="text-2xl md:text-3xl sm:text-4xl text-center mb-8 sm:mb-12">Select a Blockchain</h1>
       <div className="flex flex-col sm:flex-row justify-center items-center sm:items-stretch space-y-6 sm:space-y-0 sm:space-x-4 md:space-x-6 lg:space-x-8 max-w-7xl min-h-screen  md:h-[100vh] mx-auto">
         {blockchains.map((blockchain) => (
@@ -75,7 +75,7 @@ function TiltCard({ blockchain }: { blockchain: typeof blockchains[0] }) {
       >
         <img src={blockchain.logo} alt={`${blockchain.name} logo`} className="max-w-full max-h-full rounded-full object-contain" />
       </motion.div>
-      <h2 className="text-xl sm:text-2xl text-center">{blockchain.name}</h2>
+      <h2 className="text-xl sm:text-2xl mt-4 md:mt-0 text-center">{blockchain.name}</h2>
     </motion.div>
   )
 }

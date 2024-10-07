@@ -139,7 +139,7 @@ const FirstAnimation: React.FC = () => {
         </motion.div>
       </motion.div>
       <motion.div
-        className="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-500 rounded-full"
+        className="absolute top-1/2 left-1/2 w-4 h-4  rounded-full"
         animate={dropControls}
         initial={{ scale: 0, opacity: 0 }}
       />
