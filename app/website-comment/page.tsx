@@ -143,7 +143,7 @@ export default function Component() {
               <button
             type="submit"
             disabled={!isFormComplete}
-          className='flex flex-row w-full mt-2 md:mt-4'>
+          className='flex flex-row w-full mt-2 md:mt-4 shake-button'>
       <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
       <div className='flex flex-col flex-grow'>
         <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
