@@ -20,7 +20,7 @@ export default function Component() {
   return (
     <div className="py-8 px-4 md:px-[10vw] text-[#F7F2DA] min-h-screen mt-2 md:mt-4">
       <style jsx global>{`
-        input:focus, textarea:focus {
+        Input:focus, textarea:focus {
           outline: none;
           border-color: #4ae436 !important;
         }
@@ -54,7 +54,7 @@ export default function Component() {
               id="deposit-amount"
               type="number"
               placeholder="0.0"
-              className="bg-black w-full text-[#F7F2DA] mb-4 rounded border-white hover:border hover:border-green-500"
+              className="bg-black w-full text-[#F7F2DA] mb-4 rounded-md border-white hover:border hover:border-green-500"
               variant="bordered"
             />
             <button
@@ -86,7 +86,7 @@ export default function Component() {
               id="withdraw-amount"
               type="number"
               placeholder="0.0"
-              className="bg-black w-full text-[#F7F2DA] mb-4 rounde-md border-white hover:border hover:border-green-500"
+              className="bg-black w-full text-[#F7F2DA] mb-4 rounded-md border-white hover:border hover:border-green-500"
               variant="bordered"
             />
  

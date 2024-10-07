@@ -86,6 +86,12 @@ export default function Component() {
   const renderChatList = () => (
     <ScrollShadow className="h-screen text-[#F7F2DA]">
       <div className="space-y-4 p-4">
+      <style jsx global>{`
+        Input:focus, textarea:focus {
+          outline: none;
+          border-color: #4ae436 !important;
+        }
+      `}</style>
         <h2 className="text-2xl font-bold mb-4">Recent Comments</h2>
         <hr className="border-gray-600 mb-4" />
         {chatData.map((chat) => (
@@ -122,21 +128,21 @@ export default function Component() {
                 label="Your nickname"
                 value={nickname}
                 onChange={(e) => setNickname(e.target.value)}
-                className="bg-black text-[#F7F2DA] rounded border-white hover:border hover:border-green-500"
+                className="bg-black text-[#F7F2DA] rounded-md border-white hover:border hover:border-green-500"
                 variant="bordered"
               />
               <Input
                 label="Your address"
                 value="0x1234...5678"
                 readOnly
-                className="bg-black text-[#F7F2DA] file:rounded  border-white hover:border hover:border-green-500"
+                className="bg-black text-[#F7F2DA] file:rounded-md  border-white hover:border hover:border-green-500"
                 variant="bordered"
               />
               <Textarea
                 label="Type your comment here..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="bg-black text-[#F7F2DA] rounded border-white hover:border hover:border-green-500"
+                className="bg-black text-[#F7F2DA] rounded-md border-white hover:border hover:border-green-500"
                 variant="bordered"
               />
        
