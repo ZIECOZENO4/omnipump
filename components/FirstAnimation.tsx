@@ -122,7 +122,7 @@ const FirstAnimation: React.FC = () => {
   }, [controls, gapControls, mouseControls, dropControls]);
 
   return (
-    <div className="fixed inset-0 overflow-hidden bg-[#1D1D1D] z-0">
+    <div className="fixed inset-0 overflow-hidden bg-black z-0">
       <motion.div
         className="w-full h-full wave"
         animate={controls}
