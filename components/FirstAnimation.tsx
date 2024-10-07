@@ -1,3 +1,4 @@
+
 "use client"
 import { useEffect, useRef, useMemo } from 'react';
 import { motion, useAnimation } from 'framer-motion';
@@ -121,7 +122,7 @@ const FirstAnimation: React.FC = () => {
   }, [controls, gapControls, mouseControls, dropControls]);
 
   return (
-    <div className="fixed inset-0 overflow-hidden bg-black z-0">
+    <div className="fixed inset-0 overflow-hidden bg-[#1D1D1D] z-0">
       <motion.div
         className="w-full h-full wave"
         animate={controls}
@@ -133,12 +134,12 @@ const FirstAnimation: React.FC = () => {
           initial={{ gap: "0.1px" }}
         >
           {gridCells.map((i: number) => (
-            <div key={i} className="border border-[#242323]"></div>
+            <div key={i} className="border border-[#373737]"></div>
           ))}
         </motion.div>
       </motion.div>
       <motion.div
-        className="absolute top-1/2 left-1/2 w-4 h-4 rounded-full"
+        className="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-500 rounded-full"
         animate={dropControls}
         initial={{ scale: 0, opacity: 0 }}
       />

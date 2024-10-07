@@ -163,7 +163,7 @@ export default function DesktopCoin() {
               <span>Total Supply:10001</span>
               <span className=" text-xs text-gray-400">1 $1 is 0.000010 ETH ($0.023)</span>
             </div>
-            <div className="flex justify-center align-middle w-full mb-8 p-2">
+            <div className="flex justify-center align-middle w-full mb-4 p-2">
             <Tabs 
                    className='w-full'
                    classNames={{
@@ -177,7 +177,7 @@ export default function DesktopCoin() {
         </Tabs>
  
             </div>
-            <div className="flex text-xs justify-between  mb-8">
+            <div className="flex text-xs justify-between  mb-4">
               <span>Total Supply:10001</span>
               <span className="text-slate-400">Set slippage: 1%</span>
             </div>
@@ -199,7 +199,7 @@ export default function DesktopCoin() {
       <option value="SOL">SOL</option>
     </select>
             </div>
-            <div className="flex space-x-2 mb-4">
+            <div className="flex flex-grow space-x-2 mb-4">
               <Chip radius="sm" className="flex-grow p-2">
                 1 ETH
               </Chip>
@@ -212,13 +212,9 @@ export default function DesktopCoin() {
                  <Chip radius="sm" className="flex-grow p-2">
                 20 ETH
               </Chip>
-              <Chip radius="sm" className="flex-grow p-2">
-                50 ETH
-              </Chip>
+         
             </div>
-            {/* <Button className="w-full bg-green-500 hover:bg-green-600">
-              Connect Wallet
-            </Button> */}
+     
             <div className="w-full">
             <FullConnectButton />
             </div>
