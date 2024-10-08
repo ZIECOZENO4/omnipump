@@ -49,7 +49,7 @@ const MdNavBar = () => {
    <Link href="/" className="flex flex-row ">
  
             <motion.p
-              className="mt-2 leading-10 tracking-tight text-[#F7F2DA] text-center sm:leading-none  lg:text-7xl   hover:text-gray-500 text-inherit text-md md:text-2xl ml-2 md:ml-4 hover:scale-110 hover:text-xl md:hover:text-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out  text-xl font-normal  "
+              className="mt-2 leading-10 tracking-tight text-[#F7F2DA] text-center sm:leading-none  hover:text-gray-500 text-inherit text-md md:text-2xl ml-2 md:ml-4 hover:scale-110 hover:text-xl md:hover:text-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out  text-xl font-normal  "
               whileHover={{
                 y: [-2, 2, -2],
                 transition: { repeat: Infinity, duration: 0.5 }
@@ -105,7 +105,7 @@ const MdNavBar = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-opacity-60 text-[#F7F2DA] p-2 md:px-3 md:py-2 rounded-md text-sm font-medium cursor-pointer"
             >
-              <Badge shape="circle" color="default">
+
                 <Button
                   radius="full"
                   isIconOnly
@@ -119,7 +119,7 @@ const MdNavBar = () => {
   background="#1e293b"
 />
                 </Button>
-              </Badge>
+
             </motion.div>
         </div>
       <AnimatePresence>
