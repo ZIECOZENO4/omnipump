@@ -193,7 +193,7 @@ export default function ListContent() {
                 ))}
               </DropdownMenu>
             </Dropdown>
-            <Button color="primary" endContent={<PlusIcon />}>
+            <Button color="default" endContent={<PlusIcon />}>
              Create New
             </Button>
           </div>
