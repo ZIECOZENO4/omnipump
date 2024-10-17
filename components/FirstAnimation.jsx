@@ -150,26 +150,23 @@
 
 // export default FirstAnimation;
 
+
 "use client"
-import React, { useRef, useMemo } from 'react'
+import React, { useRef, useMemo, useEffect } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Vector3, Group, Mesh, Material, Camera } from 'three'
+import { Vector3 } from 'three'
 import { motion } from 'framer-motion-3d'
 
-const GridCell: React.FC = React.memo(() => (
+const GridCell = React.memo(() => (
   <mesh>
     <planeGeometry args={[1, 1]} />
     <meshBasicMaterial color="#373737" wireframe />
   </mesh>
 ))
 
-interface GridProps {
-  gridSize?: number;
-}
-
-const Grid: React.FC<GridProps> = React.memo(({ gridSize = 240 }) => {
+const Grid = React.memo(({ gridSize = 240 }) => {
   const grid = useMemo(() => {
-    const arr: [number, number, number][] = []
+    const arr = []
     for (let i = 0; i < gridSize; i++) {
       for (let j = 0; j < gridSize; j++) {
         arr.push([i - gridSize / 2, j - gridSize / 2, 0])
@@ -181,23 +178,22 @@ const Grid: React.FC<GridProps> = React.memo(({ gridSize = 240 }) => {
   return (
     <group>
       {grid.map((pos, index) => (
-        <GridCell key={index} position={pos as Vector3} />
+        <GridCell key={index} position={pos} />
       ))}
     </group>
   )
 })
 
-const AnimatedScene: React.FC = () => {
-  const groupRef = useRef<Group>(null)
+const AnimatedScene = () => {
+  const groupRef = useRef()
   const { camera } = useThree()
 
   useFrame(({ clock }) => {
-    if (!groupRef.current) return
     const t = clock.getElapsedTime()
     const scale = 1 + Math.sin(t * 0.5) * 0.5
     groupRef.current.scale.set(scale, scale, scale)
     groupRef.current.rotation.z = Math.sin(t * 0.2) * 0.05
-    ;(camera as Camera).position.z = 150 + Math.sin(t * 0.5) * 50
+    camera.position.z = 150 + Math.sin(t * 0.5) * 50
   })
 
   return (
@@ -207,11 +203,10 @@ const AnimatedScene: React.FC = () => {
   )
 }
 
-const MouseAnimation: React.FC = () => {
-  const meshRef = useRef<Mesh>(null)
+const MouseAnimation = () => {
+  const meshRef = useRef()
 
   useFrame(({ clock }) => {
-    if (!meshRef.current) return
     const t = clock.getElapsedTime()
     meshRef.current.position.x = Math.sin(t) * 50
     meshRef.current.position.y = Math.cos(t) * 50
@@ -226,15 +221,14 @@ const MouseAnimation: React.FC = () => {
   )
 }
 
-const DropAnimation: React.FC = () => {
-  const meshRef = useRef<Mesh>(null)
+const DropAnimation = () => {
+  const meshRef = useRef()
 
   useFrame(({ clock }) => {
-    if (!meshRef.current) return
     const t = clock.getElapsedTime()
     const scale = (Math.sin(t) + 1) / 2
     meshRef.current.scale.set(scale, scale, scale)
-    ;(meshRef.current.material as Material).opacity = 1 - scale
+    meshRef.current.material.opacity = 1 - scale
   })
 
   return (
