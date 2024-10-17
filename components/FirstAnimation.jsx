@@ -149,8 +149,6 @@
 // };
 
 // export default FirstAnimation;
-
-
 "use client"
 import React, { useRef, useMemo, useEffect } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
