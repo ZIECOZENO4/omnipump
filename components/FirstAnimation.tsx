@@ -150,11 +150,16 @@
 
 // export default FirstAnimation;
 
+
 "use client"
 import React, { useRef, useMemo, useEffect } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Vector3, Group, Mesh, Material, Camera, Clock } from 'three'
-import { motion, useAnimation, AnimationControls } from 'framer-motion-3d'
+import { Vector3, Group, Camera, Clock } from 'three'
+import { motion} from 'framer-motion-3d'
+import {useAnimation } from 'framer-motion'
+import type { GroupProps, MeshProps } from "@react-three/fiber"
+
+type AnimateType = Parameters<typeof motion.group>[0]['animate'];
 
 interface GridCellProps {
   position: Vector3;
@@ -169,7 +174,7 @@ const GridCell: React.FC<GridCellProps> = React.memo(({ position }) => (
 
 interface GridProps {
   gridSize?: number;
-  gapControls: AnimationControls;
+  gapControls: AnimateType;
 }
 
 const Grid: React.FC<GridProps> = React.memo(({ gridSize = 240, gapControls }) => {
@@ -198,7 +203,7 @@ const Grid: React.FC<GridProps> = React.memo(({ gridSize = 240, gapControls }) =
 })
 
 const AnimatedScene: React.FC = () => {
-  const groupRef = useRef<Group>(null)
+  const groupRef = useRef<GroupProps>(null)
   const { camera } = useThree()
   const controls = useAnimation();
   const gapControls = useAnimation();
@@ -249,14 +254,14 @@ const AnimatedScene: React.FC = () => {
   });
 
   return (
-    <motion.group ref={groupRef} animate={controls} initial={{ scale: 1, rotateZ: 0 }}>
-      <Grid gapControls={gapControls} />
+    <motion.group ref={groupRef} animate={controls as AnimateType} initial={{ scale: 1, rotateZ: 0 }}>
+      <Grid gapControls={gapControls as AnimateType} />
     </motion.group>
   )
 }
 
 const MouseAnimation: React.FC = () => {
-  const meshRef = useRef<Mesh>(null)
+  const meshRef = useRef<MeshProps>(null)
   const controls = useAnimation();
 
   useEffect(() => {
@@ -276,7 +281,7 @@ const MouseAnimation: React.FC = () => {
   }, [controls]);
 
   return (
-    <motion.mesh ref={meshRef} animate={controls}>
+    <motion.mesh ref={meshRef} animate={controls as AnimateType}>
       <sphereGeometry args={[2, 32, 32]} />
       <meshBasicMaterial color="white" />
     </motion.mesh>
@@ -284,7 +289,7 @@ const MouseAnimation: React.FC = () => {
 }
 
 const DropAnimation: React.FC = () => {
-  const meshRef = useRef<Mesh>(null)
+  const meshRef = useRef<MeshProps>(null)
   const controls = useAnimation();
 
   useEffect(() => {
@@ -302,7 +307,7 @@ const DropAnimation: React.FC = () => {
   }, [controls]);
 
   return (
-    <motion.mesh ref={meshRef} position={[0, 0, 10]} animate={controls} initial={{ scale: 0, opacity: 0 }}>
+    <motion.mesh ref={meshRef} position={[0, 0, 10]} animate={controls as AnimateType} initial={{ scale: 0, opacity: 0 }}>
       <sphereGeometry args={[2, 32, 32]} />
       <meshBasicMaterial color="white" transparent />
     </motion.mesh>
