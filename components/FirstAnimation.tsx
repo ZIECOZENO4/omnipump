@@ -1,183 +1,15 @@
-
-// "use client"
-// import { useEffect, useRef, useMemo } from 'react';
-// import { motion, useAnimation } from 'framer-motion';
-
-// const FirstAnimation: React.FC = () => {
-//   const controls = useAnimation();
-//   const gapControls = useAnimation();
-//   const mouseControls = useAnimation();
-//   const dropControls = useAnimation();
-//   const audioRef = useRef<HTMLAudioElement | null>(null);
-
-//   // Generate or retrieve cached grid
-//   const gridCells = useMemo(() => {
-//     if (typeof window !== 'undefined') {
-//       const cachedGrid = localStorage.getItem('animationGrid');
-//       if (cachedGrid) {
-//         return JSON.parse(cachedGrid) as number[];
-//       }
-//       const newGrid = Array.from({ length: 57600 }, (_, i) => i);
-//       localStorage.setItem('animationGrid', JSON.stringify(newGrid));
-//       return newGrid;
-//     }
-//     return [] as number[];
-//   }, []);
-
-//   useEffect(() => {
-//     const animateBackground = async () => {
-//       while (true) {
-//         // Fast zoom out
-//         await Promise.all([
-//           controls.start({
-//             scale: [1, 100],
-//             rotate: [0, 2],
-//             transition: { 
-//               duration: 3, // Faster zoom out
-//               ease: "easeInOut" 
-//             }
-//           }),
-//           gapControls.start({
-//             gap: ["0.1px", "50px"],
-//             transition: { 
-//               duration: 3,
-//               ease: "easeInOut" 
-//             }
-//           })
-//         ]);
-
-//         // Pause at zoomed out state
-//         await new Promise(resolve => setTimeout(resolve, 2000));
-
-//         // Fast zoom in
-//         await Promise.all([
-//           controls.start({
-//             scale: [100, 1],
-//             rotate: [-2, 0],
-//             transition: { 
-//               duration: 3, // Faster zoom in
-//               ease: "easeInOut" 
-//             }
-//           }),
-//           gapControls.start({
-//             gap: ["50px", "0.1px"],
-//             transition: { 
-//               duration: 3,
-//               ease: "easeInOut" 
-//             }
-//           })
-//         ]);
-
-//         // Pause at zoomed in state
-//         await new Promise(resolve => setTimeout(resolve, 1000));
-//       }
-//     };
-
-//     const animateMouse = async () => {
-//       while (true) {
-//         await mouseControls.start({
-//           x: Math.random() * 100 - 50,
-//           y: Math.random() * 100 - 50,
-//           scale: [1, 1.3, 1],
-//           rotate: [0, 360],
-//           transition: { duration: 5, ease: "easeInOut" }
-//         });
-//         await new Promise(resolve => setTimeout(resolve, 1000));
-//       }
-//     };
-
-//     const animateDrop = async () => {
-//       while (true) {
-//         await dropControls.start({
-//           scale: [0, 1],
-//           opacity: [1, 0],
-//           transition: { duration: 2, ease: "easeOut" }
-//         });
-//         await new Promise(resolve => setTimeout(resolve, 3000));
-//       }
-//     };
-
-//     animateBackground();
-//     animateMouse();
-//     animateDrop();
-
-//     // Start audio playback
-//     const playAudio = () => {
-//       if (audioRef.current) {
-//         audioRef.current.play().catch(error => {
-//           console.error("Audio playback failed:", error);
-//         });
-//       }
-//     };
-
-//     // Attempt to play audio on component mount
-//     playAudio();
-
-//     // Add event listener for user interaction
-//     document.addEventListener('click', playAudio);
-
-//     return () => {
-//       document.removeEventListener('click', playAudio);
-//     };
-//   }, [controls, gapControls, mouseControls, dropControls]);
-
-//   return (
-//     <div className="fixed inset-0 overflow-hidden bg-black z-0">
-//       <motion.div
-//         className="w-full h-full wave"
-//         animate={controls}
-//         initial={{ scale: 1, rotate: 0 }}
-//       >
-//         <motion.div 
-//           className="w-full h-full grid grid-cols-[repeat(240,1fr)] grid-rows-[repeat(240,1fr)]"
-//           animate={gapControls}
-//           initial={{ gap: "0.1px" }}
-//         >
-//           {gridCells.map((i: number) => (
-//             <div key={i} className="border border-[#373737]"></div>
-//           ))}
-//         </motion.div>
-//       </motion.div>
-//       <motion.div
-//         className="absolute top-1/2 left-1/2 w-4 h-4  rounded-full"
-//         animate={dropControls}
-//         initial={{ scale: 0, opacity: 0 }}
-//       />
-//       <audio ref={audioRef} src="/audio/play.mp3" loop />
-//     </div>
-//   );
-// };
-
-// export default FirstAnimation;
-
-
 "use client"
-import React, { useRef, useMemo, useEffect } from 'react'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Vector3, Group, Camera, Clock } from 'three'
-import { motion} from 'framer-motion-3d'
-import {useAnimation } from 'framer-motion'
-import type { GroupProps, MeshProps } from "@react-three/fiber"
+import { useEffect, useRef, useMemo } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
-type AnimateType = Parameters<typeof motion.group>[0]['animate'];
+const FirstAnimation: React.FC = () => {
+  const controls = useAnimation();
+  const gapControls = useAnimation();
+  const mouseControls = useAnimation();
+  const dropControls = useAnimation();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-interface GridCellProps {
-  position: Vector3;
-}
 
-const GridCell: React.FC<GridCellProps> = React.memo(({ position }) => (
-  <mesh position={position}>
-    <planeGeometry args={[1, 1]} />
-    <meshBasicMaterial color="#373737" wireframe />
-  </mesh>
-))
-
-interface GridProps {
-  gridSize?: number;
-  gapControls: AnimateType;
-}
-
-const Grid: React.FC<GridProps> = React.memo(({ gridSize = 240, gapControls }) => {
   const gridCells = useMemo(() => {
     if (typeof window !== 'undefined') {
       const cachedGrid = localStorage.getItem('animationGrid');
@@ -191,50 +23,47 @@ const Grid: React.FC<GridProps> = React.memo(({ gridSize = 240, gapControls }) =
     return [] as number[];
   }, []);
 
-  return (
-    <motion.group animate={gapControls} initial={{ gap: 0.1 }}>
-      {gridCells.map((i: number) => {
-        const x = (i % gridSize) - gridSize / 2;
-        const y = Math.floor(i / gridSize) - gridSize / 2;
-        return <GridCell key={i} position={new Vector3(x, y, 0)} />;
-      })}
-    </motion.group>
-  )
-})
-
-const AnimatedScene: React.FC = () => {
-  const groupRef = useRef<GroupProps>(null)
-  const { camera } = useThree()
-  const controls = useAnimation();
-  const gapControls = useAnimation();
-  const clock = new Clock();
-
   useEffect(() => {
     const animateBackground = async () => {
       while (true) {
+   
         await Promise.all([
           controls.start({
             scale: [1, 100],
-            rotateZ: 2,
-            transition: { duration: 3, ease: "easeInOut" }
+            rotate: [0, 2],
+            transition: { 
+              duration: 3, 
+              ease: "easeInOut" 
+            }
           }),
           gapControls.start({
-            gap: 50,
-            transition: { duration: 3, ease: "easeInOut" }
+            gap: ["0.1px", "50px"],
+            transition: { 
+              duration: 3,
+              ease: "easeInOut" 
+            }
           })
         ]);
 
+    
         await new Promise(resolve => setTimeout(resolve, 2000));
 
+        
         await Promise.all([
           controls.start({
             scale: [100, 1],
-            rotateZ: 0,
-            transition: { duration: 3, ease: "easeInOut" }
+            rotate: [-2, 0],
+            transition: { 
+              duration: 3,
+              ease: "easeInOut" 
+            }
           }),
           gapControls.start({
-            gap: 0.1,
-            transition: { duration: 3, ease: "easeInOut" }
+            gap: ["50px", "0.1px"],
+            transition: { 
+              duration: 3,
+              ease: "easeInOut" 
+            }
           })
         ]);
 
@@ -242,60 +71,22 @@ const AnimatedScene: React.FC = () => {
       }
     };
 
-    animateBackground();
-  }, [controls, gapControls]);
-
-  useFrame(() => {
-    if (!groupRef.current) return;
-    const t = clock.getElapsedTime();
-    if (camera instanceof Camera) {
-      camera.position.z = 150 + Math.sin(t * 0.5) * 50;
-    }
-  });
-
-  return (
-    <motion.group ref={groupRef} animate={controls as AnimateType} initial={{ scale: 1, rotateZ: 0 }}>
-      <Grid gapControls={gapControls as AnimateType} />
-    </motion.group>
-  )
-}
-
-const MouseAnimation: React.FC = () => {
-  const meshRef = useRef<MeshProps>(null)
-  const controls = useAnimation();
-
-  useEffect(() => {
-    const animate = async () => {
+    const animateMouse = async () => {
       while (true) {
-        await controls.start({
+        await mouseControls.start({
           x: Math.random() * 100 - 50,
           y: Math.random() * 100 - 50,
           scale: [1, 1.3, 1],
-          rotateZ: 360,
+          rotate: [0, 360],
           transition: { duration: 5, ease: "easeInOut" }
         });
         await new Promise(resolve => setTimeout(resolve, 1000));
       }
     };
-    animate();
-  }, [controls]);
 
-  return (
-    <motion.mesh ref={meshRef} animate={controls as AnimateType}>
-      <sphereGeometry args={[2, 32, 32]} />
-      <meshBasicMaterial color="white" />
-    </motion.mesh>
-  )
-}
-
-const DropAnimation: React.FC = () => {
-  const meshRef = useRef<MeshProps>(null)
-  const controls = useAnimation();
-
-  useEffect(() => {
-    const animate = async () => {
+    const animateDrop = async () => {
       while (true) {
-        await controls.start({
+        await dropControls.start({
           scale: [0, 1],
           opacity: [1, 0],
           transition: { duration: 2, ease: "easeOut" }
@@ -303,21 +94,12 @@ const DropAnimation: React.FC = () => {
         await new Promise(resolve => setTimeout(resolve, 3000));
       }
     };
-    animate();
-  }, [controls]);
 
-  return (
-    <motion.mesh ref={meshRef} position={[0, 0, 10]} animate={controls as AnimateType} initial={{ scale: 0, opacity: 0 }}>
-      <sphereGeometry args={[2, 32, 32]} />
-      <meshBasicMaterial color="white" transparent />
-    </motion.mesh>
-  )
-}
+    animateBackground();
+    animateMouse();
+    animateDrop();
 
-const FirstAnimation: React.FC = () => {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  useEffect(() => {
     const playAudio = () => {
       if (audioRef.current) {
         audioRef.current.play().catch(error => {
@@ -326,24 +108,43 @@ const FirstAnimation: React.FC = () => {
       }
     };
 
+
     playAudio();
+
+    // Add event listener for user interaction
     document.addEventListener('click', playAudio);
 
     return () => {
       document.removeEventListener('click', playAudio);
     };
-  }, []);
+  }, [controls, gapControls, mouseControls, dropControls]);
 
   return (
     <div className="fixed inset-0 overflow-hidden bg-black z-0">
-      <Canvas camera={{ position: [0, 0, 200], fov: 75 }}>
-        <AnimatedScene />
-        <MouseAnimation />
-        <DropAnimation />
-      </Canvas>
+      <motion.div
+        className="w-full h-full wave"
+        animate={controls}
+        initial={{ scale: 1, rotate: 0 }}
+      >
+        <motion.div 
+          className="w-full h-full grid grid-cols-[repeat(240,1fr)] grid-rows-[repeat(240,1fr)]"
+          animate={gapControls}
+          initial={{ gap: "0.1px" }}
+        >
+          {gridCells.map((i: number) => (
+            <div key={i} className="border border-[#373737]"></div>
+          ))}
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className="absolute top-1/2 left-1/2 w-4 h-4  rounded-full"
+        animate={dropControls}
+        initial={{ scale: 0, opacity: 0 }}
+      />
       <audio ref={audioRef} src="/audio/play.mp3" loop />
     </div>
-  )
-}
+  );
+};
 
-export default React.memo(FirstAnimation)
+export default FirstAnimation;
+
