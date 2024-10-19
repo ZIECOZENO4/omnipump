@@ -1,4 +1,4 @@
-// components/BackgroundVideo.tsx
+"use client"
 import React, { useEffect, useRef } from 'react';
 
 const BackgroundVideo: React.FC = () => {
