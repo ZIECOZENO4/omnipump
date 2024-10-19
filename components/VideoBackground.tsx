@@ -22,9 +22,9 @@ const BackgroundVideo: React.FC = () => {
         playsInline
         className="w-[100vw] h-[100vh] object-cover"
       >
-        <source src="/videos/first.mp4" type="video/mp4" />
-        <source src="/videos/first.webm" type="video/webm" />
-        Your browser does not support the video tag.
+        <source src="https://files.slack.com/files-tmb/T05SRBZDA4T-F07TB03BL48-4c39c12484/kannonbackgroundvideo2.mp4" type="video/mp4" />
+        <source src="https://files.slack.com/files-tmb/T05SRBZDA4T-F07TB03BL48-4c39c12484/kannonbackgroundvideo2.webm" type="video/webm" />
+        Your browser does not support the video tag.22
       </video>
     </div>
   );
