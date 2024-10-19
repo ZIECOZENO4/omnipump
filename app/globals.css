@@ -48,11 +48,9 @@ body {
 }
 
 .modal-hover-indigo:hover {
-  background-color: rgba(79, 70, 229, 0.1); /* Indigo with opacity */
+  background-color: rgba(79, 70, 229, 0.1);
 }
 
-
-/* globals.css */
 
 @layer base {
   :root {
@@ -66,8 +64,6 @@ body {
   font-weight: 400;
   font-style: normal;
   font-variation-settings:
-  /* "BLED" 16,
-  "SCAN" -33; */
   "BLED" 0,
   "SCAN" -53;
 }
