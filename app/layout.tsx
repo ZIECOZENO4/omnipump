@@ -6,8 +6,8 @@ import  MdNavBar from "../components/MdNavBar";
 import { Providers } from "./providers";
 import { Suspense } from 'react';
 import Loading from './loading';
-import FirstAnimation from "../components/FirstAnimation";
 import BottomMore from "@/components/BottomMore";
+import BackgroundVideo from "@/components/VideoBackground";
 
 const workbench = Workbench({
   weight: '400', 
@@ -31,7 +31,7 @@ export default function RootLayout({
        <body className={`${workbench.variable} dark text-[#F7F2DA] antialiased relative font-workbench`}>
        <Providers>
         <div className="relative min-h-screen">
-          <FirstAnimation />
+          <BackgroundVideo />
           <div className="relative z-10">
           <MdNavBar  />
             <Suspense fallback={<Loading />}>

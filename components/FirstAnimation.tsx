@@ -142,7 +142,7 @@ const FirstAnimation: React.FC = () => {
         initial={{ scale: 0, opacity: 0 }}
       />
       <audio ref={audioRef} src="/audio/play.mp3" loop />
-    </div>
+    </div>      
   );
 };
 
