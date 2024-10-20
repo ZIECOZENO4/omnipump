@@ -135,7 +135,7 @@ export default function Component() {
                 label="Your address"
                 value="0x1234...5678"
                 readOnly
-                className="bg-black text-[#F7F2DA] file:rounded-2xl  border-white hover:border hover:border-green-500"
+                className="bg-black text-[#F7F2DA] rounded-2xl  border-white hover:border hover:border-green-500"
                 variant="bordered"
               />
               <Textarea

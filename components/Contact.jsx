@@ -506,10 +506,21 @@ const ContactContent = () => {
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-[#F7F2DA] font-bold shadow-md shadow-primary'
+         className='my-2 md:my-4'
           >
-            {loading ? "Sending..." : "Send"}
+             <div className='flex flex-row w-full shake-button'>
+      <div className="top-9 left-[1305.31px] w-[2.84px] h-[36.22px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      <div className='flex flex-col flex-grow'>
+        <div className="w-full h-[33.39px] top-9 left-[1307.83px] bg-[#787878] items-center shadow-md flex justify-center">
+          <span className="text-[#F7F2DA] text-xl font-normal leading-5 text-center">
+          {loading ? "Sending Your Message..." : "Fill all the fields to send"}
+          </span>
+        </div>
+        <div className="top-[69.7px] left-[1305px] w-full h-[3.15px] bg-[#787878] border-t-[0.63px] border-solid border-black"></div>
+      </div>
+    </div>
           </button>
+       
         </form>
       </motion.div>
 
